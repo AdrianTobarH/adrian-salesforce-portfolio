@@ -7,9 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>
-
 Adrian Tobar | Salesforce Automation Engineer
-
 </title>
 
 <link rel="stylesheet" href="style.css">
@@ -27,12 +25,10 @@ Adrian Tobar | Salesforce Automation Engineer
 
 <div class="logo">
 
-Adrian Tobar
+Adrian Tobar Hanze
 
 <span class="role-tag">
-
 Salesforce Architect Track
-
 </span>
 
 </div>
@@ -40,39 +36,16 @@ Salesforce Architect Track
 
 <div class="nav-links">
 
-<a href="#projects">
+<a href="#projects"><i data-lucide="folder"></i>Projects</a>
 
-<i data-lucide="folder"></i>
-Projects
+<a href="#architecture"><i data-lucide="layers"></i>Architecture</a>
 
-</a>
+<a href="#decision-matrix"><i data-lucide="git-branch"></i>Decision Model</a>
 
-<a href="#architecture">
-
-<i data-lucide="layers"></i>
-Architecture
-
-</a>
-
-<a href="#decision-matrix">
-
-<i data-lucide="git-branch"></i>
-Decision Model
-
-</a>
-
-<a href="#architecture-timeline">
-
-<i data-lucide="activity"></i>
-Case Studies
-
-</a>
+<a href="#architecture-timeline"><i data-lucide="activity"></i>Case Studies</a>
 
 <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank">
-
-<i data-lucide="linkedin"></i>
-LinkedIn
-
+<i data-lucide="linkedin"></i>LinkedIn
 </a>
 
 </div>
@@ -81,15 +54,17 @@ LinkedIn
 <div class="nav-right">
 
 <span class="timezone-pill">
-
 GMT-5 • PT overlap ready
-
 </span>
 
+<div class="language-switcher">
+<button onclick="setLanguage('en')">EN</button>
+<button onclick="setLanguage('es')">ES</button>
+<button onclick="setLanguage('fr')">FR</button>
+</div>
+
 <a href="#contact" class="cta-btn">
-
 Available for Remote Roles
-
 </a>
 
 </div>
@@ -106,20 +81,45 @@ Available for Remote Roles
 
 <div class="hero-text">
 
+<div class="hero-badge">
+Salesforce Automation Architect Track
+</div>
+
 <h1>
-
-Salesforce Automation Engineer
-
+Designing Scalable Salesforce Automation for Enterprise Teams
 </h1>
 
-<p>
-
-Designing scalable automation architectures using Flow, Apex and Lightning Web Components
-
+<p class="hero-subtitle">
+Flow Orchestration • Apex Service Layers • LWC Interfaces • API Integrations
 </p>
+
+<p class="hero-description">
+Helping organizations build maintainable, scalable and integration-ready Salesforce solutions aligned with enterprise architecture standards.
+</p>
+
+<div class="hero-cta-group">
+
+<a href="#projects" class="primary-cta">
+View Architecture Projects
+</a>
+
+<a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="secondary-cta">
+Connect on LinkedIn
+</a>
 
 </div>
 
+<div class="hero-availability">
+Available for Remote Salesforce Engineering Roles (US timezone overlap)
+</div>
+
+<div class="certifications-line">
+<span id="cert-rotator">
+Salesforce Certified Administrator
+</span>
+</div>
+
+</div>
 
 <img src="assets/profile.jpg" class="hero-img">
 
@@ -133,49 +133,24 @@ Designing scalable automation architectures using Flow, Apex and Lightning Web C
 
 <section id="projects" class="section reveal">
 
-<h2>Featured Projects</h2>
+<h2>Featured Architecture Projects</h2>
 
 <div class="cards">
 
-
 <a href="projects/case-automation.html" class="card">
-
-<h3>Case Automation Engine</h3>
-
-<p>
-
-Lifecycle automation using Flow orchestration and Apex services
-
-</p>
-
+<h3>Enterprise Case Automation Framework</h3>
+<p>Flow orchestration routing architecture</p>
 </a>
-
 
 <a href="projects/lwc-dashboard.html" class="card">
-
-<h3>LWC Analytics Dashboard</h3>
-
-<p>
-
-Executive real-time pipeline visibility interface
-
-</p>
-
+<h3>Executive LWC Analytics Dashboard</h3>
+<p>Real-time pipeline visibility interface</p>
 </a>
-
 
 <a href="projects/api-integration.html" class="card">
-
-<h3>External API Integration Layer</h3>
-
-<p>
-
-Reusable Named Credential integration architecture
-
-</p>
-
+<h3>Reusable Integration Service Layer</h3>
+<p>Named Credential API architecture</p>
 </a>
-
 
 </div>
 
@@ -191,29 +166,13 @@ Reusable Named Credential integration architecture
 
 <div class="layer-stack">
 
-<div class="layer user-layer">
+<div class="layer">Lightning UI · LWC Experience Layer</div>
 
-Lightning UI · LWC Experience Layer
+<div class="layer">Flow Orchestration · Apex Services Layer</div>
 
-</div>
+<div class="layer">Objects · Security · Validation Layer</div>
 
-<div class="layer logic-layer">
-
-Flow Orchestration · Apex Services Layer
-
-</div>
-
-<div class="layer data-layer">
-
-Objects · Security · Validation Layer
-
-</div>
-
-<div class="layer integration-layer">
-
-REST APIs · Named Credentials Layer
-
-</div>
+<div class="layer">REST APIs · Named Credentials Layer</div>
 
 </div>
 
@@ -229,51 +188,32 @@ REST APIs · Named Credentials Layer
 
 <div class="matrix-container">
 
-
-<div class="matrix-card flow-card">
-
+<div class="matrix-card">
 <h3>Use Flow When</h3>
-
 <ul>
-
 <li>Admin maintainability required</li>
 <li>Rapid iteration cycles</li>
 <li>Declarative orchestration sufficient</li>
-
 </ul>
-
 </div>
 
-
-<div class="matrix-card apex-card">
-
+<div class="matrix-card">
 <h3>Use Apex When</h3>
-
 <ul>
-
 <li>Transaction-level control needed</li>
 <li>Complex integrations required</li>
 <li>Performance critical logic exists</li>
-
 </ul>
-
 </div>
 
-
-<div class="matrix-card hybrid-card">
-
+<div class="matrix-card">
 <h3>Hybrid Pattern</h3>
-
 <ul>
-
 <li>Flow orchestration layer</li>
 <li>Apex service layer</li>
 <li>Enterprise scalability required</li>
-
 </ul>
-
 </div>
-
 
 </div>
 
@@ -287,111 +227,94 @@ REST APIs · Named Credentials Layer
 
 <h2>Architecture Decision Review Panel</h2>
 
-
 <div class="timeline-tabs">
 
-<button class="timeline-tab active" data-project="case">
+<button class="timeline-tab active" data-project="case">Case Automation</button>
 
-Case Automation
+<button class="timeline-tab" data-project="lwc">LWC Dashboard</button>
 
-</button>
+<button class="timeline-tab" data-project="api">API Integration</button>
 
-<button class="timeline-tab" data-project="lwc">
-
-LWC Dashboard
-
-</button>
-
-<button class="timeline-tab" data-project="api">
-
-API Integration
-
-</button>
-
-<button class="timeline-tab" data-project="stack">
-
-Architecture Stack
-
-</button>
+<button class="timeline-tab" data-project="stack">Architecture Stack</button>
 
 </div>
-
 
 
 <div class="timeline-panel active" id="case">
 
 <div class="timeline-flow">
-
-<div class="flow-node">
-
-🔍 Discovery
-
-</div>
-
+<div class="flow-node">🔍 Discovery</div>
 <div class="flow-connector"></div>
-
-<div class="flow-node">
-
-🧠 Decision
-
-</div>
-
+<div class="flow-node">🧠 Decision</div>
 <div class="flow-connector"></div>
-
-<div class="flow-node impact-node">
-
-🚀 Impact
-
+<div class="flow-node impact-node">🚀 Impact</div>
 </div>
 
 </div>
-
-</div>
-
 
 
 <div class="timeline-panel" id="lwc">
 
 <div class="timeline-flow">
-
 <div class="flow-node">📊 Discovery</div>
-
 <div class="flow-connector"></div>
-
 <div class="flow-node impact-node">🚀 Impact</div>
-
 </div>
 
 </div>
-
 
 
 <div class="timeline-panel" id="api">
 
 <div class="timeline-flow">
-
 <div class="flow-node">🌐 Discovery</div>
-
 <div class="flow-connector"></div>
-
 <div class="flow-node impact-node">🚀 Impact</div>
-
 </div>
 
 </div>
-
 
 
 <div class="timeline-panel" id="stack">
 
 <div class="timeline-flow">
-
 <div class="flow-node">👤 UX Layer</div>
-
 <div class="flow-connector"></div>
-
 <div class="flow-node impact-node">🏗 Enterprise Model</div>
+</div>
 
+</div>
+
+</section>
+
+
+
+<!-- METRICS -->
+
+<section class="metrics-section reveal">
+
+<h2>Architecture Metrics Impact</h2>
+
+<div class="metrics-container">
+
+<div class="metric-card">
+<h3>⚡ Automation Speed</h3>
+<p>Reduced manual routing time by 65%</p>
+</div>
+
+<div class="metric-card">
+<h3>📊 Adoption Increase</h3>
+<p>Executive dashboard adoption improved 3×</p>
+</div>
+
+<div class="metric-card">
+<h3>🔗 Integration Reliability</h3>
+<p>Reusable Named Credential architecture delivered</p>
+</div>
+
+<div class="metric-card">
+<h3>🛡 Security Alignment</h3>
+<p>Enterprise-ready permission modeling implemented</p>
 </div>
 
 </div>
@@ -407,21 +330,45 @@ Architecture Stack
 <h2>Let's Build Something Together</h2>
 
 <p>
-
 Available for remote Salesforce engineering roles across US timezones
-
 </p>
 
 </section>
 
 
 
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="footer-content">
+
+<span>
+Adrian Tobar Hanze © 2026
+</span>
+
+<div class="footer-links">
+
+<a href="#projects">Projects</a>
+<a href="#architecture">Architecture</a>
+<a href="#contact">Contact</a>
+
+<a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank">
+LinkedIn
+</a>
+
+</div>
+
+</div>
+
+</footer>
+
+
+
 <script src="script.js"></script>
 
 <script>
-
 lucide.createIcons();
-
 </script>
 
 </body>
