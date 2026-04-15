@@ -6,7 +6,7 @@
 
 <meta charset="UTF-8">
 
-<title>External Integration Architecture</title>
+<title>Reusable API Integration Architecture</title>
 
 <link rel="stylesheet" href="project-style.css">
 
@@ -14,20 +14,21 @@
 
 <body>
 
+
 <h1>
 
-Secure External Platform Integration Framework
+Reusable Salesforce API Integration Layer
 
 </h1>
 
 
 <div class="section">
 
-<div class="tech-badge">Apex REST</div>
-
 <div class="tech-badge">Named Credentials</div>
 
-<div class="tech-badge">JSON Mapping</div>
+<div class="tech-badge">REST APIs</div>
+
+<div class="tech-badge">Authentication Layer</div>
 
 <div class="tech-badge">Retry Logic</div>
 
@@ -42,7 +43,7 @@ Context
 
 </div>
 
-Customer data synchronization required secure real-time communication between Salesforce and external service platforms.
+Customer interaction data existed across external platforms creating fragmented visibility within Salesforce service workflows.
 
 </div>
 
@@ -55,7 +56,7 @@ Architecture Strategy
 
 </div>
 
-Implemented API-led integration pattern using Named Credentials and structured Apex REST callouts ensuring authentication security and retry reliability.
+Designed a reusable Apex integration service layer leveraging Named Credentials enabling secure authentication abstraction and standardized API communication patterns.
 
 </div>
 
@@ -64,29 +65,14 @@ Implemented API-led integration pattern using Named Credentials and structured A
 
 <div class="section-title">
 
-Integration Layers
+Solution Layers
 
 </div>
 
-Authentication abstraction layer  
-Callout orchestration controller  
-JSON transformation mapping  
-Retry-safe error handler  
-
-</div>
-
-
-<div class="section card">
-
-<div class="section-title">
-
-Security Strategy
-
-</div>
-
-Credential isolation  
-Endpoint abstraction  
-Structured exception handling  
+• Named Credential authentication abstraction  
+• REST integration service layer  
+• Error handling retry logic  
+• Data normalization pipeline  
 
 </div>
 
@@ -95,11 +81,11 @@ Structured exception handling
 
 <div class="section-title">
 
-Scalability Model
+Scalability Strategy
 
 </div>
 
-Reusable integration service classes enable extension across additional endpoints without architecture refactor.
+Reusable service architecture supports onboarding additional integrations without modifying orchestration logic.
 
 </div>
 
@@ -112,9 +98,16 @@ Business Impact
 
 </div>
 
-Delivered unified cross-platform customer visibility supporting operational decision alignment.
+<div class="metric">
+
+60%
 
 </div>
+
+Reduction in manual external data verification tasks.
+
+</div>
+
 
 </body>
 
