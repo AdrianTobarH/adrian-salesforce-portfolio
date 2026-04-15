@@ -1,114 +1,92 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
+<title>LWC Executive Dashboard</title>
 
-<title>Executive LWC Analytics Dashboard</title>
-
-<link rel="stylesheet" href="project-style.css">
+<link rel="stylesheet" href="../style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
 
 </head>
 
 <body>
 
+<nav class="nav">
 
-<h1>
+<a href="../index.html" class="back-home">
 
-Executive Pipeline Visibility Dashboard (LWC)
+<i data-lucide="arrow-left"></i>
+Back to Portfolio
+
+</a>
+
+</nav>
+
+<section class="section">
+
+<h1 class="section-title">
+
+Executive KPI Dashboard Architecture
 
 </h1>
 
+<div>
 
-<div class="section">
-
-<div class="tech-badge">Lightning Web Components</div>
-
-<div class="tech-badge">Executive Reporting</div>
-
-<div class="tech-badge">Cross-Object Metrics</div>
-
-<div class="tech-badge">Dynamic Filtering</div>
+<span class="tech-badge">Lightning Web Components</span>
+<span class="tech-badge">Apex Controllers</span>
+<span class="tech-badge">Dynamic Charts</span>
 
 </div>
 
+<br>
 
-<div class="section card">
+<div class="cards">
 
-<div class="section-title">
+<div class="card">
 
-Context
+<h3>Problem</h3>
 
-</div>
-
-Leadership teams lacked real-time pipeline visibility across sales stages, limiting forecasting confidence and decision speed.
-
-</div>
-
-
-<div class="section card">
-
-<div class="section-title">
-
-Architecture Strategy
+Executives lacked real-time pipeline visibility.
 
 </div>
 
-Designed a Lightning Web Component analytics interface delivering cross-object pipeline visibility with dynamic filtering optimized for executive consumption workflows.
+<div class="card">
+
+<h3>Solution</h3>
+
+Built modular LWC analytics dashboard
+powered by Apex service aggregation.
 
 </div>
 
+<div class="card">
 
-<div class="section card">
+<h3>Architecture Value</h3>
 
-<div class="section-title">
-
-Solution Layers
-
-</div>
-
-• LWC analytics interface layer  
-• Cross-object reporting dataset  
-• Dynamic stage filtering engine  
-• KPI visualization components  
+Reusable chart services
+cross-object reporting visibility layer.
 
 </div>
 
+<div class="card">
 
-<div class="section card">
+<h3>Impact</h3>
 
-<div class="section-title">
+<div class="metric">3x</div>
 
-Performance Optimization
-
-</div>
-
-Client-side rendering strategy minimized server calls improving dashboard responsiveness across high-volume opportunity datasets.
+faster decision insights
 
 </div>
 
-
-<div class="section card">
-
-<div class="section-title">
-
-Business Impact
-
 </div>
 
-<div class="metric">
+</section>
 
-3×
-
-</div>
-
-Increase in executive dashboard adoption rate.
-
-</div>
-
+<script>
+lucide.createIcons();
+</script>
 
 </body>
-
 </html>
