@@ -1,132 +1,105 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
+<title>Case Automation Engine</title>
 
-<title>Enterprise Case Automation Framework</title>
-
-<link rel="stylesheet" href="project-style.css">
+<link rel="stylesheet" href="../style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
 
 </head>
 
 <body>
 
+<nav class="nav">
 
-<h1>
+<a href="../index.html" class="back-home">
 
+<i data-lucide="arrow-left"></i>
+Back to Portfolio
+
+</a>
+
+</nav>
+
+<section class="section">
+
+<h1 class="section-title">
 Enterprise Case Automation Framework
-
 </h1>
 
+<div>
 
-<div class="section">
-
-<div class="tech-badge">Flow Orchestration</div>
-
-<div class="tech-badge">Assignment Routing</div>
-
-<div class="tech-badge">SLA Escalation</div>
-
-<div class="tech-badge">Validation Guardrails</div>
-
-<div class="tech-badge">Queue Automation</div>
+<span class="tech-badge">Flow Orchestration</span>
+<span class="tech-badge">Assignment Routing</span>
+<span class="tech-badge">Escalation SLA</span>
+<span class="tech-badge">Validation Guardrails</span>
 
 </div>
 
+<br>
 
-<div class="section card">
+<div class="cards">
 
-<div class="section-title">
+<div class="card">
 
-Context
+<h3>Context</h3>
 
-</div>
+<p>
 
-Support teams processed high-volume service cases manually, generating routing delays and inconsistent SLA visibility across queues.
+Support queues processed high-volume cases manually,
+generating routing delays and inconsistent SLA tracking.
 
-</div>
-
-
-<div class="section card">
-
-<div class="section-title">
-
-Architecture Strategy
+</p>
 
 </div>
 
-Designed a modular Record-Triggered Flow orchestration engine composed of reusable routing subflows enabling scalable queue expansion without introducing Apex dependency or technical debt risk.
+<div class="card">
+
+<h3>Architecture Strategy</h3>
+
+<p>
+
+Designed reusable modular Flow orchestration engine
+scalable across queues without Apex dependency.
+
+</p>
 
 </div>
 
+<div class="card">
 
-<div class="section card">
+<h3>Security Model</h3>
 
-<div class="section-title">
+<p>
 
-Solution Layers
+Role hierarchy enforcement,
+field-level security validation,
+audit-safe ownership transitions.
 
-</div>
-
-• Record-Triggered Flow orchestration engine  
-• Assignment routing decision subflow  
-• SLA escalation monitoring logic  
-• Closure validation guardrails  
-• Supervisor visibility dashboards  
+</p>
 
 </div>
 
+<div class="card">
 
-<div class="section card">
+<h3>Business Impact</h3>
 
-<div class="section-title">
+<div class="metric">40%</div>
 
-Security Model
-
-</div>
-
-Role hierarchy enforcement  
-Field-level access validation  
-Ownership transition auditing safeguards  
+Manual routing reduction
 
 </div>
 
-
-<div class="section card">
-
-<div class="section-title">
-
-Scalability Strategy
-
 </div>
 
-Reusable routing logic enables extension across new service queues without duplication logic or maintenance overhead increase.
+</section>
 
-</div>
-
-
-<div class="section card">
-
-<div class="section-title">
-
-Business Impact
-
-</div>
-
-<div class="metric">
-
-40%
-
-</div>
-
-Reduction in manual routing workload across service operations.
-
-</div>
-
+<script>
+lucide.createIcons();
+</script>
 
 </body>
-
 </html>
