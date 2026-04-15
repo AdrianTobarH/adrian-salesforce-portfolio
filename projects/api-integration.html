@@ -1,114 +1,93 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
+<title>External API Integration</title>
 
-<title>Reusable API Integration Architecture</title>
-
-<link rel="stylesheet" href="project-style.css">
+<link rel="stylesheet" href="../style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
 
 </head>
 
 <body>
 
+<nav class="nav">
 
-<h1>
+<a href="../index.html" class="back-home">
 
-Reusable Salesforce API Integration Layer
+<i data-lucide="arrow-left"></i>
+Back to Portfolio
+
+</a>
+
+</nav>
+
+<section class="section">
+
+<h1 class="section-title">
+
+Salesforce External Integration Architecture
 
 </h1>
 
+<div>
 
-<div class="section">
-
-<div class="tech-badge">Named Credentials</div>
-
-<div class="tech-badge">REST APIs</div>
-
-<div class="tech-badge">Authentication Layer</div>
-
-<div class="tech-badge">Retry Logic</div>
+<span class="tech-badge">REST API</span>
+<span class="tech-badge">OAuth 2.0</span>
+<span class="tech-badge">Platform Events</span>
 
 </div>
 
+<br>
 
-<div class="section card">
+<div class="cards">
 
-<div class="section-title">
+<div class="card">
 
-Context
+<h3>Challenge</h3>
 
-</div>
-
-Customer interaction data existed across external platforms creating fragmented visibility within Salesforce service workflows.
-
-</div>
-
-
-<div class="section card">
-
-<div class="section-title">
-
-Architecture Strategy
+Disconnected external data sources reduced
+customer lifecycle visibility.
 
 </div>
 
-Designed a reusable Apex integration service layer leveraging Named Credentials enabling secure authentication abstraction and standardized API communication patterns.
+<div class="card">
+
+<h3>Integration Strategy</h3>
+
+REST-based middleware sync layer
+with retry logic + monitoring events.
 
 </div>
 
+<div class="card">
 
-<div class="section card">
+<h3>Security Layer</h3>
 
-<div class="section-title">
-
-Solution Layers
-
-</div>
-
-• Named Credential authentication abstraction  
-• REST integration service layer  
-• Error handling retry logic  
-• Data normalization pipeline  
+OAuth authentication
+token refresh lifecycle control.
 
 </div>
 
+<div class="card">
 
-<div class="section card">
+<h3>Impact</h3>
 
-<div class="section-title">
+<div class="metric">Realtime</div>
 
-Scalability Strategy
-
-</div>
-
-Reusable service architecture supports onboarding additional integrations without modifying orchestration logic.
+customer data synchronization
 
 </div>
 
-
-<div class="section card">
-
-<div class="section-title">
-
-Business Impact
-
 </div>
 
-<div class="metric">
+</section>
 
-60%
-
-</div>
-
-Reduction in manual external data verification tasks.
-
-</div>
-
+<script>
+lucide.createIcons();
+</script>
 
 </body>
-
 </html>
