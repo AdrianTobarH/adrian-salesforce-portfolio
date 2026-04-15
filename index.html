@@ -6,286 +6,313 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Adrian Tobar | Salesforce Platform Developer</title>
+<title>Adrian Tobar | Salesforce Platform Developer II</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
 
 <link rel="stylesheet" href="style.css">
 
 </head>
 
-<body>
+
+<body class="bg-slate-950 text-white font-sans">
 
 
-<nav>
+<!-- NAVBAR -->
 
-<a onclick="scrollToSection('about')">About</a>
+<nav class="flex justify-between items-center px-10 py-6">
 
-<a onclick="scrollToSection('skills')">Skills</a>
+<h1 class="text-2xl font-bold text-blue-400">
 
-<a onclick="scrollToSection('projects')">Projects</a>
+Adrian Tobar
 
-<a onclick="scrollToSection('certifications')">Certifications</a>
+</h1>
 
-<a onclick="scrollToSection('contact')">Contact</a>
+<div class="space-x-6 hidden md:flex">
+
+<a href="#skills">Skills</a>
+<a href="#architecture">Architecture</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+
+</div>
 
 </nav>
 
 
 
-<header>
+<!-- HERO -->
 
-<img src="assets/profile.jpg" class="profile-pic">
+<section class="text-center mt-24">
 
-<h1>Adrian Tobar</h1>
+<img src="assets/profile.jpg"
+class="mx-auto w-36 rounded-full border-4 border-blue-500 shadow-xl">
 
-<p>Salesforce Platform Developer II</p>
+<h1 class="text-5xl font-bold mt-6">
 
-<button onclick="downloadCV()">
+Salesforce Platform Developer II
 
-Download Resume
+</h1>
 
-</button>
+<p class="text-slate-400 mt-4 text-lg">
 
-</header>
-
-
-
-<section id="about">
-
-<h2>About Me</h2>
-
-<p>
-
-Salesforce Administrator and Platform Developer II with 4+ years delivering scalable CRM solutions across Sales Cloud, Service Cloud, Apex development, Lightning Web Components, Flow automation, and REST integrations.
-
-Specialized in automation architecture, process optimization, and secure enterprise implementations aligned with GDPR and HIPAA compliance standards.
+Automation • Apex • LWC • Integrations • Security Architecture
 
 </p>
 
-</section>
 
+<div class="mt-8 flex justify-center gap-6">
 
-
-<section id="skills">
-
-<h2>Technical Skills</h2>
-
-<div class="skills">
-
-<span>Sales Cloud</span>
-<span>Service Cloud</span>
-<span>CPQ</span>
-<span>Apex</span>
-<span>LWC</span>
-<span>Flow Builder</span>
-<span>REST APIs</span>
-<span>SOQL</span>
-<span>Security Model</span>
-<span>Permission Sets</span>
-<span>Sharing Rules</span>
-
-</div>
-
-</section>
-
-
-
-<section id="projects">
-
-<h2>Projects</h2>
-
-
-<div class="card">
-
-<h3>Case Automation Engine</h3>
-
-<p>
-
-Designed lifecycle automation using Flow Builder, validation rules, and assignment routing to streamline support workflows and reduce manual intervention.
-
-</p>
-
-<a href="projects/case-automation.html">
-
-View Architecture →
-
-</a>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>LWC Sales Dashboard</h3>
-
-<p>
-
-Developed Lightning Web Component dashboards powered by Apex controllers and dynamic SOQL queries to provide real-time pipeline visibility.
-
-</p>
-
-<a href="projects/lwc-dashboard.html">
-
-View Architecture →
-
-</a>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>External API Integration</h3>
-
-<p>
-
-Implemented secure REST integrations using Named Credentials and Apex callouts to synchronize external customer platforms with Salesforce.
-
-</p>
-
-<a href="projects/api-integration.html">
-
-View Architecture →
-
-</a>
-
-</div>
-
-
-</section>
-
-
-
-<section id="certifications">
-
-<h2>Certifications</h2>
-
-
-<div class="cert-grid">
-
-<img src="assets/certifications/Platform Developer II.png">
-
-<img src="assets/certifications/Platform Developer.png">
-
-<img src="assets/certifications/Platform Administrator.png">
-
-<img src="assets/certifications/Platform App Builder.png">
-
-<img src="assets/certifications/Platform Foundations.png">
-
-<img src="assets/certifications/Agentforce Specialist.png">
-
-</div>
-
-
-</section>
-
-
-
-<section>
-
-<h2>Architecture Approach</h2>
-
-<p>
-
-Due to client confidentiality agreements, implementation screenshots cannot be publicly shared. However, architecture patterns represented in this portfolio reflect real-world enterprise CRM solutions delivered using Salesforce best practices.
-
-Examples include:
-
-</p>
-
-<ul>
-
-<li>Flow-based automation frameworks</li>
-
-<li>LWC component architecture</li>
-
-<li>Secure REST API integrations</li>
-
-<li>Enterprise role hierarchy design</li>
-
-<li>Permission-set driven security models</li>
-
-</ul>
-
-</section>
-
-
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-
-<p>
-
-📧
-
-<a href="mailto:adriantobar97@gmail.com">
-
-Send Email
-
-</a>
-
-</p>
-
-
-
-<p>
-
-📱
-
-<a href="tel:+593984681976">
-
-Call Me
-
-</a>
-
-</p>
-
-
-
-<p>
-
-💼
-
-<a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank">
-
-LinkedIn Profile
-
-</a>
-
-</p>
-
-
-
-<p>
-
-📂
-
-<a href="Adrian Tobar CV.pdf">
+<a href="Adrian Tobar CV.pdf"
+class="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600">
 
 Download CV
 
 </a>
 
-</p>
 
+<a href="mailto:adriantobar97@gmail.com"
+class="border border-blue-400 px-6 py-3 rounded-lg hover:bg-blue-500">
+
+Contact Me
+
+</a>
+
+</div>
 
 </section>
 
 
 
-<footer>
+<!-- EXPERIENCE METRICS -->
 
-© 2026 Adrian Tobar | Salesforce Platform Developer II
+<section class="grid md:grid-cols-3 gap-8 text-center mt-24 px-10">
+
+<div>
+
+<h2 class="text-4xl font-bold text-blue-400">
+
+4+
+
+</h2>
+
+<p>Years Salesforce Experience</p>
+
+</div>
+
+<div>
+
+<h2 class="text-4xl font-bold text-blue-400">
+
+6
+
+</h2>
+
+<p>Certifications</p>
+
+</div>
+
+<div>
+
+<h2 class="text-4xl font-bold text-blue-400">
+
+Enterprise
+
+</h2>
+
+<p>CRM Implementations</p>
+
+</div>
+
+</section>
+
+
+
+<!-- SKILLS -->
+
+<section id="skills" class="mt-32 px-10">
+
+<h2 class="text-3xl font-bold mb-12">
+
+Technical Stack
+
+</h2>
+
+<div class="grid md:grid-cols-4 gap-6">
+
+<div class="card">Sales Cloud</div>
+<div class="card">Service Cloud</div>
+<div class="card">CPQ</div>
+<div class="card">Apex</div>
+<div class="card">LWC</div>
+<div class="card">Flow Builder</div>
+<div class="card">REST APIs</div>
+<div class="card">Security Model</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ARCHITECTURE EXPERTISE -->
+
+<section id="architecture" class="mt-32 px-10">
+
+<h2 class="text-3xl font-bold mb-12">
+
+Architecture Expertise
+
+</h2>
+
+<div class="grid md:grid-cols-2 gap-10">
+
+<div class="architecture-card">
+
+Flow automation frameworks for enterprise lifecycle management
+
+</div>
+
+<div class="architecture-card">
+
+Lightning Web Component UI architecture with Apex controllers
+
+</div>
+
+<div class="architecture-card">
+
+Secure REST API integrations using Named Credentials
+
+</div>
+
+<div class="architecture-card">
+
+Role hierarchy and permission-set driven security models
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PROJECTS -->
+
+<section id="projects" class="mt-32 px-10">
+
+<h2 class="text-3xl font-bold mb-12">
+
+Featured Projects
+
+</h2>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<a href="projects/case-automation.html" class="project-card">
+
+Case Automation Engine
+
+</a>
+
+<a href="projects/lwc-dashboard.html" class="project-card">
+
+LWC Sales Dashboard
+
+</a>
+
+<a href="projects/api-integration.html" class="project-card">
+
+External API Integration
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- CERTIFICATIONS -->
+
+<section class="mt-32 px-10">
+
+<h2 class="text-3xl font-bold mb-12">
+
+Certifications
+
+</h2>
+
+<div class="grid md:grid-cols-6 gap-6">
+
+<img src="assets/certifications/Platform Developer II.png">
+<img src="assets/certifications/Platform Developer.png">
+<img src="assets/certifications/Platform Administrator.png">
+<img src="assets/certifications/Platform App Builder.png">
+<img src="assets/certifications/Platform Foundations.png">
+<img src="assets/certifications/Agentforce Specialist.png">
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section id="contact"
+class="mt-32 text-center">
+
+<h2 class="text-3xl font-bold">
+
+Let's Work Together
+
+</h2>
+
+<p class="text-slate-400 mt-4">
+
+Available for remote Salesforce roles
+
+</p>
+
+<div class="flex justify-center gap-6 mt-6">
+
+<a href="mailto:adriantobar97@gmail.com"
+class="contact-btn">
+
+Email
+
+</a>
+
+<a href="tel:+593984681976"
+class="contact-btn">
+
+Call
+
+</a>
+
+<a href="https://www.linkedin.com/in/adrian-tobar-hanze/"
+target="_blank"
+class="contact-btn">
+
+LinkedIn
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<footer class="text-center mt-20 pb-10 text-slate-500">
+
+© 2026 Adrian Tobar
 
 </footer>
 
 
 <script src="script.js"></script>
-
 
 </body>
 
