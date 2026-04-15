@@ -1,58 +1,66 @@
 body{
 
+margin:0;
+
+font-family:system-ui;
+
 background:#020617;
 
 color:white;
 
-font-family:system-ui;
-
-max-width:1100px;
-
-margin:auto;
-
-padding:60px;
+padding:80px 12%;
 
 }
+
+
+h1{
+
+font-size:42px;
+
+margin-bottom:40px;
+
+}
+
 
 .section{
 
-margin-bottom:70px;
+margin-bottom:40px;
 
 }
 
-.section-title{
-
-font-size:28px;
-
-font-weight:700;
-
-color:#60a5fa;
-
-margin-bottom:20px;
-
-}
 
 .card{
 
-background:#020617;
-
 border:1px solid #1e293b;
 
-padding:30px;
+padding:28px;
 
 border-radius:14px;
 
-transition:.4s;
+transition:.3s;
 
 }
+
 
 .card:hover{
 
 border-color:#3b82f6;
 
-transform:translateY(-5px);
+transform:translateY(-4px);
 
 }
+
+
+.section-title{
+
+font-size:22px;
+
+margin-bottom:14px;
+
+color:#60a5fa;
+
+}
+
 
 .tech-badge{
 
@@ -60,11 +68,13 @@ display:inline-block;
 
 padding:6px 14px;
 
+margin-right:8px;
+
+margin-bottom:12px;
+
 border:1px solid #3b82f6;
 
 border-radius:999px;
-
-margin:6px;
 
 font-size:13px;
 
@@ -72,12 +82,13 @@ color:#93c5fd;
 
 }
 
+
 .metric{
 
-font-size:36px;
+font-size:46px;
 
-color:#3b82f6;
+color:#22c55e;
 
-font-weight:700;
+margin-top:10px;
 
 }
