@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 
 <head>
 
@@ -8,79 +8,120 @@
 
 <title>Case Automation Architecture</title>
 
-<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="project-style.css">
 
 </head>
 
-<body class="bg-slate-950 text-white p-10">
+<body>
 
-<h1 class="text-4xl font-bold mb-6">
+<h1>
 
-Case Automation Engine
+Enterprise Case Automation Framework
 
 </h1>
 
-<section class="mb-10">
 
-<h2 class="text-2xl text-blue-400 mb-3">
+<div class="section">
 
-Problem
+<div class="tech-badge">Flow Orchestration</div>
 
-</h2>
+<div class="tech-badge">Assignment Logic</div>
 
-<p>
+<div class="tech-badge">SLA Escalation</div>
 
-Support agents manually routed cases creating SLA delays and inconsistent ownership tracking.
+<div class="tech-badge">Validation Controls</div>
 
-</p>
+</div>
 
-</section>
 
-<section class="mb-10">
+<div class="section card">
 
-<h2 class="text-2xl text-blue-400 mb-3">
+<div class="section-title">
 
-Solution Architecture
+Context
 
-</h2>
+</div>
 
-<ul class="list-disc ml-6">
+Support teams processed high-volume service cases manually, creating routing delays and inconsistent SLA tracking visibility.
 
-<li>Record-triggered flows</li>
+</div>
 
-<li>Assignment routing logic</li>
 
-<li>Escalation subflows</li>
+<div class="section card">
 
-<li>Validation rules before closure</li>
+<div class="section-title">
 
-</ul>
+Architecture Strategy
 
-</section>
+</div>
 
-<section>
+Designed a modular Flow orchestration engine using reusable subflows enabling scalable routing logic expansion without Apex dependency.
 
-<h2 class="text-2xl text-blue-400 mb-3">
+</div>
 
-Impact
 
-</h2>
+<div class="section card">
 
-<p>
+<div class="section-title">
 
-Reduced manual assignment workload by ~40% while improving SLA compliance visibility.
+Solution Layers
 
-</p>
+</div>
 
-</section>
+• Record-Triggered Flow engine  
+• Assignment routing subflow  
+• Escalation framework  
+• Closure validation guardrails  
+• Reporting dashboards  
 
-<a href="../index.html"
+</div>
 
-class="mt-10 inline-block text-blue-400">
 
-← Back to portfolio
+<div class="section card">
 
-</a>
+<div class="section-title">
+
+Security Model
+
+</div>
+
+Role hierarchy enforcement  
+Field-level access validation  
+Audit-safe ownership transitions  
+
+</div>
+
+
+<div class="section card">
+
+<div class="section-title">
+
+Scalability Strategy
+
+</div>
+
+Reusable routing subflows enable extension across queues without duplication logic or technical debt introduction.
+
+</div>
+
+
+<div class="section card">
+
+<div class="section-title">
+
+Business Impact
+
+</div>
+
+<div class="metric">
+
+40%
+
+</div>
+
+Manual routing reduction
+
+</div>
 
 </body>
 
