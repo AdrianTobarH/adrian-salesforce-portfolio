@@ -1,111 +1,169 @@
-document.addEventListener("DOMContentLoaded",()=>{
+lucide.createIcons()
 
 
-/* NAVBAR SCROLL */
+/* ===============================
+LANGUAGE ENGINE FULL TRANSLATION
+=============================== */
 
-const navbar=document.getElementById("navbar");
+const translations = {
 
-window.addEventListener("scroll",()=>{
+EN: {
 
-if(window.scrollY>40){
-navbar.classList.add("scrolled");
-}else{
-navbar.classList.remove("scrolled");
-}
+headline:
+"Salesforce Architect-level Solutions for Enterprise Automation",
 
-});
+availability:
+"Available for Remote Roles",
 
+metrics_title:
+"Architecture Metrics Impact"
 
-/* REVEAL ANIMATION */
-
-const reveals=document.querySelectorAll(".reveal");
-
-window.addEventListener("scroll",()=>{
-
-reveals.forEach(section=>{
-
-if(section.getBoundingClientRect().top < window.innerHeight-100){
-section.classList.add("active");
-}
-
-});
-
-});
-
-
-/* TIMELINE SWITCHER */
-
-const tabs=document.querySelectorAll(".timeline-tab");
-
-const panels=document.querySelectorAll(".timeline-panel");
-
-tabs.forEach(tab=>{
-
-tab.addEventListener("click",()=>{
-
-tabs.forEach(t=>t.classList.remove("active"));
-panels.forEach(p=>p.classList.remove("active"));
-
-tab.classList.add("active");
-
-document.getElementById(tab.dataset.project)
-.classList.add("active");
-
-});
-
-});
-
-
-/* LANGUAGE SWITCHER */
-
-const translations={
-
-en:{
-headline:"Designing Scalable Salesforce Automation for Enterprise Teams"
 },
 
-es:{
-headline:"Diseñando automatización Salesforce escalable para equipos empresariales"
+ES: {
+
+headline:
+"Soluciones Salesforce nivel Arquitecto para Automatización Empresarial",
+
+availability:
+"Disponible para roles remotos",
+
+metrics_title:
+"Impacto Métrico de Arquitectura"
+
 },
 
-fr:{
-headline:"Conception d'automatisations Salesforce évolutives pour équipes enterprise"
+FR: {
+
+headline:
+"Solutions Salesforce niveau Architecte pour automatisation entreprise",
+
+availability:
+"Disponible pour rôles remote",
+
+metrics_title:
+"Impact métrique d’architecture"
+
 }
 
-};
-
-window.setLanguage=(lang)=>{
-
-document.querySelector(".hero h1")
-.innerText=translations[lang].headline;
-
-};
+}
 
 
-/* CERT ROTATOR */
+document
+.querySelectorAll(".lang-btn")
+.forEach(btn=>{
 
-const certs=[
+btn.onclick=()=>{
 
-"Salesforce Certified Administrator",
+const lang=btn.dataset.lang
 
-"Salesforce Platform App Builder",
+document
+.querySelectorAll("[data-i18n]")
+.forEach(el=>{
 
-"Flow Automation Specialist",
+const key=el.dataset.i18n
 
-"Integration Architecture Experience"
+if(translations[lang][key])
+el.innerText=translations[lang][key]
 
-];
+})
 
-let certIndex=0;
+}
 
-setInterval(()=>{
-
-certIndex=(certIndex+1)%certs.length;
-
-document.getElementById("cert-rotator")
-.innerText=certs[certIndex];
-
-},2500);
+})
 
 
-});
+/* ===============================
+ARCHITECTURE LAYER HOVER EFFECT
+=============================== */
+
+document
+.querySelectorAll(".arch-layer")
+.forEach(layer=>{
+
+layer.addEventListener("mouseenter",()=>{
+
+layer.style.transform="scale(1.04)"
+
+})
+
+layer.addEventListener("mouseleave",()=>{
+
+layer.style.transform="scale(1)"
+
+})
+
+})
+
+
+/* ===============================
+FLOW vs APEX MATRIX INTERACTION
+=============================== */
+
+document
+.querySelectorAll(".decision-card")
+.forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transform="translateY(-8px)"
+
+})
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="translateY(0px)"
+
+})
+
+})
+
+
+/* ===============================
+ARCHITECTURE PANEL CLICK EXPAND
+=============================== */
+
+document
+.querySelectorAll(".architecture-card")
+.forEach(card=>{
+
+card.addEventListener("click",()=>{
+
+card.classList.toggle("expanded")
+
+})
+
+})
+
+
+/* ===============================
+METRICS SCROLL REVEAL
+=============================== */
+
+const metricsObserver =
+new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity=1
+entry.target.style.transform="translateY(0)"
+
+}
+
+})
+
+})
+
+
+document
+.querySelectorAll(".metric-card")
+.forEach(card=>{
+
+card.style.opacity=0
+card.style.transform="translateY(40px)"
+
+metricsObserver.observe(card)
+
+})
