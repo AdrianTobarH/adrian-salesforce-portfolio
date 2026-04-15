@@ -1,21 +1,22 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Adrian Tobar | Salesforce Platform Developer II</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<script src="https://cdn.tailwindcss.com"></script>
+<title>Adrian Tobar | Salesforce Engineer</title>
 
 <link rel="stylesheet" href="style.css">
 
+<script defer src="script.js"></script>
+
 </head>
 
-
-<body class="bg-slate-950 text-white">
+<body>
 
 
 <!-- NAVBAR -->
@@ -28,12 +29,12 @@ Adrian Tobar
 
 </div>
 
-<div class="menu">
+<div>
 
-<a href="#skills">Skills</a>
-<a href="#architecture">Architecture</a>
 <a href="#projects">Projects</a>
-<a href="#certifications">Certifications</a>
+
+<a href="#architecture">Architecture</a>
+
 <a href="#contact">Contact</a>
 
 </div>
@@ -46,8 +47,6 @@ Adrian Tobar
 
 <section class="hero">
 
-<div class="hero-container">
-
 <img src="assets/profile.jpg" class="profile-pic">
 
 <h1 class="hero-title">
@@ -58,13 +57,19 @@ Salesforce Platform Developer II
 
 <p class="hero-subtitle">
 
-Automation Architect · Apex Engineer · LWC Specialist · Integration Builder
+Automation Architect · Apex Engineer · LWC Specialist · Integration Builder · Solution Design Thinker
 
 </p>
 
+<div class="availability-badge">
+
+Available for Remote Roles • GMT-5 overlap with PT / ET teams
+
+</div>
+
 <div class="hero-buttons">
 
-<a href="Adrian Tobar CV.pdf" class="primary-btn">
+<a href="Adrian_Tobar_CV.pdf" class="primary-btn">
 
 Download Resume
 
@@ -78,15 +83,13 @@ Contact Me
 
 </div>
 
-</div>
-
 </section>
 
 
 
 <!-- METRICS -->
 
-<section class="metrics">
+<section class="metrics reveal">
 
 <div class="metric-card">
 
@@ -100,7 +103,7 @@ Contact Me
 
 <h2>6</h2>
 
-<p>Salesforce Certifications</p>
+<p>Certifications</p>
 
 </div>
 
@@ -116,50 +119,41 @@ Contact Me
 
 
 
-<!-- SKILLS -->
+<!-- DELIVERY TIMELINE -->
 
-<section id="skills" class="section">
+<section class="timeline reveal">
 
-<h2>Technical Expertise</h2>
+<h2>
 
-<div class="grid">
+Delivery Lifecycle Approach
 
-<div class="card skill-card"
-onclick="showSkill('salescloud')">
+</h2>
 
-Sales Cloud
+<div class="timeline-container">
 
-</div>
+<div class="timeline-card">
 
-
-<div class="card skill-card"
-onclick="showSkill('flow')">
-
-Flow Automation
+Discovery → stakeholder alignment
 
 </div>
 
+<div class="timeline-card">
 
-<div class="card skill-card"
-onclick="showSkill('apex')">
-
-Apex Development
+Architecture → scalable automation patterns
 
 </div>
 
+<div class="timeline-card">
 
-<div class="card skill-card"
-onclick="showSkill('lwc')">
-
-Lightning Web Components
+Implementation → Flow + Apex + LWC
 
 </div>
 
+<div class="timeline-card">
+
+Validation → dashboards + reporting
+
 </div>
-
-
-<div id="skill-info"
-class="skill-panel hidden">
 
 </div>
 
@@ -167,47 +161,115 @@ class="skill-panel hidden">
 
 
 
-<!-- ARCHITECTURE -->
+<!-- ARCHITECTURE PHILOSOPHY -->
 
-<section id="architecture" class="section">
+<section id="architecture" class="architecture reveal">
 
-<h2>Architecture Expertise</h2>
+<h2>
 
-<div class="grid">
+Architecture Decision Philosophy
 
-<div class="card"
-onclick="openArchitecture('flow')">
+</h2>
 
-Flow automation frameworks
+<div class="architecture-grid">
 
-</div>
+<div class="arch-card">
 
-<div class="card"
-onclick="openArchitecture('integration')">
-
-Secure API integrations
+Flow-first automation strategy
 
 </div>
 
-<div class="card"
-onclick="openArchitecture('security')">
+<div class="arch-card">
 
-Security architecture model
-
-</div>
-
-<div class="card"
-onclick="openArchitecture('data')">
-
-Enterprise data migration
+Apex for orchestration logic
 
 </div>
 
+<div class="arch-card">
+
+LWC for performance UX
+
 </div>
 
+<div class="arch-card">
 
-<div id="architecture-panel"
-class="skill-panel hidden">
+API-led integrations
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ARCHITECTURE DIAGRAM -->
+
+<section class="diagram reveal">
+
+<h2>
+
+Solution Architecture Model
+
+</h2>
+
+<div class="diagram-box">
+
+User Layer
+
+↓
+
+Lightning UI / LWC
+
+↓
+
+Apex Controllers
+
+↓
+
+Flow Orchestration Engine
+
+↓
+
+External APIs / Data Services
+
+</div>
+
+</section>
+
+
+
+<!-- BEFORE VS AFTER -->
+
+<section class="impact reveal">
+
+<h2>
+
+Transformation Impact
+
+</h2>
+
+<div class="impact-grid">
+
+<div>
+
+<h3>Before</h3>
+
+Manual routing  
+Limited visibility  
+Disconnected reporting
+
+</div>
+
+<div>
+
+<h3>After</h3>
+
+Automated workflows  
+Real-time dashboards  
+Unified integrations
+
+</div>
 
 </div>
 
@@ -217,132 +279,70 @@ class="skill-panel hidden">
 
 <!-- PROJECTS -->
 
-<section id="projects" class="section">
+<section id="projects" class="projects reveal">
 
-<h2>Featured Implementations</h2>
+<h2>
 
-<div class="projects">
+Architecture Case Studies
 
-<a href="projects/case-automation.html">
+</h2>
+
+<div class="project-grid">
+
+<a href="projects/case-automation.html" class="project-card">
 
 Case Automation Engine
 
 </a>
 
-<a href="projects/lwc-dashboard.html">
+<a href="projects/lwc-dashboard.html" class="project-card">
 
-LWC Sales Dashboard
+Executive LWC Dashboard
 
 </a>
 
-<a href="projects/api-integration.html">
+<a href="projects/api-integration.html" class="project-card">
 
-External API Integration
+Secure API Integration
+
+</a>
+
+<a href="projects/case-study-enterprise-automation.html" class="project-card">
+
+Enterprise Architecture Study
 
 </a>
 
 </div>
 
 </section>
-
-
-
-<!-- CERTIFICATIONS -->
-
-<section id="certifications"
-class="section">
-
-<h2>Certifications</h2>
-
-<div class="cert-grid">
-
-<img src="assets/certifications/Platform Developer II.png"
-onclick="zoomCert(this)">
-
-<img src="assets/certifications/Platform Developer.png"
-onclick="zoomCert(this)">
-
-<img src="assets/certifications/Platform Administrator.png"
-onclick="zoomCert(this)">
-
-<img src="assets/certifications/Platform App Builder.png"
-onclick="zoomCert(this)">
-
-<img src="assets/certifications/Platform Foundations.png"
-onclick="zoomCert(this)">
-
-<img src="assets/certifications/Agentforce Specialist.png"
-onclick="zoomCert(this)">
-
-</div>
-
-</section>
-
-
-
-<div id="certModal"
-class="modal hidden"
-onclick="closeModal()">
-
-<img id="modalImg">
-
-</div>
 
 
 
 <!-- CONTACT -->
 
-<section id="contact"
-class="contact">
+<section id="contact" class="contact reveal">
 
 <h2>
 
-Available for Remote Salesforce Roles
+Let's Build Scalable Salesforce Solutions
 
 </h2>
 
 <p>
 
-LATAM timezone overlap with US teams
+Experienced working across distributed US timezone teams (PT / ET overlap)
 
 </p>
 
+<a href="mailto:adriantobar97@gmail.com" class="primary-btn">
 
-<div class="contact-buttons">
-
-<a href="mailto:adriantobar97@gmail.com">
-
-Email
+Contact Me
 
 </a>
-
-<a href="tel:+593984681976">
-
-Call
-
-</a>
-
-<a href="https://www.linkedin.com/in/adrian-tobar-hanze/"
-target="_blank">
-
-LinkedIn
-
-</a>
-
-</div>
 
 </section>
 
-
-
-<footer>
-
-© 2026 Adrian Tobar
-
-</footer>
-
-
-<script src="script.js"></script>
 
 </body>
 
