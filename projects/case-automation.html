@@ -1,48 +1,87 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
-<title>Case Automation Engine</title>
-<link rel="stylesheet" href="../style.css">
+
+<title>Case Automation Architecture</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
-<body>
+<body class="bg-slate-950 text-white p-10">
 
-<section>
+<h1 class="text-4xl font-bold mb-6">
 
-<h1>Case Automation Engine</h1>
+Case Automation Engine
 
-<h2>Business Problem</h2>
+</h1>
 
-<p>
-Support teams were manually assigning cases and updating status transitions, causing delays and inconsistent SLA tracking.
-</p>
+<section class="mb-10">
 
-<h2>Solution</h2>
+<h2 class="text-2xl text-blue-400 mb-3">
 
-<p>
-Designed Flow-based automation to manage assignment routing, status lifecycle transitions, and escalation triggers automatically.
-</p>
+Problem
 
-<h2>Architecture</h2>
-
-<ul>
-<li>Record-triggered Flow</li>
-<li>Assignment Rules</li>
-<li>Validation Rules</li>
-<li>Permission Sets</li>
-</ul>
-
-<h2>Impact</h2>
+</h2>
 
 <p>
-Reduced manual intervention and improved response time visibility across support workflows.
-</p>
 
-<a href="../index.html">⬅ Back</a>
+Support agents manually routed cases creating SLA delays and inconsistent ownership tracking.
+
+</p>
 
 </section>
 
+<section class="mb-10">
+
+<h2 class="text-2xl text-blue-400 mb-3">
+
+Solution Architecture
+
+</h2>
+
+<ul class="list-disc ml-6">
+
+<li>Record-triggered flows</li>
+
+<li>Assignment routing logic</li>
+
+<li>Escalation subflows</li>
+
+<li>Validation rules before closure</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2 class="text-2xl text-blue-400 mb-3">
+
+Impact
+
+</h2>
+
+<p>
+
+Reduced manual assignment workload by ~40% while improving SLA compliance visibility.
+
+</p>
+
+</section>
+
+<a href="../index.html"
+
+class="mt-10 inline-block text-blue-400">
+
+← Back to portfolio
+
+</a>
+
 </body>
+
 </html>
