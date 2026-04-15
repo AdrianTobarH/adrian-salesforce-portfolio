@@ -1,51 +1,35 @@
 const skillContent = {
 
-salescloud: `
+salescloud:`
+
 <h3>Sales Cloud Architecture</h3>
 
-<p>
+Designed scalable opportunity lifecycle validation ensuring pipeline integrity before deal closure.
 
-Designed opportunity lifecycle automation improving pipeline tracking visibility across multiple teams.
-
-Example:
-
-Implemented stage transition validation logic ensuring data completeness before closing deals.
-
-</p>
 `,
 
-apex: `
-<h3>Apex Development</h3>
+flow:`
 
-<p>
+<h3>Flow Automation Framework</h3>
 
-Developed REST callout services integrating Salesforce with external insurance platforms.
+Designed reusable subflow orchestration architecture reducing manual assignment workload across service teams.
 
-Implemented retry logic and structured error handling improving integration stability.
-
-</p>
 `,
 
-lwc: `
-<h3>Lightning Web Components</h3>
+apex:`
 
-<p>
+<h3>Apex Integration Services</h3>
 
-Built dynamic KPI dashboards using Apex controllers and reactive UI components for leadership reporting.
+Implemented retry-safe REST callouts using Named Credentials improving reliability across external integrations.
 
-</p>
 `,
 
-flow: `
-<h3>Flow Automation Frameworks</h3>
+lwc:`
 
-<p>
+<h3>LWC Dashboard Engineering</h3>
 
-Implemented case lifecycle automation reducing manual assignment effort by ~40%.
+Developed reactive KPI dashboards leveraging Apex controllers and dynamic SOQL queries.
 
-Designed reusable subflow architecture across service processes.
-
-</p>
 `
 
 };
@@ -54,40 +38,99 @@ Designed reusable subflow architecture across service processes.
 
 function showSkill(skill){
 
-const panel=document.getElementById("skill-info");
+document.getElementById("skill-info").innerHTML=
 
-panel.innerHTML=skillContent[skill];
+skillContent[skill];
 
-panel.classList.remove("hidden");
+document.getElementById("skill-info")
 
-panel.scrollIntoView({behavior:"smooth"});
+.classList.remove("hidden");
+
+}
+
+
+
+function openArchitecture(type){
+
+const content={
+
+flow:`
+
+<h3>Flow Lifecycle Automation Architecture</h3>
+
+Pattern includes:
+
+• Trigger orchestration  
+• Assignment routing  
+• SLA escalation logic  
+• Modular subflows  
+
+<a href="projects/case-automation.html">
+
+Open technical documentation →
+
+</a>
+
+`,
+
+integration:`
+
+<h3>Secure REST Integration Model</h3>
+
+Architecture based on Named Credentials + Apex callouts + retry logic.
+
+`,
+
+security:`
+
+<h3>Security Architecture</h3>
+
+Role hierarchy + permission-set strategy aligned with enterprise compliance models.
+
+`,
+
+data:`
+
+<h3>Data Migration Strategy</h3>
+
+ETL staging + transformation layer + validation pipeline before production deployment.
+
+`
+
+};
+
+
+
+document.getElementById("architecture-panel")
+
+.innerHTML=content[type];
+
+document.getElementById("architecture-panel")
+
+.classList.remove("hidden");
 
 }
 
 
 
-const revealElements=document.querySelectorAll(
+function zoomCert(img){
 
-".card,.architecture-card,.project-card"
+document.getElementById("certModal")
 
-);
+.classList.remove("hidden");
 
+document.getElementById("modalImg")
 
-
-window.addEventListener("scroll",()=>{
-
-revealElements.forEach(el=>{
-
-const top=el.getBoundingClientRect().top;
-
-if(top<window.innerHeight-80){
-
-el.style.opacity=1;
-
-el.style.transform="translateY(0)";
+.src=img.src;
 
 }
 
-});
 
-});
+
+function closeModal(){
+
+document.getElementById("certModal")
+
+.classList.add("hidden");
+
+}
