@@ -6,47 +6,102 @@
 
 <meta charset="UTF-8">
 
-<title>LWC Dashboard</title>
+<title>LWC Dashboard Architecture</title>
 
-<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="project-style.css">
 
 </head>
 
-<body class="bg-slate-950 text-white p-10">
+<body>
 
-<h1 class="text-4xl font-bold mb-6">
+<h1>
 
-LWC Sales Dashboard
+Executive Opportunity Intelligence Dashboard
 
 </h1>
 
-<section>
 
-<p>
+<div class="section">
 
-Designed Lightning Web Components connected to Apex controllers retrieving real-time opportunity metrics.
+<div class="tech-badge">LWC</div>
 
-</p>
+<div class="tech-badge">Apex Controllers</div>
 
-<ul class="mt-6 list-disc ml-6">
+<div class="tech-badge">Dynamic SOQL</div>
 
-<li>Dynamic SOQL queries</li>
+<div class="tech-badge">Real-Time Metrics</div>
 
-<li>KPI visualization components</li>
+</div>
 
-<li>Leadership reporting dashboards</li>
 
-</ul>
+<div class="section card">
 
-</section>
+<div class="section-title">
 
-<a href="../index.html"
+Context
 
-class="mt-10 inline-block text-blue-400">
+</div>
 
-← Back
+Leadership teams required real-time pipeline visibility beyond standard Salesforce reporting limitations.
 
-</a>
+</div>
+
+
+<div class="section card">
+
+<div class="section-title">
+
+Architecture Strategy
+
+</div>
+
+Developed Lightning Web Components powered by Apex controllers retrieving structured opportunity datasets optimized for performance rendering.
+
+</div>
+
+
+<div class="section card">
+
+<div class="section-title">
+
+Technical Layers
+
+</div>
+
+Client-side LWC rendering  
+Server-side Apex aggregation  
+Dynamic SOQL filters  
+Reusable KPI visualization widgets  
+
+</div>
+
+
+<div class="section card">
+
+<div class="section-title">
+
+Performance Optimization
+
+</div>
+
+Selective field retrieval  
+Cache-friendly queries  
+Lazy component rendering  
+
+</div>
+
+
+<div class="section card">
+
+<div class="section-title">
+
+Business Impact
+
+</div>
+
+Enabled executive-level decision visibility across pipeline health metrics in real-time dashboards.
+
+</div>
 
 </body>
 
