@@ -8,11 +8,13 @@
 
 <title>
 
-Adrian Tobar | Salesforce Engineer Portfolio
+Adrian Tobar | Salesforce Automation Engineer
 
 </title>
 
 <link rel="stylesheet" href="style.css">
+
+<script src="https://unpkg.com/lucide@latest"></script>
 
 </head>
 
@@ -23,43 +25,70 @@ Adrian Tobar | Salesforce Engineer Portfolio
 
 <nav id="navbar" class="nav">
 
-<div class="nav-left">
-
 <div class="logo">
 
 Adrian Tobar
 
 <span class="role-tag">
 
-Salesforce Engineer
+Salesforce Architect Track
 
 </span>
 
 </div>
 
-</div>
 
 <div class="nav-links">
 
-<a href="#projects">Projects</a>
-<a href="#architecture">Architecture</a>
-<a href="#decision-matrix">Decision Model</a>
-<a href="#architecture-timeline">Case Studies</a>
-<a href="#contact">Contact</a>
+<a href="#projects">
+
+<i data-lucide="folder"></i>
+Projects
+
+</a>
+
+<a href="#architecture">
+
+<i data-lucide="layers"></i>
+Architecture
+
+</a>
+
+<a href="#decision-matrix">
+
+<i data-lucide="git-branch"></i>
+Decision Model
+
+</a>
+
+<a href="#architecture-timeline">
+
+<i data-lucide="activity"></i>
+Case Studies
+
+</a>
+
+<a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank">
+
+<i data-lucide="linkedin"></i>
+LinkedIn
+
+</a>
 
 </div>
+
 
 <div class="nav-right">
 
 <span class="timezone-pill">
 
-GMT-5 • PT overlap
+GMT-5 • PT overlap ready
 
 </span>
 
-<a href="mailto:adriantobar97@gmail.com" class="hire-btn">
+<a href="#contact" class="cta-btn">
 
-Hire Me
+Available for Remote Roles
 
 </a>
 
@@ -73,6 +102,10 @@ Hire Me
 
 <section class="hero">
 
+<div class="hero-content">
+
+<div class="hero-text">
+
 <h1>
 
 Salesforce Automation Engineer
@@ -81,9 +114,16 @@ Salesforce Automation Engineer
 
 <p>
 
-Designing scalable enterprise automation using Flow, Apex and Lightning Web Components
+Designing scalable automation architectures using Flow, Apex and Lightning Web Components
 
 </p>
+
+</div>
+
+
+<img src="assets/profile.jpg" class="hero-img">
+
+</div>
 
 </section>
 
@@ -93,21 +133,14 @@ Designing scalable enterprise automation using Flow, Apex and Lightning Web Comp
 
 <section id="projects" class="section reveal">
 
-<h2>
-
-Featured Projects
-
-</h2>
+<h2>Featured Projects</h2>
 
 <div class="cards">
 
+
 <a href="projects/case-automation.html" class="card">
 
-<h3>
-
-Case Automation Engine
-
-</h3>
+<h3>Case Automation Engine</h3>
 
 <p>
 
@@ -117,13 +150,10 @@ Lifecycle automation using Flow orchestration and Apex services
 
 </a>
 
+
 <a href="projects/lwc-dashboard.html" class="card">
 
-<h3>
-
-LWC Analytics Dashboard
-
-</h3>
+<h3>LWC Analytics Dashboard</h3>
 
 <p>
 
@@ -133,13 +163,10 @@ Executive real-time pipeline visibility interface
 
 </a>
 
+
 <a href="projects/api-integration.html" class="card">
 
-<h3>
-
-External API Integration Layer
-
-</h3>
+<h3>External API Integration Layer</h3>
 
 <p>
 
@@ -148,6 +175,7 @@ Reusable Named Credential integration architecture
 </p>
 
 </a>
+
 
 </div>
 
@@ -159,59 +187,31 @@ Reusable Named Credential integration architecture
 
 <section id="architecture" class="architecture-diagram reveal">
 
-<h2>
-
-Salesforce Layered Architecture Model
-
-</h2>
+<h2>Salesforce Layered Architecture Model</h2>
 
 <div class="layer-stack">
 
 <div class="layer user-layer">
 
-User Experience Layer
-
-<span>
-
-Lightning UI · LWC Components
-
-</span>
+Lightning UI · LWC Experience Layer
 
 </div>
 
 <div class="layer logic-layer">
 
-Logic Layer
-
-<span>
-
-Flows · Apex Controllers
-
-</span>
+Flow Orchestration · Apex Services Layer
 
 </div>
 
 <div class="layer data-layer">
 
-Data Layer
-
-<span>
-
-Objects · Validation Rules · Security Model
-
-</span>
+Objects · Security · Validation Layer
 
 </div>
 
 <div class="layer integration-layer">
 
-Integration Layer
-
-<span>
-
-REST APIs · Named Credentials
-
-</span>
+REST APIs · Named Credentials Layer
 
 </div>
 
@@ -225,49 +225,55 @@ REST APIs · Named Credentials
 
 <section id="decision-matrix" class="decision-matrix reveal">
 
-<h2>
-
-Flow vs Apex Decision Matrix
-
-</h2>
+<h2>Flow vs Apex Decision Matrix</h2>
 
 <div class="matrix-container">
+
 
 <div class="matrix-card flow-card">
 
 <h3>Use Flow When</h3>
 
 <ul>
+
 <li>Admin maintainability required</li>
-<li>Rapid iteration needed</li>
-<li>Declarative automation sufficient</li>
+<li>Rapid iteration cycles</li>
+<li>Declarative orchestration sufficient</li>
+
 </ul>
 
 </div>
+
 
 <div class="matrix-card apex-card">
 
 <h3>Use Apex When</h3>
 
 <ul>
-<li>Transaction control required</li>
-<li>Performance critical logic exists</li>
+
+<li>Transaction-level control needed</li>
 <li>Complex integrations required</li>
+<li>Performance critical logic exists</li>
+
 </ul>
 
 </div>
+
 
 <div class="matrix-card hybrid-card">
 
 <h3>Hybrid Pattern</h3>
 
 <ul>
-<li>Flow orchestration</li>
+
+<li>Flow orchestration layer</li>
 <li>Apex service layer</li>
-<li>Enterprise scalability</li>
+<li>Enterprise scalability required</li>
+
 </ul>
 
 </div>
+
 
 </div>
 
@@ -279,11 +285,8 @@ Flow vs Apex Decision Matrix
 
 <section id="architecture-timeline" class="timeline-section reveal">
 
-<h2>
+<h2>Architecture Decision Review Panel</h2>
 
-Architecture Decision Review Panel
-
-</h2>
 
 <div class="timeline-tabs">
 
@@ -321,11 +324,7 @@ Architecture Stack
 
 <div class="flow-node">
 
-<div class="node-icon">🔍</div>
-
-<span>Discovery</span>
-
-<p>SLA visibility missing</p>
+🔍 Discovery
 
 </div>
 
@@ -333,11 +332,7 @@ Architecture Stack
 
 <div class="flow-node">
 
-<div class="node-icon">🧠</div>
-
-<span>Decision</span>
-
-<p>Hybrid Flow + Apex model</p>
+🧠 Decision
 
 </div>
 
@@ -345,11 +340,7 @@ Architecture Stack
 
 <div class="flow-node impact-node">
 
-<div class="node-icon">🚀</div>
-
-<span>Impact</span>
-
-<p>Improved escalation tracking</p>
+🚀 Impact
 
 </div>
 
@@ -363,27 +354,11 @@ Architecture Stack
 
 <div class="timeline-flow">
 
-<div class="flow-node">
-
-<div class="node-icon">🔍</div>
-
-<span>Discovery</span>
-
-<p>No executive visibility</p>
-
-</div>
+<div class="flow-node">📊 Discovery</div>
 
 <div class="flow-connector"></div>
 
-<div class="flow-node impact-node">
-
-<div class="node-icon">🚀</div>
-
-<span>Impact</span>
-
-<p>Real-time pipeline analytics</p>
-
-</div>
+<div class="flow-node impact-node">🚀 Impact</div>
 
 </div>
 
@@ -395,27 +370,11 @@ Architecture Stack
 
 <div class="timeline-flow">
 
-<div class="flow-node">
-
-<div class="node-icon">🔍</div>
-
-<span>Discovery</span>
-
-<p>Fragmented external data</p>
-
-</div>
+<div class="flow-node">🌐 Discovery</div>
 
 <div class="flow-connector"></div>
 
-<div class="flow-node impact-node">
-
-<div class="node-icon">🚀</div>
-
-<span>Impact</span>
-
-<p>Unified customer model</p>
-
-</div>
+<div class="flow-node impact-node">🚀 Impact</div>
 
 </div>
 
@@ -427,27 +386,11 @@ Architecture Stack
 
 <div class="timeline-flow">
 
-<div class="flow-node">
-
-<div class="node-icon">👤</div>
-
-<span>UX Layer</span>
-
-<p>LWC Experience UI</p>
-
-</div>
+<div class="flow-node">👤 UX Layer</div>
 
 <div class="flow-connector"></div>
 
-<div class="flow-node impact-node">
-
-<div class="node-icon">🏗</div>
-
-<span>Outcome</span>
-
-<p>Enterprise layered architecture</p>
-
-</div>
+<div class="flow-node impact-node">🏗 Enterprise Model</div>
 
 </div>
 
@@ -461,15 +404,11 @@ Architecture Stack
 
 <section id="contact" class="section reveal">
 
-<h2>
-
-Let's Build Something Together
-
-</h2>
+<h2>Let's Build Something Together</h2>
 
 <p>
 
-Available for remote Salesforce engineering roles
+Available for remote Salesforce engineering roles across US timezones
 
 </p>
 
@@ -478,6 +417,12 @@ Available for remote Salesforce engineering roles
 
 
 <script src="script.js"></script>
+
+<script>
+
+lucide.createIcons();
+
+</script>
 
 </body>
 
