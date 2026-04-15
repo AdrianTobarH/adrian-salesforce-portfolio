@@ -1,38 +1,16 @@
-function downloadCV() {
-
-window.open("Adrian Tobar CV.pdf");
-
-}
-
-
-
-function scrollToSection(sectionId) {
-
-document.getElementById(sectionId).scrollIntoView({
-
-behavior:"smooth"
-
-});
-
-}
-
-
-
-const cards=document.querySelectorAll(".card");
-
-
+const elements=document.querySelectorAll(".card,.architecture-card,.project-card");
 
 window.addEventListener("scroll",()=>{
 
-cards.forEach(card=>{
+elements.forEach(el=>{
 
-const cardTop=card.getBoundingClientRect().top;
+const top=el.getBoundingClientRect().top;
 
-if(cardTop<window.innerHeight-50){
+if(top<window.innerHeight-50){
 
-card.style.opacity=1;
+el.style.opacity=1;
 
-card.style.transform="translateY(0)";
+el.style.transform="translateY(0)";
 
 }
 
