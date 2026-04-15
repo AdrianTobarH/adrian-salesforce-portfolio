@@ -1,92 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Adrian Tobar | Salesforce Admin & Developer</title>
 
-<style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f7f9fc;
-  color: #1a1a1a;
-}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-header {
-  background: #0b5cab;
-  color: white;
-  padding: 40px;
-  text-align: center;
-}
+<title>Adrian Tobar | Salesforce Platform Developer</title>
 
-section {
-  max-width: 900px;
-  margin: auto;
-  padding: 40px 20px;
-}
+<link rel="stylesheet" href="style.css">
 
-h2 {
-  border-bottom: 2px solid #0b5cab;
-  padding-bottom: 10px;
-}
-
-.skills span {
-  display: inline-block;
-  background: #e3efff;
-  padding: 8px 12px;
-  margin: 5px;
-  border-radius: 5px;
-}
-
-.project {
-  background: white;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #0b5cab;
-  color: white;
-}
-
-button {
-  background: #0b5cab;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #094a8c;
-}
-</style>
 </head>
 
 <body>
 
+
+<nav>
+
+<a onclick="scrollToSection('about')">About</a>
+
+<a onclick="scrollToSection('skills')">Skills</a>
+
+<a onclick="scrollToSection('projects')">Projects</a>
+
+<a onclick="scrollToSection('certifications')">Certifications</a>
+
+<a onclick="scrollToSection('contact')">Contact</a>
+
+</nav>
+
+
+
 <header>
-<h1>Adrian Tobar Hanze</h1>
-<p>Salesforce Administrator | Platform Developer II | Apex | LWC | Integrations</p>
-<button onclick="downloadCV()">Download Resume</button>
+
+<img src="assets/profile.jpg" class="profile-pic">
+
+<h1>Adrian Tobar</h1>
+
+<p>Salesforce Platform Developer II</p>
+
+<button onclick="downloadCV()">
+
+Download Resume
+
+</button>
+
 </header>
 
-<section>
+
+
+<section id="about">
+
 <h2>About Me</h2>
+
 <p>
-Salesforce Administrator and Platform Developer II with 4+ years of experience designing scalable CRM solutions using Flow Builder, Apex, Lightning Web Components, and REST integrations.
+
+Salesforce Administrator and Platform Developer II with 4+ years delivering scalable CRM solutions across Sales Cloud, Service Cloud, Apex development, Lightning Web Components, Flow automation, and REST integrations.
+
+Specialized in automation architecture, process optimization, and secure enterprise implementations aligned with GDPR and HIPAA compliance standards.
+
 </p>
+
 </section>
 
-<section>
+
+
+<section id="skills">
+
 <h2>Technical Skills</h2>
+
 <div class="skills">
+
 <span>Sales Cloud</span>
 <span>Service Cloud</span>
 <span>CPQ</span>
@@ -95,65 +79,214 @@ Salesforce Administrator and Platform Developer II with 4+ years of experience d
 <span>Flow Builder</span>
 <span>REST APIs</span>
 <span>SOQL</span>
+<span>Security Model</span>
 <span>Permission Sets</span>
 <span>Sharing Rules</span>
+
 </div>
+
 </section>
 
-<section>
+
+
+<section id="projects">
+
 <h2>Projects</h2>
 
-<div class="project">
+
+<div class="card">
+
 <h3>Case Automation Engine</h3>
+
 <p>
-Automated case assignment and lifecycle tracking using Flow Builder and validation logic.
+
+Designed lifecycle automation using Flow Builder, validation rules, and assignment routing to streamline support workflows and reduce manual intervention.
+
 </p>
+
+<a href="projects/case-automation.html">
+
+View Architecture →
+
+</a>
+
 </div>
 
-<div class="project">
+
+
+<div class="card">
+
 <h3>LWC Sales Dashboard</h3>
+
 <p>
-Custom Lightning Web Component displaying pipeline KPIs using Apex controllers.
+
+Developed Lightning Web Component dashboards powered by Apex controllers and dynamic SOQL queries to provide real-time pipeline visibility.
+
 </p>
+
+<a href="projects/lwc-dashboard.html">
+
+View Architecture →
+
+</a>
+
 </div>
 
-<div class="project">
+
+
+<div class="card">
+
 <h3>External API Integration</h3>
+
 <p>
-Integrated Salesforce with external platform using REST APIs and Named Credentials.
+
+Implemented secure REST integrations using Named Credentials and Apex callouts to synchronize external customer platforms with Salesforce.
+
 </p>
+
+<a href="projects/api-integration.html">
+
+View Architecture →
+
+</a>
+
 </div>
 
+
 </section>
 
-<section>
+
+
+<section id="certifications">
+
 <h2>Certifications</h2>
-<ul>
-<li>Platform Developer II</li>
-<li>Platform Developer I</li>
-<li>Administrator</li>
-<li>App Builder</li>
-<li>Agentforce Specialist</li>
-<li>AI Associate</li>
-</ul>
+
+
+<div class="cert-grid">
+
+<img src="assets/certifications/Platform Developer II.png">
+
+<img src="assets/certifications/Platform Developer.png">
+
+<img src="assets/certifications/Platform Administrator.png">
+
+<img src="assets/certifications/Platform App Builder.png">
+
+<img src="assets/certifications/Platform Foundations.png">
+
+<img src="assets/certifications/Agentforce Specialist.png">
+
+</div>
+
+
 </section>
 
+
+
 <section>
-<h2>Contact</h2>
-<p>Email: adriantobar97@gmail.com</p>
-<p>LinkedIn: linkedin.com/in/adrian-tobar-hanze</p>
-<p>Trailhead: salesforce.com/trailblazer/adriantobar</p>
+
+<h2>Architecture Approach</h2>
+
+<p>
+
+Due to client confidentiality agreements, implementation screenshots cannot be publicly shared. However, architecture patterns represented in this portfolio reflect real-world enterprise CRM solutions delivered using Salesforce best practices.
+
+Examples include:
+
+</p>
+
+<ul>
+
+<li>Flow-based automation frameworks</li>
+
+<li>LWC component architecture</li>
+
+<li>Secure REST API integrations</li>
+
+<li>Enterprise role hierarchy design</li>
+
+<li>Permission-set driven security models</li>
+
+</ul>
+
 </section>
+
+
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+
+<p>
+
+📧
+
+<a href="mailto:adriantobar97@gmail.com">
+
+Send Email
+
+</a>
+
+</p>
+
+
+
+<p>
+
+📱
+
+<a href="tel:+593984681976">
+
+Call Me
+
+</a>
+
+</p>
+
+
+
+<p>
+
+💼
+
+<a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank">
+
+LinkedIn Profile
+
+</a>
+
+</p>
+
+
+
+<p>
+
+📂
+
+<a href="Adrian Tobar CV.pdf">
+
+Download CV
+
+</a>
+
+</p>
+
+
+</section>
+
+
 
 <footer>
-<p>© 2026 Adrian Tobar Hanze</p>
+
+© 2026 Adrian Tobar | Salesforce Platform Developer II
+
 </footer>
 
-<script>
-function downloadCV() {
-  window.open("Adrian_Tobar_CV.pdf");
-}
-</script>
+
+<script src="script.js"></script>
+
 
 </body>
+
 </html>
