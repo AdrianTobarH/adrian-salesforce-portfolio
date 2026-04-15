@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Enterprise Case Automation Architecture</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-slate-950 text-white p-10 max-w-5xl mx-auto">
+
+<h1 class="text-4xl font-bold mb-8">
+
+Enterprise Case Automation Architecture
+
+</h1>
+
+
+<!-- CONTEXT -->
+
+<section class="mb-12">
+
+<h2 class="text-2xl text-blue-400 mb-3">
+
+Context
+
+</h2>
+
+<p>
+
+Support teams processed high volumes of incoming cases with manual assignment routing, inconsistent ownership tracking and SLA visibility gaps affecting response performance.
+
+</p>
+
+</section>
+
+
+<!-- PROBLEM -->
+
+<section class="mb-12">
+
+<h2 class="text-2xl text-blue-400 mb-3">
+
+Problem Statement
+
+</h2>
+
+<ul class="list-disc ml-6">
+
+<li>Manual routing created ownership delays</li>
+
+<li>No structured escalation model</li>
+
+<li>SLA compliance visibility limited</li>
+
+<li>Leadership lacked real-time reporting</li>
+
+</ul>
+
+</section>
+
+
+<!-- CONSTRAINTS -->
+
+<section class="mb-12">
+
+<h2 class="text-2xl text-blue-400 mb-3">
+
+Constraints
+
+</h2>
+
+<ul class="list-disc ml-6">
+
+<li>Needed admin-maintainable automation</li>
+
+<li>Required scalable architecture</li>
+
+<li>Avoid Apex unless necessary</li>
+
+<li>Support future integrations</li>
+
+</ul>
+
+</section>
+
+
+<!-- ARCHITECTURE DECISION -->
+
+<section class="mb-12">
+
+<h2 class="text-2xl text-blue-400 mb-3">
+
+Architecture Strategy
+
+</h2>
+
+<p>
+
+Designed a Flow-first orchestration model supported by modular subflows enabling assignment routing logic reuse across service processes while preserving declarative maintainability.
+
+</p>
+
+</section>
+
+
+<!-- SOLUTION LAYERS -->
+
+<section class="mb-12">
+
+<h2 class="text-2xl text-blue-400 mb-3">
+
+Solution Layers
+
+</h2>
+
+<ul class="list-disc ml-6">
+
+<li>Record-triggered Flow orchestration engine</li>
+
+<li>Reusable assignment routing subflow</li>
+
+<li>Status transition validation controls</li>
+
+<li>SLA escalation logic layer</li>
+
+<li>Leadership reporting dashboards</li>
+
+</ul>
+
+</section>
+
+
+<!-- SECURITY -->
+
+<section class="mb-12">
+
+<h2 class="text-2xl text-blue-400 mb-3">
+
+Security Considerations
+
+</h2>
+
+<ul class="list-disc ml-6">
+
+<li>Role hierarchy-based visibility control</li>
+
+<li>Field-level access enforcement</li>
+
+<li>Audit-safe ownership transitions</li>
+
+</ul>
+
+</section>
+
+
+<!-- SCALABILITY -->
+
+<section class="mb-12">
+
+<h2 class="text-2xl text-blue-400 mb-3">
+
+Scalability Model
+
+</h2>
+
+<p>
+
+Reusable modular subflow architecture supports expansion across additional service queues without introducing logic duplication or Apex dependency.
+
+</p>
+
+</section>
+
+
+<!-- TRADEOFFS -->
+
+<section class="mb-12">
+
+<h2 class="text-2xl text-blue-400 mb-3">
+
+Architecture Tradeoffs
+
+</h2>
+
+<ul class="list-disc ml-6">
+
+<li>Selected Flow over Apex for maintainability</li>
+
+<li>Balanced automation depth with admin transparency</li>
+
+<li>Prepared integration-ready structure</li>
+
+</ul>
+
+</section>
+
+
+<!-- BUSINESS IMPACT -->
+
+<section class="mb-12">
+
+<h2 class="text-2xl text-blue-400 mb-3">
+
+Business Impact
+
+</h2>
+
+<ul class="list-disc ml-6">
+
+<li>Reduced manual assignment workload ~40%</li>
+
+<li>Improved SLA tracking visibility</li>
+
+<li>Enabled leadership-level reporting dashboards</li>
+
+</ul>
+
+</section>
+
+
+<a href="../index.html"
+
+class="text-blue-400">
+
+← Back to Portfolio
+
+</a>
+
+</body>
+
+</html>
