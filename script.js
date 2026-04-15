@@ -1,15 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+
 const navbar = document.getElementById("navbar");
 
-const sections = document.querySelectorAll("section");
-
-const navLinks = document.querySelectorAll(".nav-links a");
-
-const reveals = document.querySelectorAll(".reveal");
-
-
-/* navbar shrink */
 
 window.addEventListener("scroll", () => {
 
@@ -23,16 +16,20 @@ navbar.classList.remove("scrolled");
 
 }
 
+});
+
 
 /* reveal animation */
 
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+
 reveals.forEach(section => {
 
-const windowHeight = window.innerHeight;
+const top = section.getBoundingClientRect().top;
 
-const revealTop = section.getBoundingClientRect().top;
-
-if(revealTop < windowHeight - 100){
+if(top < window.innerHeight - 100){
 
 section.classList.add("active");
 
@@ -40,58 +37,31 @@ section.classList.add("active");
 
 });
 
-
-/* active section highlight */
-
-let current = "";
-
-sections.forEach(section => {
-
-const sectionTop = section.offsetTop;
-
-if(scrollY >= sectionTop - 200){
-
-current = section.getAttribute("id");
-
-}
-
 });
 
 
-navLinks.forEach(link => {
+/* timeline tabs */
 
-link.classList.remove("active");
+const tabs = document.querySelectorAll(".timeline-tab");
 
-if(link.getAttribute("href") === "#" + current){
-
-link.classList.add("active");
-
-}
-
-});
+const panels = document.querySelectorAll(".timeline-panel");
 
 
-});
+tabs.forEach(tab => {
 
+tab.addEventListener("click", () => {
 
-/* smooth scroll */
+tabs.forEach(t => t.classList.remove("active"));
 
-navLinks.forEach(anchor => {
+panels.forEach(p => p.classList.remove("active"));
 
-anchor.addEventListener("click", function(e){
+tab.classList.add("active");
 
-e.preventDefault();
-
-document.querySelector(this.getAttribute("href"))
-
-.scrollIntoView({
-
-behavior:"smooth"
+document.getElementById(tab.dataset.project).classList.add("active");
 
 });
 
 });
 
-});
 
 });
