@@ -28,14 +28,29 @@ Adrian Tobar
 
 </h1>
 
-<div class="space-x-6 hidden md:flex">
+<section id="skills" class="mt-32 px-10">
 
-<a href="#skills">Skills</a>
-<a href="#architecture">Architecture</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+<h2 class="text-3xl font-bold mb-12">
+
+Technical Stack
+
+</h2>
+
+<div class="grid md:grid-cols-4 gap-6">
+
+<div class="card skill-card" onclick="showSkill('salescloud')">Sales Cloud</div>
+
+<div class="card skill-card" onclick="showSkill('apex')">Apex</div>
+
+<div class="card skill-card" onclick="showSkill('lwc')">LWC</div>
+
+<div class="card skill-card" onclick="showSkill('flow')">Flow Builder</div>
 
 </div>
+
+<div id="skill-info" class="skill-info hidden"></div>
+
+</section>
 
 </nav>
 
