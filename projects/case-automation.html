@@ -6,13 +6,14 @@
 
 <meta charset="UTF-8">
 
-<title>Case Automation Architecture</title>
+<title>Enterprise Case Automation Framework</title>
 
 <link rel="stylesheet" href="project-style.css">
 
 </head>
 
 <body>
+
 
 <h1>
 
@@ -25,11 +26,13 @@ Enterprise Case Automation Framework
 
 <div class="tech-badge">Flow Orchestration</div>
 
-<div class="tech-badge">Assignment Logic</div>
+<div class="tech-badge">Assignment Routing</div>
 
 <div class="tech-badge">SLA Escalation</div>
 
-<div class="tech-badge">Validation Controls</div>
+<div class="tech-badge">Validation Guardrails</div>
+
+<div class="tech-badge">Queue Automation</div>
 
 </div>
 
@@ -42,7 +45,7 @@ Context
 
 </div>
 
-Support teams processed high-volume service cases manually, creating routing delays and inconsistent SLA tracking visibility.
+Support teams processed high-volume service cases manually, generating routing delays and inconsistent SLA visibility across queues.
 
 </div>
 
@@ -55,7 +58,7 @@ Architecture Strategy
 
 </div>
 
-Designed a modular Flow orchestration engine using reusable subflows enabling scalable routing logic expansion without Apex dependency.
+Designed a modular Record-Triggered Flow orchestration engine composed of reusable routing subflows enabling scalable queue expansion without introducing Apex dependency or technical debt risk.
 
 </div>
 
@@ -68,11 +71,11 @@ Solution Layers
 
 </div>
 
-• Record-Triggered Flow engine  
-• Assignment routing subflow  
-• Escalation framework  
+• Record-Triggered Flow orchestration engine  
+• Assignment routing decision subflow  
+• SLA escalation monitoring logic  
 • Closure validation guardrails  
-• Reporting dashboards  
+• Supervisor visibility dashboards  
 
 </div>
 
@@ -87,7 +90,7 @@ Security Model
 
 Role hierarchy enforcement  
 Field-level access validation  
-Audit-safe ownership transitions  
+Ownership transition auditing safeguards  
 
 </div>
 
@@ -100,7 +103,7 @@ Scalability Strategy
 
 </div>
 
-Reusable routing subflows enable extension across queues without duplication logic or technical debt introduction.
+Reusable routing logic enables extension across new service queues without duplication logic or maintenance overhead increase.
 
 </div>
 
@@ -119,9 +122,10 @@ Business Impact
 
 </div>
 
-Manual routing reduction
+Reduction in manual routing workload across service operations.
 
 </div>
+
 
 </body>
 
