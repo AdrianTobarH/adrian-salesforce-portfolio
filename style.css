@@ -1,180 +1,36 @@
-:root {
-
---primary:#0176d3;
-
---dark:#1a1a1a;
-
---light:#f4f6f9;
-
---card:#ffffff;
-
-}
-
-
-
-body {
-
-margin:0;
-
-font-family:Inter,Arial;
-
-background:var(--light);
-
-color:var(--dark);
-
-}
-
-
-
-nav {
-
-background:white;
-
-display:flex;
-
-justify-content:center;
-
-gap:40px;
-
-padding:18px;
-
-position:sticky;
-
-top:0;
-
-box-shadow:0px 2px 10px rgba(0,0,0,0.05);
-
-z-index:100;
-
-}
-
-
-
-nav a {
-
-cursor:pointer;
-
-font-weight:600;
-
-}
-
-
-
-header {
-
-background:var(--primary);
-
-color:white;
-
-padding:80px 20px;
-
-text-align:center;
-
-}
-
-
-
-.profile-pic {
-
-width:140px;
-
-border-radius:50%;
-
-border:4px solid white;
-
-margin-bottom:20px;
-
-}
-
-
-
-section {
-
-max-width:900px;
-
-margin:auto;
-
-padding:60px 20px;
-
-}
-
-
-
-h2 {
-
-border-bottom:3px solid var(--primary);
-
-padding-bottom:10px;
-
-}
-
-
-
-.skills span {
-
-display:inline-block;
-
-background:#e6f2ff;
-
-padding:10px 14px;
-
-margin:6px;
-
-border-radius:6px;
-
-font-weight:600;
-
-}
-
-
-
 .card {
 
-background:var(--card);
-
-border-radius:12px;
+background:#020617;
 
 padding:25px;
 
-margin-top:20px;
+border-radius:14px;
 
-box-shadow:0px 6px 18px rgba(0,0,0,0.06);
+border:1px solid #1e293b;
 
-opacity:0;
-
-transform:translateY(40px);
-
-transition:.6s ease;
+transition:.3s;
 
 }
-
-
 
 .card:hover {
 
 transform:translateY(-6px);
 
-}
-
-
-
-.cert-grid {
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-
-gap:25px;
-
-margin-top:30px;
+border-color:#3b82f6;
 
 }
 
 
 
-.cert-grid img {
+.architecture-card {
 
-width:100%;
+background:#020617;
+
+padding:30px;
+
+border-radius:14px;
+
+border:1px solid #1e293b;
 
 transition:.3s;
 
@@ -182,40 +38,66 @@ transition:.3s;
 
 
 
-.cert-grid img:hover {
+.architecture-card:hover {
 
-transform:scale(1.08);
+border-color:#3b82f6;
+
+transform:scale(1.03);
 
 }
 
 
 
-button {
+.project-card {
 
-background:white;
+display:flex;
 
-border:none;
+align-items:center;
 
-padding:14px 22px;
+justify-content:center;
+
+height:150px;
+
+background:#020617;
+
+border-radius:14px;
+
+border:1px solid #1e293b;
+
+transition:.3s;
 
 font-weight:bold;
 
-border-radius:6px;
+}
 
-cursor:pointer;
+
+
+.project-card:hover {
+
+transform:translateY(-8px);
+
+border-color:#3b82f6;
 
 }
 
 
 
-footer {
+.contact-btn {
 
-background:var(--primary);
+border:1px solid #3b82f6;
 
-color:white;
+padding:12px 28px;
 
-text-align:center;
+border-radius:8px;
 
-padding:30px;
+transition:.3s;
+
+}
+
+
+
+.contact-btn:hover {
+
+background:#3b82f6;
 
 }
