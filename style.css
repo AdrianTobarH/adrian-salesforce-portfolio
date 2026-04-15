@@ -1,38 +1,12 @@
 body{
 
+margin:0;
+
 font-family:system-ui;
 
 background:#020617;
 
 color:white;
-
-margin:0;
-
-}
-
-
-.section{
-
-padding:140px 10%;
-
-text-align:center;
-
-}
-
-
-/* HERO */
-
-.hero{
-
-height:80vh;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
 
 }
 
@@ -49,11 +23,15 @@ display:flex;
 
 justify-content:space-between;
 
-padding:26px 80px;
+align-items:center;
 
-background:rgba(2,6,23,.75);
+padding:24px 60px;
 
-backdrop-filter:blur(18px);
+background:rgba(2,6,23,.8);
+
+backdrop-filter:blur(16px);
+
+z-index:999;
 
 transition:.3s;
 
@@ -62,14 +40,101 @@ transition:.3s;
 
 .nav.scrolled{
 
-padding:14px 80px;
+padding:14px 60px;
 
 }
 
 
-.role-tag{
+.nav-links{
 
-color:#60a5fa;
+display:flex;
+
+gap:24px;
+
+}
+
+
+.nav-links a{
+
+display:flex;
+
+gap:6px;
+
+align-items:center;
+
+color:#94a3b8;
+
+text-decoration:none;
+
+}
+
+
+.nav-links a:hover{
+
+color:white;
+
+}
+
+
+.cta-btn{
+
+background:#3b82f6;
+
+padding:10px 18px;
+
+border-radius:8px;
+
+}
+
+
+/* HERO */
+
+.hero{
+
+height:80vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+
+.hero-content{
+
+display:flex;
+
+gap:60px;
+
+align-items:center;
+
+flex-wrap:wrap;
+
+}
+
+
+.hero-img{
+
+width:220px;
+
+border-radius:50%;
+
+border:3px solid #3b82f6;
+
+box-shadow:0 0 28px rgba(59,130,246,.4);
+
+}
+
+
+/* SECTIONS */
+
+.section{
+
+padding:140px 10%;
+
+text-align:center;
 
 }
 
@@ -95,11 +160,9 @@ width:260px;
 
 padding:26px;
 
-background:#020617;
+border-radius:12px;
 
 border:1px solid #1e293b;
-
-border-radius:14px;
 
 transition:.3s;
 
@@ -115,7 +178,7 @@ border-color:#3b82f6;
 }
 
 
-/* LAYERS */
+/* ARCHITECTURE STACK */
 
 .layer{
 
@@ -151,7 +214,7 @@ flex-wrap:wrap;
 
 width:280px;
 
-padding:26px;
+padding:24px;
 
 border:1px solid #1e293b;
 
@@ -162,15 +225,22 @@ transition:.3s;
 }
 
 
+.matrix-card:hover{
+
+transform:translateY(-6px);
+
+}
+
+
 /* TIMELINE */
 
 .timeline-tabs{
 
 display:flex;
 
-gap:14px;
-
 justify-content:center;
+
+gap:12px;
 
 margin-top:40px;
 
@@ -183,7 +253,7 @@ background:#020617;
 
 border:1px solid #1e293b;
 
-padding:10px 18px;
+padding:10px 16px;
 
 cursor:pointer;
 
@@ -219,20 +289,18 @@ justify-content:center;
 
 align-items:center;
 
-gap:12px;
+gap:10px;
 
 }
 
 
 .flow-node{
 
-width:180px;
-
-padding:20px;
+padding:18px;
 
 border:1px solid #1e293b;
 
-border-radius:12px;
+border-radius:10px;
 
 }
 
