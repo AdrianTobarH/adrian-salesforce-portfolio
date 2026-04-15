@@ -15,42 +15,28 @@
 </head>
 
 
-<body class="bg-slate-950 text-white font-sans">
+<body class="bg-slate-950 text-white">
 
 
 <!-- NAVBAR -->
 
-<nav class="flex justify-between items-center px-10 py-6">
+<nav class="nav">
 
-<h1 class="text-2xl font-bold text-blue-400">
+<div class="logo">
 
 Adrian Tobar
 
-</h1>
-
-<section id="skills" class="mt-32 px-10">
-
-<h2 class="text-3xl font-bold mb-12">
-
-Technical Stack
-
-</h2>
-
-<div class="grid md:grid-cols-4 gap-6">
-
-<div class="card skill-card" onclick="showSkill('salescloud')">Sales Cloud</div>
-
-<div class="card skill-card" onclick="showSkill('apex')">Apex</div>
-
-<div class="card skill-card" onclick="showSkill('lwc')">LWC</div>
-
-<div class="card skill-card" onclick="showSkill('flow')">Flow Builder</div>
-
 </div>
 
-<div id="skill-info" class="skill-info hidden"></div>
+<div class="menu">
 
-</section>
+<a href="#skills">Skills</a>
+<a href="#architecture">Architecture</a>
+<a href="#projects">Projects</a>
+<a href="#certifications">Certifications</a>
+<a href="#contact">Contact</a>
+
+</div>
 
 </nav>
 
@@ -58,36 +44,32 @@ Technical Stack
 
 <!-- HERO -->
 
-<section class="text-center mt-24">
+<section class="hero">
 
-<img src="assets/profile.jpg"
-class="mx-auto w-36 rounded-full border-4 border-blue-500 shadow-xl">
+<img src="assets/profile.jpg" class="profile-pic">
 
-<h1 class="text-5xl font-bold mt-6">
+<h1>
 
 Salesforce Platform Developer II
 
 </h1>
 
-<p class="text-slate-400 mt-4 text-lg">
+<p>
 
-Automation • Apex • LWC • Integrations • Security Architecture
+Automation Architect · Apex Engineer · LWC Developer · Integration Specialist
 
 </p>
 
 
-<div class="mt-8 flex justify-center gap-6">
+<div class="hero-buttons">
 
-<a href="Adrian Tobar CV.pdf"
-class="bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-600">
+<a href="Adrian Tobar CV.pdf">
 
-Download CV
+Download Resume
 
 </a>
 
-
-<a href="mailto:adriantobar97@gmail.com"
-class="border border-blue-400 px-6 py-3 rounded-lg hover:bg-blue-500">
+<a href="mailto:adriantobar97@gmail.com">
 
 Contact Me
 
@@ -99,43 +81,31 @@ Contact Me
 
 
 
-<!-- EXPERIENCE METRICS -->
+<!-- METRICS -->
 
-<section class="grid md:grid-cols-3 gap-8 text-center mt-24 px-10">
+<section class="metrics">
 
 <div>
 
-<h2 class="text-4xl font-bold text-blue-400">
+<h2>4+</h2>
 
-4+
-
-</h2>
-
-<p>Years Salesforce Experience</p>
+Years Salesforce Experience
 
 </div>
 
 <div>
 
-<h2 class="text-4xl font-bold text-blue-400">
+<h2>6</h2>
 
-6
-
-</h2>
-
-<p>Certifications</p>
+Certifications
 
 </div>
 
 <div>
 
-<h2 class="text-4xl font-bold text-blue-400">
+<h2>Enterprise</h2>
 
-Enterprise
-
-</h2>
-
-<p>CRM Implementations</p>
+Implementations
 
 </div>
 
@@ -145,24 +115,48 @@ Enterprise
 
 <!-- SKILLS -->
 
-<section id="skills" class="mt-32 px-10">
+<section id="skills" class="section">
 
-<h2 class="text-3xl font-bold mb-12">
+<h2>Technical Expertise</h2>
 
-Technical Stack
+<div class="grid">
 
-</h2>
+<div class="card skill-card"
+onclick="showSkill('salescloud')">
 
-<div class="grid md:grid-cols-4 gap-6">
+Sales Cloud
 
-<div class="card">Sales Cloud</div>
-<div class="card">Service Cloud</div>
-<div class="card">CPQ</div>
-<div class="card">Apex</div>
-<div class="card">LWC</div>
-<div class="card">Flow Builder</div>
-<div class="card">REST APIs</div>
-<div class="card">Security Model</div>
+</div>
+
+
+<div class="card skill-card"
+onclick="showSkill('flow')">
+
+Flow Automation
+
+</div>
+
+
+<div class="card skill-card"
+onclick="showSkill('apex')">
+
+Apex Development
+
+</div>
+
+
+<div class="card skill-card"
+onclick="showSkill('lwc')">
+
+Lightning Web Components
+
+</div>
+
+</div>
+
+
+<div id="skill-info"
+class="skill-panel hidden">
 
 </div>
 
@@ -170,41 +164,47 @@ Technical Stack
 
 
 
-<!-- ARCHITECTURE EXPERTISE -->
+<!-- ARCHITECTURE -->
 
-<section id="architecture" class="mt-32 px-10">
+<section id="architecture" class="section">
 
-<h2 class="text-3xl font-bold mb-12">
+<h2>Architecture Expertise</h2>
 
-Architecture Expertise
+<div class="grid">
 
-</h2>
+<div class="card"
+onclick="openArchitecture('flow')">
 
-<div class="grid md:grid-cols-2 gap-10">
-
-<div class="architecture-card">
-
-Flow automation frameworks for enterprise lifecycle management
+Flow automation frameworks
 
 </div>
 
-<div class="architecture-card">
+<div class="card"
+onclick="openArchitecture('integration')">
 
-Lightning Web Component UI architecture with Apex controllers
-
-</div>
-
-<div class="architecture-card">
-
-Secure REST API integrations using Named Credentials
+Secure API integrations
 
 </div>
 
-<div class="architecture-card">
+<div class="card"
+onclick="openArchitecture('security')">
 
-Role hierarchy and permission-set driven security models
+Security architecture model
 
 </div>
+
+<div class="card"
+onclick="openArchitecture('data')">
+
+Enterprise data migration
+
+</div>
+
+</div>
+
+
+<div id="architecture-panel"
+class="skill-panel hidden">
 
 </div>
 
@@ -214,29 +214,25 @@ Role hierarchy and permission-set driven security models
 
 <!-- PROJECTS -->
 
-<section id="projects" class="mt-32 px-10">
+<section id="projects" class="section">
 
-<h2 class="text-3xl font-bold mb-12">
+<h2>Featured Implementations</h2>
 
-Featured Projects
+<div class="projects">
 
-</h2>
-
-<div class="grid md:grid-cols-3 gap-8">
-
-<a href="projects/case-automation.html" class="project-card">
+<a href="projects/case-automation.html">
 
 Case Automation Engine
 
 </a>
 
-<a href="projects/lwc-dashboard.html" class="project-card">
+<a href="projects/lwc-dashboard.html">
 
 LWC Sales Dashboard
 
 </a>
 
-<a href="projects/api-integration.html" class="project-card">
+<a href="projects/api-integration.html">
 
 External API Integration
 
@@ -250,22 +246,30 @@ External API Integration
 
 <!-- CERTIFICATIONS -->
 
-<section class="mt-32 px-10">
+<section id="certifications"
+class="section">
 
-<h2 class="text-3xl font-bold mb-12">
+<h2>Certifications</h2>
 
-Certifications
+<div class="cert-grid">
 
-</h2>
+<img src="assets/certifications/Platform Developer II.png"
+onclick="zoomCert(this)">
 
-<div class="grid md:grid-cols-6 gap-6">
+<img src="assets/certifications/Platform Developer.png"
+onclick="zoomCert(this)">
 
-<img src="assets/certifications/Platform Developer II.png">
-<img src="assets/certifications/Platform Developer.png">
-<img src="assets/certifications/Platform Administrator.png">
-<img src="assets/certifications/Platform App Builder.png">
-<img src="assets/certifications/Platform Foundations.png">
-<img src="assets/certifications/Agentforce Specialist.png">
+<img src="assets/certifications/Platform Administrator.png"
+onclick="zoomCert(this)">
+
+<img src="assets/certifications/Platform App Builder.png"
+onclick="zoomCert(this)">
+
+<img src="assets/certifications/Platform Foundations.png"
+onclick="zoomCert(this)">
+
+<img src="assets/certifications/Agentforce Specialist.png"
+onclick="zoomCert(this)">
 
 </div>
 
@@ -273,42 +277,50 @@ Certifications
 
 
 
+<div id="certModal"
+class="modal hidden"
+onclick="closeModal()">
+
+<img id="modalImg">
+
+</div>
+
+
+
 <!-- CONTACT -->
 
 <section id="contact"
-class="mt-32 text-center">
+class="contact">
 
-<h2 class="text-3xl font-bold">
+<h2>
 
-Let's Work Together
+Available for Remote Salesforce Roles
 
 </h2>
 
-<p class="text-slate-400 mt-4">
+<p>
 
-Available for remote Salesforce roles
+LATAM timezone overlap with US teams
 
 </p>
 
-<div class="flex justify-center gap-6 mt-6">
 
-<a href="mailto:adriantobar97@gmail.com"
-class="contact-btn">
+<div class="contact-buttons">
+
+<a href="mailto:adriantobar97@gmail.com">
 
 Email
 
 </a>
 
-<a href="tel:+593984681976"
-class="contact-btn">
+<a href="tel:+593984681976">
 
 Call
 
 </a>
 
 <a href="https://www.linkedin.com/in/adrian-tobar-hanze/"
-target="_blank"
-class="contact-btn">
+target="_blank">
 
 LinkedIn
 
@@ -320,7 +332,7 @@ LinkedIn
 
 
 
-<footer class="text-center mt-20 pb-10 text-slate-500">
+<footer>
 
 © 2026 Adrian Tobar
 
