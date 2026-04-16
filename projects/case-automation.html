@@ -1,105 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<title>Case Automation Engine</title>
-
-<link rel="stylesheet" href="../style.css">
-<script src="https://unpkg.com/lucide@latest"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Automation Architecture — Adrian Tobar Hanze</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="project-style.css">
 </head>
-
 <body>
+  <nav id="navbar" class="nav">
+    <div class="logo">
+      <span class="logo-mark">ATH</span>
+      <span class="logo-name">Adrian Tobar Hanze</span>
+    </div>
+    <div class="nav-links">
+      <a href="../index.html#architecture">Architecture</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="../index.html" class="btn-ghost" style="font-size:13px;padding:8px 18px;">← Back to Portfolio</a>
+    </div>
+  </nav>
 
-<nav class="nav">
+  <div class="project-hero reveal">
+    <a href="../index.html" class="back-link">← All Architecture Projects</a>
+    <div class="project-meta">
+      <span class="meta-badge blue">Flow Orchestration</span>
+      <span class="meta-badge blue">Assignment Routing</span>
+      <span class="meta-badge amber">Escalation SLA</span>
+      <span class="meta-badge amber">Validation Guardrails</span>
+      <span class="meta-badge green">Reporting Dashboards</span>
+    </div>
+    <h1 class="project-title">Enterprise Case Automation<br>Architecture</h1>
+    <p class="project-summary">
+      Flow-driven intelligent routing, multi-tier escalation guardrails, and validation frameworks for enterprise case management at scale — eliminating manual intervention across the resolution lifecycle.
+    </p>
+    <div class="impact-bar">
+      <div class="impact-item"><div class="i-num" style="color:#4a9eff">40%</div><div class="i-lbl">Routing time reduction</div></div>
+      <div class="impact-item"><div class="i-num" style="color:#00d4aa">3</div><div class="i-lbl">Escalation tiers automated</div></div>
+      <div class="impact-item"><div class="i-num" style="color:#f59e0b">0</div><div class="i-lbl">Manual routing touchpoints</div></div>
+    </div>
+  </div>
 
-<a href="../index.html" class="back-home">
+  <div class="content-grid">
+    <div class="content-block reveal">
+      <span class="block-tag">Context</span>
+      <h3>Business Problem</h3>
+      <ul style="--li-color:#4a9eff">
+        <li style="--before:'→'">Manual case assignment causing 40%+ delay in first response times</li>
+        <li>No escalation logic — cases stalling without SLA enforcement</li>
+        <li>Inconsistent validation at case creation causing data quality issues</li>
+        <li>No executive visibility into resolution pipeline performance</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
+      <span class="block-tag">Architecture Strategy</span>
+      <h3>Solution Design</h3>
+      <ul>
+        <li>Record-Triggered Flow for intake validation and initial routing logic</li>
+        <li>Scheduled Flow for time-based SLA monitoring and escalation triggers</li>
+        <li>Flow-invoked Apex for complex routing decisions at scale</li>
+        <li>Custom metadata for configurable routing rules without code changes</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
+      <span class="block-tag">Flow Orchestration</span>
+      <h3>Implementation Layers</h3>
+      <ul>
+        <li>Entry criteria gates preventing invalid record progression</li>
+        <li>Assignment routing via queue-based ownership transfer</li>
+        <li>Multi-branch escalation via scheduled paths with wait elements</li>
+        <li>Auto-close logic for stale cases meeting resolution criteria</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
+      <span class="block-tag">Security Model</span>
+      <h3>Access &amp; Compliance</h3>
+      <ul>
+        <li>OWD set to Private; sharing rules for cross-team visibility</li>
+        <li>Queue-based assignment preserving full audit trail integrity</li>
+        <li>Field-level security on sensitive case fields by profile</li>
+        <li>Flow run-as context enforced for proper record access</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
+      <span class="block-tag">Scalability</span>
+      <h3>Growth Architecture</h3>
+      <ul>
+        <li>Custom metadata routing table — zero code changes for new rules</li>
+        <li>Bulkification-safe Apex invocable methods for batch processing</li>
+        <li>Flow subflow architecture for modular, reusable logic components</li>
+        <li>Platform events for decoupled async escalation notifications</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
+      <span class="block-tag">Business Impact</span>
+      <h3>Delivered Outcomes</h3>
+      <ul>
+        <li>40% reduction in average case routing time (manual → automated)</li>
+        <li>3-tier escalation matrix eliminating SLA breaches</li>
+        <li>Executive dashboard surfaces real-time case throughput metrics</li>
+        <li>Validation guardrails reduced data quality incidents to near zero</li>
+      </ul>
+    </div>
+  </div>
 
-<i data-lucide="arrow-left"></i>
-Back to Portfolio
-
-</a>
-
-</nav>
-
-<section class="section">
-
-<h1 class="section-title">
-Enterprise Case Automation Framework
-</h1>
-
-<div>
-
-<span class="tech-badge">Flow Orchestration</span>
-<span class="tech-badge">Assignment Routing</span>
-<span class="tech-badge">Escalation SLA</span>
-<span class="tech-badge">Validation Guardrails</span>
-
-</div>
-
-<br>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>Context</h3>
-
-<p>
-
-Support queues processed high-volume cases manually,
-generating routing delays and inconsistent SLA tracking.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Architecture Strategy</h3>
-
-<p>
-
-Designed reusable modular Flow orchestration engine
-scalable across queues without Apex dependency.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Security Model</h3>
-
-<p>
-
-Role hierarchy enforcement,
-field-level security validation,
-audit-safe ownership transitions.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Business Impact</h3>
-
-<div class="metric">40%</div>
-
-Manual routing reduction
-
-</div>
-
-</div>
-
-</section>
-
-<script>
-lucide.createIcons();
-</script>
-
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><span class="logo-mark">ATH</span><span>Adrian Tobar Hanze © 2026</span></div>
+      <div class="footer-links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#architecture">Architecture</a>
+        <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank">LinkedIn ↗</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded",()=>{
+      const nb=document.getElementById("navbar");
+      window.addEventListener("scroll",()=>nb.classList.toggle("scrolled",window.scrollY>40));
+      document.querySelectorAll(".reveal").forEach(el=>{
+        const check=()=>{ if(el.getBoundingClientRect().top<window.innerHeight-80) el.classList.add("active"); };
+        window.addEventListener("scroll",check,{passive:true}); check();
+      });
+    });
+  </script>
 </body>
 </html>
