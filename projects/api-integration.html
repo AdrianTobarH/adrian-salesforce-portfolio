@@ -1,93 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<title>External API Integration</title>
-
-<link rel="stylesheet" href="../style.css">
-<script src="https://unpkg.com/lucide@latest"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Integration Architecture — Adrian Tobar Hanze</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="project-style.css">
 </head>
-
 <body>
+  <nav id="navbar" class="nav">
+    <div class="logo">
+      <span class="logo-mark">ATH</span>
+      <span class="logo-name">Adrian Tobar Hanze</span>
+    </div>
+    <div class="nav-links">
+      <a href="../index.html#architecture">Architecture</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="../index.html" class="btn-ghost" style="font-size:13px;padding:8px 18px;">← Back to Portfolio</a>
+    </div>
+  </nav>
 
-<nav class="nav">
+  <div class="project-hero reveal">
+    <a href="../index.html" class="back-link">← All Architecture Projects</a>
+    <div class="project-meta">
+      <span class="meta-badge amber">REST API</span>
+      <span class="meta-badge amber">Named Credentials</span>
+      <span class="meta-badge amber">OAuth 2.0</span>
+      <span class="meta-badge blue">Platform Events</span>
+      <span class="meta-badge green">Real-Time Sync</span>
+    </div>
+    <h1 class="project-title">Enterprise API<br>Integration Layer</h1>
+    <p class="project-summary">
+      Reusable Named Credential architecture with secure REST endpoints, OAuth 2.0 Auth Providers, and real-time sync layers — building an integration foundation that scales across all external system boundaries.
+    </p>
+    <div class="impact-bar">
+      <div class="impact-item"><div class="i-num" style="color:#f59e0b">∞</div><div class="i-lbl">Reusable credential layer</div></div>
+      <div class="impact-item"><div class="i-num" style="color:#4a9eff">100%</div><div class="i-lbl">Secrets removed from Apex</div></div>
+      <div class="impact-item"><div class="i-num" style="color:#00d4aa">RT</div><div class="i-lbl">Real-time sync</div></div>
+    </div>
+  </div>
 
-<a href="../index.html" class="back-home">
+  <div class="content-grid">
+    <div class="content-block reveal">
+      <span class="block-tag">Context</span>
+      <h3>Business Problem</h3>
+      <ul>
+        <li>API credentials hardcoded in Apex — critical security vulnerability</li>
+        <li>No reusable integration pattern — each system required bespoke code</li>
+        <li>External data sync running on nightly batch only — no real-time option</li>
+        <li>Zero error handling — failed callouts silent with no retry mechanism</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
+      <span class="block-tag">Architecture Strategy</span>
+      <h3>Solution Design</h3>
+      <ul>
+        <li>Named Credentials + Auth Provider for zero-secret Apex callouts</li>
+        <li>Apex HttpCallout service class — single integration point for all APIs</li>
+        <li>Platform Events for async real-time sync decoupled from transactions</li>
+        <li>Custom object logging layer for callout auditing and retry management</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
+      <span class="block-tag">Integration Layers</span>
+      <h3>Technical Implementation</h3>
+      <ul>
+        <li>OAuth 2.0 Auth Provider managing token refresh automatically</li>
+        <li>Named Credential as abstraction layer — no URL or credential in code</li>
+        <li>Apex Queueable chain for retry-safe async callout architecture</li>
+        <li>External Services for no-code API schema registration where viable</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
+      <span class="block-tag">Security Model</span>
+      <h3>Credential Architecture</h3>
+      <ul>
+        <li>All credentials stored in Named Credentials — zero exposure in Apex</li>
+        <li>Per-user credential delegation via User-level Named Credentials</li>
+        <li>CSP Trusted Sites and CORS configured for outbound security</li>
+        <li>Callout log with field-level encryption on sensitive response data</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
+      <span class="block-tag">Scalability</span>
+      <h3>Reusable Architecture</h3>
+      <ul>
+        <li>Single HttpCallout service class supports any REST endpoint via config</li>
+        <li>Custom metadata for endpoint registration — new APIs without code</li>
+        <li>Platform Event bus absorbs volume spikes without governor limit risk</li>
+        <li>Retry queue with exponential backoff for transient failure resilience</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
+      <span class="block-tag">Business Impact</span>
+      <h3>Delivered Outcomes</h3>
+      <ul>
+        <li>100% of API secrets removed from codebase — security audit passed</li>
+        <li>Reusable layer reduced new integration time from weeks to days</li>
+        <li>Real-time sync replaced nightly batch — latency cut from 24h to seconds</li>
+        <li>Callout logging surfaces integration health in executive dashboard</li>
+      </ul>
+    </div>
+  </div>
 
-<i data-lucide="arrow-left"></i>
-Back to Portfolio
-
-</a>
-
-</nav>
-
-<section class="section">
-
-<h1 class="section-title">
-
-Salesforce External Integration Architecture
-
-</h1>
-
-<div>
-
-<span class="tech-badge">REST API</span>
-<span class="tech-badge">OAuth 2.0</span>
-<span class="tech-badge">Platform Events</span>
-
-</div>
-
-<br>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>Challenge</h3>
-
-Disconnected external data sources reduced
-customer lifecycle visibility.
-
-</div>
-
-<div class="card">
-
-<h3>Integration Strategy</h3>
-
-REST-based middleware sync layer
-with retry logic + monitoring events.
-
-</div>
-
-<div class="card">
-
-<h3>Security Layer</h3>
-
-OAuth authentication
-token refresh lifecycle control.
-
-</div>
-
-<div class="card">
-
-<h3>Impact</h3>
-
-<div class="metric">Realtime</div>
-
-customer data synchronization
-
-</div>
-
-</div>
-
-</section>
-
-<script>
-lucide.createIcons();
-</script>
-
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><span class="logo-mark">ATH</span><span>Adrian Tobar Hanze © 2026</span></div>
+      <div class="footer-links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#architecture">Architecture</a>
+        <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank">LinkedIn ↗</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded",()=>{
+      const nb=document.getElementById("navbar");
+      window.addEventListener("scroll",()=>nb.classList.toggle("scrolled",window.scrollY>40));
+      document.querySelectorAll(".reveal").forEach(el=>{
+        const check=()=>{ if(el.getBoundingClientRect().top<window.innerHeight-80) el.classList.add("active"); };
+        window.addEventListener("scroll",check,{passive:true}); check();
+      });
+    });
+  </script>
 </body>
 </html>
