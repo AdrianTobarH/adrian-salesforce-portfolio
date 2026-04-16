@@ -6,7 +6,7 @@
   <title>Adrian Tobar Hanze | Salesforce Platform Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,23 +17,20 @@
       <span class="logo-mark">ATH</span>
       <span class="logo-name">Adrian Tobar Hanze</span>
     </div>
-
     <div class="nav-links">
       <a href="#architecture">Architecture</a>
+      <a href="#arch-diagram">Diagram</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
       <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="nav-linkedin">LinkedIn ↗</a>
     </div>
-
     <div class="nav-right">
       <span class="timezone-badge">GMT-5 · PT overlap</span>
-
       <div class="language-switcher">
         <button class="lang-btn active" data-lang="en">EN</button>
         <button class="lang-btn" data-lang="es">ES</button>
         <button class="lang-btn" data-lang="fr">FR</button>
       </div>
-
       <a href="#contact" class="availability-badge">
         <span class="pulse-dot"></span>
         <span id="availability-text">Available for Remote Roles</span>
@@ -46,32 +43,72 @@
     <div class="hero-content">
       <div class="hero-eyebrow">
         <span class="eyebrow-tag">Salesforce Platform Engineer</span>
-        <div id="cert-rotator" class="cert-rotator">
-          Salesforce Certified Administrator
-        </div>
+        <div id="cert-rotator" class="cert-rotator">Salesforce Certified Administrator</div>
       </div>
-
       <h1 id="headline" class="hero-headline">
         Architect-Level Automation<br>for Enterprise Scale
       </h1>
-
       <p class="hero-sub">
         Flow orchestration · Apex service layers · Enterprise integrations · Sales Cloud environments
       </p>
-
       <div class="hero-cta-group">
         <a href="#projects" class="btn-primary">View Architecture Projects</a>
-        <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="btn-ghost">Connect on LinkedIn ↗</a>
+        <a href="Adrian Tobar CV.pdf" target="_blank" class="btn-ghost">Download Resume ↓</a>
+        <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="btn-ghost">LinkedIn ↗</a>
       </div>
     </div>
-
     <div class="hero-visual">
       <div class="hero-stack-preview">
         <div class="stack-chip chip-top">Lightning UI · LWC</div>
         <div class="stack-chip">Flow Orchestration · Apex</div>
         <div class="stack-chip">Objects · Security · RBAC</div>
         <div class="stack-chip chip-bottom">REST APIs · Named Credentials</div>
-        <div class="stack-connector"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CERTIFICATIONS ═══ -->
+  <section class="section section-certs reveal">
+    <div class="section-header">
+      <span class="section-tag">Credentials</span>
+      <h2 class="section-title">Salesforce Certifications</h2>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <div class="cert-img-wrap">
+          <img src="assets/certifications/Platform Administrator.png" alt="Platform Administrator" onerror="this.parentElement.innerHTML='<div class=cert-fallback>Admin</div>'">
+        </div>
+        <span class="cert-name">Platform Administrator</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-img-wrap">
+          <img src="assets/certifications/Platform App Builder.png" alt="Platform App Builder" onerror="this.parentElement.innerHTML='<div class=cert-fallback>App Builder</div>'">
+        </div>
+        <span class="cert-name">Platform App Builder</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-img-wrap">
+          <img src="assets/certifications/Platform Developer.png" alt="Platform Developer I" onerror="this.parentElement.innerHTML='<div class=cert-fallback>Dev I</div>'">
+        </div>
+        <span class="cert-name">Platform Developer I</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-img-wrap">
+          <img src="assets/certifications/Platform Developer II.png" alt="Platform Developer II" onerror="this.parentElement.innerHTML='<div class=cert-fallback>Dev II</div>'">
+        </div>
+        <span class="cert-name">Platform Developer II</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-img-wrap">
+          <img src="assets/certifications/Platform Foundations.png" alt="Platform Foundations" onerror="this.parentElement.innerHTML='<div class=cert-fallback>Foundations</div>'">
+        </div>
+        <span class="cert-name">Platform Foundations</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-img-wrap">
+          <img src="assets/certifications/Agentforce Specialist.png" alt="Agentforce Specialist" onerror="this.parentElement.innerHTML='<div class=cert-fallback>Agentforce</div>'">
+        </div>
+        <span class="cert-name">Agentforce Specialist</span>
       </div>
     </div>
   </section>
@@ -80,187 +117,448 @@
   <section id="architecture" class="section reveal">
     <div class="section-header">
       <span class="section-tag">Architecture</span>
-      <h2 id="architecture-title" class="section-title">Salesforce Layered Architecture Model</h2>
+      <h2 id="architecture-title" class="section-title">Enterprise Salesforce Architecture Strategy</h2>
+      <p class="section-intro">Designing scalable Flow orchestration frameworks, reusable Apex service layers, and enterprise-grade integration architectures across Sales Cloud environments. Focused on performance, governance alignment, and maintainable automation at scale.</p>
     </div>
-
     <div class="architecture-stack">
       <div class="arch-layer" data-layer="01">
         <div class="layer-label">01</div>
         <div class="layer-content">
-          <div class="layer-name">Lightning UI · LWC Experience Layer</div>
-          <div class="layer-desc">Component-driven UX, dynamic dashboards, executive reporting surfaces</div>
+          <div class="layer-name">Experience Layer</div>
+          <div class="layer-desc">Lightning UI · LWC Dashboards · Executive Visibility Components — Delivers role-based interaction surfaces designed for operational clarity and adoption acceleration.</div>
         </div>
         <div class="layer-tech">LWC · Aura · FlexiPage</div>
       </div>
-
       <div class="arch-layer" data-layer="02">
         <div class="layer-label">02</div>
         <div class="layer-content">
-          <div class="layer-name">Flow Orchestration · Apex Services Layer</div>
-          <div class="layer-desc">Declarative automation, triggered Apex, service class architecture</div>
+          <div class="layer-name">Orchestration Layer</div>
+          <div class="layer-desc">Flow Orchestration · Screen Flows · Record-Triggered Flows — Coordinates business processes declaratively while maintaining flexibility for admin-level iteration.</div>
         </div>
-        <div class="layer-tech">Flow · Apex · Platform Events</div>
+        <div class="layer-tech">Flow · Platform Events</div>
       </div>
-
       <div class="arch-layer" data-layer="03">
         <div class="layer-label">03</div>
         <div class="layer-content">
-          <div class="layer-name">Objects · Security · Validation Layer</div>
-          <div class="layer-desc">Custom objects, permission sets, RBAC modeling, validation rules</div>
+          <div class="layer-name">Service Layer</div>
+          <div class="layer-desc">Reusable Apex Services · Invocable Methods · Async Processing — Encapsulates transaction-level logic for performance-critical workflows and integration mediation.</div>
         </div>
-        <div class="layer-tech">Profiles · Permission Sets · Sharing Rules</div>
+        <div class="layer-tech">Apex · Queueable · Batch</div>
       </div>
-
       <div class="arch-layer" data-layer="04">
         <div class="layer-label">04</div>
         <div class="layer-content">
-          <div class="layer-name">REST APIs · Named Credentials Layer</div>
-          <div class="layer-desc">Secure external integrations, reusable credential architecture</div>
+          <div class="layer-name">Data &amp; Governance Layer</div>
+          <div class="layer-desc">Objects · Validation Rules · Permission Models · Sharing Strategy — Implements enterprise-ready security alignment and structured data lifecycle governance.</div>
         </div>
-        <div class="layer-tech">REST · Named Credentials · Auth Providers</div>
+        <div class="layer-tech">Profiles · Permission Sets · Sharing</div>
+      </div>
+      <div class="arch-layer" data-layer="05">
+        <div class="layer-label">05</div>
+        <div class="layer-content">
+          <div class="layer-name">Integration Layer</div>
+          <div class="layer-desc">REST APIs · Named Credentials · External Services — Provides secure authentication abstraction and reusable connectivity across system boundaries.</div>
+        </div>
+        <div class="layer-tech">REST · Named Credentials · Auth</div>
       </div>
     </div>
   </section>
 
-  <!-- ═══ FLOW vs APEX DECISION MATRIX ═══ -->
+  <!-- ═══ INTERACTIVE ARCHITECTURE DIAGRAM ═══ -->
+  <section id="arch-diagram" class="section reveal">
+    <div class="section-header">
+      <span class="section-tag">Interactive</span>
+      <h2 class="section-title">Architecture Diagram</h2>
+      <p class="section-intro">Click each layer node to expand its technical scope, responsibilities, and design rationale.</p>
+    </div>
+
+    <div class="arch-diagram-wrap">
+      <div class="diagram-nodes">
+        <button class="diag-node" data-node="experience">
+          <div class="node-icon">◫</div>
+          <div class="node-label">Experience</div>
+          <div class="node-sub">LWC · Lightning UI</div>
+          <div class="node-arrow">↓</div>
+        </button>
+        <div class="diag-connector"></div>
+        <button class="diag-node" data-node="orchestration">
+          <div class="node-icon">◈</div>
+          <div class="node-label">Orchestration</div>
+          <div class="node-sub">Flow · Events</div>
+          <div class="node-arrow">↓</div>
+        </button>
+        <div class="diag-connector"></div>
+        <button class="diag-node" data-node="service">
+          <div class="node-icon">⬡</div>
+          <div class="node-label">Service</div>
+          <div class="node-sub">Apex · Async</div>
+          <div class="node-arrow">↓</div>
+        </button>
+        <div class="diag-connector"></div>
+        <button class="diag-node" data-node="data">
+          <div class="node-icon">⬢</div>
+          <div class="node-label">Data</div>
+          <div class="node-sub">Objects · Security</div>
+          <div class="node-arrow">↓</div>
+        </button>
+        <div class="diag-connector"></div>
+        <button class="diag-node" data-node="integration">
+          <div class="node-icon">◬</div>
+          <div class="node-label">Integration</div>
+          <div class="node-sub">REST · Named Creds</div>
+          <div class="node-arrow">↓</div>
+        </button>
+      </div>
+
+      <!-- PANELS -->
+      <div class="diag-panel" data-panel="experience">
+        <div class="panel-inner">
+          <div class="panel-header">
+            <span class="panel-icon">◫</span>
+            <h3>Experience Layer</h3>
+            <button class="panel-close" aria-label="Close">✕</button>
+          </div>
+          <div class="panel-grid">
+            <div class="panel-col">
+              <div class="panel-block-label">Responsibilities</div>
+              <ul>
+                <li>Role-based interaction surfaces via Lightning FlexiPages</li>
+                <li>LWC components with reactive @wire data bindings</li>
+                <li>Executive visibility dashboards with real-time KPIs</li>
+                <li>Dynamic filtering and conditional rendering by profile</li>
+              </ul>
+            </div>
+            <div class="panel-col">
+              <div class="panel-block-label">Tech Stack</div>
+              <div class="panel-badges">
+                <span class="pbadge">Lightning Web Components</span>
+                <span class="pbadge">FlexiPage Layouts</span>
+                <span class="pbadge">@wire Adapters</span>
+                <span class="pbadge">Custom Property Editor</span>
+                <span class="pbadge">Aura Components</span>
+              </div>
+            </div>
+            <div class="panel-col">
+              <div class="panel-block-label">Design Principle</div>
+              <p class="panel-principle">Deliver role-based interaction surfaces designed for operational clarity and adoption acceleration. Components stay data-agnostic — they consume services, never write them.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="diag-panel" data-panel="orchestration">
+        <div class="panel-inner">
+          <div class="panel-header">
+            <span class="panel-icon">◈</span>
+            <h3>Orchestration Layer</h3>
+            <button class="panel-close" aria-label="Close">✕</button>
+          </div>
+          <div class="panel-grid">
+            <div class="panel-col">
+              <div class="panel-block-label">Responsibilities</div>
+              <ul>
+                <li>Record-triggered Flow as the primary automation entry point</li>
+                <li>Scheduled Flows for SLA monitoring and time-based logic</li>
+                <li>Screen Flows for guided user journeys within the UI</li>
+                <li>Platform Events for decoupled async process coordination</li>
+              </ul>
+            </div>
+            <div class="panel-col">
+              <div class="panel-block-label">Tech Stack</div>
+              <div class="panel-badges">
+                <span class="pbadge">Record-Triggered Flow</span>
+                <span class="pbadge">Scheduled Flow</span>
+                <span class="pbadge">Screen Flow</span>
+                <span class="pbadge">Platform Events</span>
+                <span class="pbadge">Subflow Architecture</span>
+              </div>
+            </div>
+            <div class="panel-col">
+              <div class="panel-block-label">Design Principle</div>
+              <p class="panel-principle">Coordinate business processes declaratively while maintaining flexibility for admin-level iteration. Orchestration calls services — it does not contain business logic itself.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="diag-panel" data-panel="service">
+        <div class="panel-inner">
+          <div class="panel-header">
+            <span class="panel-icon">⬡</span>
+            <h3>Service Layer</h3>
+            <button class="panel-close" aria-label="Close">✕</button>
+          </div>
+          <div class="panel-grid">
+            <div class="panel-col">
+              <div class="panel-block-label">Responsibilities</div>
+              <ul>
+                <li>Invocable Apex methods callable from Flow orchestration</li>
+                <li>Queueable chains for retry-safe async callout execution</li>
+                <li>Batch Apex for high-volume bulk data processing jobs</li>
+                <li>Service class architecture enforcing single-responsibility</li>
+              </ul>
+            </div>
+            <div class="panel-col">
+              <div class="panel-block-label">Tech Stack</div>
+              <div class="panel-badges">
+                <span class="pbadge">Apex Service Classes</span>
+                <span class="pbadge">@InvocableMethod</span>
+                <span class="pbadge">Queueable Apex</span>
+                <span class="pbadge">Batch Apex</span>
+                <span class="pbadge">Custom Metadata</span>
+              </div>
+            </div>
+            <div class="panel-col">
+              <div class="panel-block-label">Design Principle</div>
+              <p class="panel-principle">Encapsulate transaction-level logic for performance-critical workflows and integration mediation. Services are stateless, bulkification-safe, and independently testable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="diag-panel" data-panel="data">
+        <div class="panel-inner">
+          <div class="panel-header">
+            <span class="panel-icon">⬢</span>
+            <h3>Data &amp; Governance Layer</h3>
+            <button class="panel-close" aria-label="Close">✕</button>
+          </div>
+          <div class="panel-grid">
+            <div class="panel-col">
+              <div class="panel-block-label">Responsibilities</div>
+              <ul>
+                <li>Custom object schema aligned to business domain model</li>
+                <li>Validation rules enforcing data integrity at write time</li>
+                <li>RBAC via Permission Sets and Permission Set Groups</li>
+                <li>Sharing rules and OWD modeling for record-level security</li>
+              </ul>
+            </div>
+            <div class="panel-col">
+              <div class="panel-block-label">Tech Stack</div>
+              <div class="panel-badges">
+                <span class="pbadge">Custom Objects</span>
+                <span class="pbadge">Validation Rules</span>
+                <span class="pbadge">Permission Sets</span>
+                <span class="pbadge">OWD + Sharing Rules</span>
+                <span class="pbadge">Field-Level Security</span>
+              </div>
+            </div>
+            <div class="panel-col">
+              <div class="panel-block-label">Design Principle</div>
+              <p class="panel-principle">Implement enterprise-ready security alignment and structured data lifecycle governance. The data layer is the source of truth — access is earned, not assumed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="diag-panel" data-panel="integration">
+        <div class="panel-inner">
+          <div class="panel-header">
+            <span class="panel-icon">◬</span>
+            <h3>Integration Layer</h3>
+            <button class="panel-close" aria-label="Close">✕</button>
+          </div>
+          <div class="panel-grid">
+            <div class="panel-col">
+              <div class="panel-block-label">Responsibilities</div>
+              <ul>
+                <li>Named Credentials as authentication abstraction — zero secrets in Apex</li>
+                <li>OAuth 2.0 Auth Providers for token lifecycle management</li>
+                <li>Reusable HttpCallout service class across all external systems</li>
+                <li>Error-resilient retry architecture via Queueable chaining</li>
+              </ul>
+            </div>
+            <div class="panel-col">
+              <div class="panel-block-label">Tech Stack</div>
+              <div class="panel-badges">
+                <span class="pbadge">Named Credentials</span>
+                <span class="pbadge">Auth Providers</span>
+                <span class="pbadge">REST Callouts</span>
+                <span class="pbadge">External Services</span>
+                <span class="pbadge">Platform Events</span>
+              </div>
+            </div>
+            <div class="panel-col">
+              <div class="panel-block-label">Design Principle</div>
+              <p class="panel-principle">Provide secure authentication abstraction and reusable connectivity across system boundaries. One integration framework supports all external systems — not one bespoke class per API.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="diagram-governance">
+        <div class="gov-title">Architecture Governance Strategy</div>
+        <div class="gov-pillars">
+          <span class="gov-pill">Separation of orchestration &amp; execution</span>
+          <span class="gov-pill">Reusable service abstraction</span>
+          <span class="gov-pill">Admin-friendly declarative surfaces</span>
+          <span class="gov-pill">Integration security standardization</span>
+          <span class="gov-pill">Performance-aware transaction handling</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ DECISION MATRIX ═══ -->
   <section class="section reveal">
     <div class="section-header">
       <span class="section-tag">Decision Framework</span>
       <h2 id="flow-matrix-title" class="section-title">Flow vs Apex Decision Matrix</h2>
     </div>
-
     <div class="matrix-grid">
       <div class="matrix-card matrix-flow">
         <div class="matrix-icon">◈</div>
         <h3>Use Flow When</h3>
         <ul>
           <li>Admin maintainability is required</li>
-          <li>Rapid iteration cycles expected</li>
-          <li>Declarative orchestration sufficient</li>
-          <li>Non-developer team ownership</li>
+          <li>Rapid iteration cycles are expected</li>
+          <li>Declarative orchestration is sufficient</li>
+          <li>Business logic transparency improves adoption</li>
         </ul>
         <div class="matrix-tag">Declarative</div>
       </div>
-
       <div class="matrix-card matrix-apex">
         <div class="matrix-icon">⬡</div>
         <h3>Use Apex When</h3>
         <ul>
-          <li>Transaction-level control needed</li>
-          <li>Complex integrations required</li>
-          <li>Performance-critical logic exists</li>
-          <li>Bulk data processing at scale</li>
+          <li>Transaction-level control is necessary</li>
+          <li>Complex integrations must be coordinated</li>
+          <li>Bulk processing logic is performance-sensitive</li>
+          <li>Reusable service abstraction improves clarity</li>
         </ul>
         <div class="matrix-tag">Programmatic</div>
       </div>
-
       <div class="matrix-card matrix-hybrid">
         <div class="matrix-icon">◬</div>
         <h3>Hybrid Pattern</h3>
         <ul>
           <li>Flow orchestration layer on top</li>
-          <li>Apex invocable service layer below</li>
-          <li>Enterprise scalability required</li>
-          <li>Separation of concerns enforced</li>
+          <li>Apex service execution layer below</li>
+          <li>Shared integration framework</li>
+          <li>Maximum maintainability + enterprise scale</li>
         </ul>
         <div class="matrix-tag">Recommended</div>
       </div>
     </div>
   </section>
 
-  <!-- ═══ ARCHITECTURE DECISION REVIEW PANEL ═══ -->
+  <!-- ═══ PROJECTS ═══ -->
   <section id="projects" class="section reveal">
     <div class="section-header">
       <span class="section-tag">Case Studies</span>
       <h2 id="decision-panel-title" class="section-title">Architecture Decision Review Panel</h2>
+      <p class="section-intro">Real production-style solution patterns applied across portfolio implementations.</p>
     </div>
-
     <div class="project-grid">
       <a href="projects/case-automation.html" class="project-card">
         <div class="project-card-header">
           <span class="project-icon">⚙</span>
           <span class="project-tag">Flow · Escalation Logic</span>
         </div>
-        <h3>Case Automation</h3>
-        <p>Flow-driven routing, escalation guardrails, and validation frameworks for enterprise case management.</p>
+        <h3>Case Automation Architecture</h3>
+        <p>Automated routing strategy designed to reduce manual workload and accelerate SLA response time with reusable assignment logic services.</p>
         <div class="project-metric">
           <span class="metric-num">40%</span>
           <span class="metric-label">routing time reduction</span>
         </div>
         <span class="project-cta">View Architecture →</span>
       </a>
-
       <a href="projects/lwc-dashboard.html" class="project-card">
         <div class="project-card-header">
           <span class="project-icon">◫</span>
           <span class="project-tag">LWC · Analytics</span>
         </div>
-        <h3>LWC Dashboard</h3>
-        <p>Executive-grade real-time dashboards with cross-object reporting and dynamic filtering layers.</p>
+        <h3>LWC Dashboard Architecture</h3>
+        <p>Executive-ready Lightning dashboards built for operational adoption with dynamic Apex data providers and role-based UI visibility strategy.</p>
         <div class="project-metric">
           <span class="metric-num">3×</span>
           <span class="metric-label">adoption improvement</span>
         </div>
         <span class="project-cta">View Architecture →</span>
       </a>
-
       <a href="projects/api-integration.html" class="project-card">
         <div class="project-card-header">
           <span class="project-icon">⬡</span>
           <span class="project-tag">REST · Named Credentials</span>
         </div>
-        <h3>API Integration</h3>
-        <p>Reusable Named Credential architecture with secure REST endpoints and real-time sync layers.</p>
+        <h3>API Integration Architecture</h3>
+        <p>Reusable Named Credential integration model supporting secure external system communication with error-resilient service execution.</p>
         <div class="project-metric">
           <span class="metric-num">∞</span>
           <span class="metric-label">reusable integration layer</span>
         </div>
         <span class="project-cta">View Architecture →</span>
       </a>
+      <a href="projects/case-study-enterprise-automation.html" class="project-card">
+        <div class="project-card-header">
+          <span class="project-icon">⬢</span>
+          <span class="project-tag">Deep Dive · Full Case Study</span>
+        </div>
+        <h3>Enterprise Automation Deep Dive</h3>
+        <p>Full architecture decision record — context, constraints, tradeoffs, solution layers, security model, and measured business impact.</p>
+        <div class="project-metric">
+          <span class="metric-num">ADR</span>
+          <span class="metric-label">architecture decision record</span>
+        </div>
+        <span class="project-cta">View Full Case Study →</span>
+      </a>
     </div>
   </section>
 
-  <!-- ═══ METRICS IMPACT ═══ -->
+  <!-- ═══ METRICS ═══ -->
   <section class="section reveal">
     <div class="section-header">
       <span class="section-tag">Impact</span>
       <h2 id="metrics-title" class="section-title">Architecture Metrics Impact</h2>
+      <p class="section-intro">Architecture decisions measured through operational effectiveness outcomes.</p>
     </div>
-
     <div class="metrics-grid">
       <div class="metric-card reveal">
         <div class="metric-num">65%</div>
-        <div class="metric-label">Manual routing time reduced via Flow automation</div>
+        <div class="metric-label">Manual routing workload reduced via Flow automation</div>
         <div class="metric-domain">⚙ Automation Speed</div>
       </div>
-
       <div class="metric-card reveal">
         <div class="metric-num">3×</div>
-        <div class="metric-label">Executive dashboard adoption improved</div>
-        <div class="metric-domain">◫ Dashboard Adoption</div>
+        <div class="metric-label">Executive dashboard visibility adoption improved</div>
+        <div class="metric-domain">◫ Executive Adoption</div>
       </div>
-
       <div class="metric-card reveal">
         <div class="metric-num">100%</div>
-        <div class="metric-label">Reusable Named Credential architecture delivered</div>
+        <div class="metric-label">Reusable Named Credential architecture deployed across services</div>
         <div class="metric-domain">⬡ Integration Reliability</div>
       </div>
-
       <div class="metric-card reveal">
         <div class="metric-num">RBAC</div>
-        <div class="metric-label">Enterprise-ready permission modeling implemented</div>
+        <div class="metric-label">Enterprise-ready permission modeling applied across automation layers</div>
         <div class="metric-domain">⬢ Security Alignment</div>
       </div>
+    </div>
+  </section>
+
+  <!-- ═══ STACK SUMMARY ═══ -->
+  <section class="section section-stack-summary reveal">
+    <div class="section-header">
+      <span class="section-tag">Summary</span>
+      <h2 class="section-title">Enterprise Architecture Stack</h2>
+    </div>
+    <div class="stack-summary-grid">
+      <div class="stack-row"><span class="stack-layer-label">UX Layer</span><span class="stack-arrow-r">→</span><span class="stack-tech-val">Lightning Experience + LWC</span></div>
+      <div class="stack-row"><span class="stack-layer-label">Automation Layer</span><span class="stack-arrow-r">→</span><span class="stack-tech-val">Flow Orchestration Framework</span></div>
+      <div class="stack-row"><span class="stack-layer-label">Service Layer</span><span class="stack-arrow-r">→</span><span class="stack-tech-val">Apex Domain Services</span></div>
+      <div class="stack-row"><span class="stack-layer-label">Data Layer</span><span class="stack-arrow-r">→</span><span class="stack-tech-val">Objects + Validation + Security</span></div>
+      <div class="stack-row"><span class="stack-layer-label">Integration Layer</span><span class="stack-arrow-r">→</span><span class="stack-tech-val">Named Credentials + REST APIs</span></div>
     </div>
   </section>
 
   <!-- ═══ CTA ═══ -->
   <section id="contact" class="section cta-section reveal">
     <div class="cta-inner">
-      <h2 id="cta-title" class="cta-headline">Let's Build Something Together</h2>
-      <p id="availability-desc" class="cta-sub">Available for remote Salesforce engineering roles across US timezones</p>
+      <h2 id="cta-title" class="cta-headline">Let's Build Enterprise-Grade<br>Salesforce Automation Together</h2>
+      <p id="availability-desc" class="cta-sub">Available for remote Salesforce Platform Engineer (Flow + Apex + Integrations) roles across US-aligned timezones.<br>Designing scalable automation frameworks that balance admin maintainability, developer extensibility, and integration reliability.</p>
       <div class="cta-actions">
         <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="btn-primary">Connect on LinkedIn ↗</a>
+        <a href="Adrian Tobar CV.pdf" target="_blank" class="btn-ghost">Download Resume ↓</a>
       </div>
     </div>
   </section>
@@ -274,6 +572,7 @@
       </div>
       <div class="footer-links">
         <a href="#projects">Projects</a>
+        <a href="#arch-diagram">Diagram</a>
         <a href="#architecture">Architecture</a>
         <a href="#contact">Contact</a>
         <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank">LinkedIn ↗</a>
