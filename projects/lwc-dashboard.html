@@ -1,92 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<title>LWC Executive Dashboard</title>
-
-<link rel="stylesheet" href="../style.css">
-<script src="https://unpkg.com/lucide@latest"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LWC Dashboard Architecture — Adrian Tobar Hanze</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="project-style.css">
 </head>
-
 <body>
+  <nav id="navbar" class="nav">
+    <div class="logo">
+      <span class="logo-mark">ATH</span>
+      <span class="logo-name">Adrian Tobar Hanze</span>
+    </div>
+    <div class="nav-links">
+      <a href="../index.html#architecture">Architecture</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="../index.html" class="btn-ghost" style="font-size:13px;padding:8px 18px;">← Back to Portfolio</a>
+    </div>
+  </nav>
 
-<nav class="nav">
+  <div class="project-hero reveal">
+    <a href="../index.html" class="back-link">← All Architecture Projects</a>
+    <div class="project-meta">
+      <span class="meta-badge green">LWC</span>
+      <span class="meta-badge green">Executive Analytics</span>
+      <span class="meta-badge blue">Apex Controllers</span>
+      <span class="meta-badge blue">Cross-Object Reporting</span>
+      <span class="meta-badge purple">Dynamic Filtering</span>
+    </div>
+    <h1 class="project-title">LWC Executive<br>Dashboard Architecture</h1>
+    <p class="project-summary">
+      Real-time executive dashboards built on Lightning Web Components with dynamic Apex data providers, cross-object reporting, and role-based UI visibility strategy — transforming raw data into decision-ready insights.
+    </p>
+    <div class="impact-bar">
+      <div class="impact-item"><div class="i-num" style="color:#00d4aa">3×</div><div class="i-lbl">Adoption improvement</div></div>
+      <div class="impact-item"><div class="i-num" style="color:#4a9eff">5</div><div class="i-lbl">Exec personas served</div></div>
+      <div class="impact-item"><div class="i-num" style="color:#a78bfa">RT</div><div class="i-lbl">Real-time data sync</div></div>
+    </div>
+  </div>
 
-<a href="../index.html" class="back-home">
+  <div class="content-grid">
+    <div class="content-block reveal">
+      <span class="block-tag">Context</span>
+      <h3>Business Problem</h3>
+      <ul>
+        <li>Executives relying on weekly spreadsheet exports for pipeline visibility</li>
+        <li>No real-time cross-object reporting across Cases, Opportunities, Accounts</li>
+        <li>Generic report layouts not aligned to exec decision-making workflows</li>
+        <li>Low adoption of native Salesforce reports — perceived as too complex</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
+      <span class="block-tag">Architecture Strategy</span>
+      <h3>Solution Design</h3>
+      <ul>
+        <li>LWC component architecture with @wire adapters for live data binding</li>
+        <li>Apex controller layer for complex cross-object SOQL aggregations</li>
+        <li>FlexiPage layouts with dynamic visibility rules per user profile</li>
+        <li>Custom property editor for non-developer dashboard configuration</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
+      <span class="block-tag">Component Architecture</span>
+      <h3>LWC Implementation</h3>
+      <ul>
+        <li>Parent-child component communication via custom events and @api</li>
+        <li>Dynamic filtering using @track reactive properties</li>
+        <li>KPI visualization integration within LWC components</li>
+        <li>Conditional rendering with template directives for role-based views</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
+      <span class="block-tag">Security Model</span>
+      <h3>Access Architecture</h3>
+      <ul>
+        <li>Apex with-sharing enforced — data filtered by running user's access</li>
+        <li>FlexiPage visibility rules gating sensitive KPIs by permission set</li>
+        <li>Field-level security respected at SOQL query level via schema checks</li>
+        <li>Read-only profiles for dashboard consumers, no write risk surface</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
+      <span class="block-tag">Scalability</span>
+      <h3>Growth Architecture</h3>
+      <ul>
+        <li>SOQL aggregated queries to minimize data volume at scale</li>
+        <li>Server-side filtering reducing payload to LWC components</li>
+        <li>Modular component design — new KPI cards added without refactoring</li>
+        <li>Custom labels for all strings enabling multilingual exec personas</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
+      <span class="block-tag">Business Impact</span>
+      <h3>Delivered Outcomes</h3>
+      <ul>
+        <li>3× increase in executive dashboard adoption within 30 days of launch</li>
+        <li>Real-time pipeline visibility replacing 5 manually curated reports</li>
+        <li>Exec decision cycles reduced from weekly to daily cadence</li>
+        <li>Zero IT dependency for dashboard layout adjustments post-launch</li>
+      </ul>
+    </div>
+  </div>
 
-<i data-lucide="arrow-left"></i>
-Back to Portfolio
-
-</a>
-
-</nav>
-
-<section class="section">
-
-<h1 class="section-title">
-
-Executive KPI Dashboard Architecture
-
-</h1>
-
-<div>
-
-<span class="tech-badge">Lightning Web Components</span>
-<span class="tech-badge">Apex Controllers</span>
-<span class="tech-badge">Dynamic Charts</span>
-
-</div>
-
-<br>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>Problem</h3>
-
-Executives lacked real-time pipeline visibility.
-
-</div>
-
-<div class="card">
-
-<h3>Solution</h3>
-
-Built modular LWC analytics dashboard
-powered by Apex service aggregation.
-
-</div>
-
-<div class="card">
-
-<h3>Architecture Value</h3>
-
-Reusable chart services
-cross-object reporting visibility layer.
-
-</div>
-
-<div class="card">
-
-<h3>Impact</h3>
-
-<div class="metric">3x</div>
-
-faster decision insights
-
-</div>
-
-</div>
-
-</section>
-
-<script>
-lucide.createIcons();
-</script>
-
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><span class="logo-mark">ATH</span><span>Adrian Tobar Hanze © 2026</span></div>
+      <div class="footer-links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#architecture">Architecture</a>
+        <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank">LinkedIn ↗</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded",()=>{
+      const nb=document.getElementById("navbar");
+      window.addEventListener("scroll",()=>nb.classList.toggle("scrolled",window.scrollY>40));
+      document.querySelectorAll(".reveal").forEach(el=>{
+        const check=()=>{ if(el.getBoundingClientRect().top<window.innerHeight-80) el.classList.add("active"); };
+        window.addEventListener("scroll",check,{passive:true}); check();
+      });
+    });
+  </script>
 </body>
 </html>
