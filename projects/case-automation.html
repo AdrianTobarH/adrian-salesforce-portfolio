@@ -17,26 +17,40 @@
       <span class="logo-name">Adrian Tobar Hanze</span>
     </div>
     <div class="nav-links">
-      <a href="../index.html#architecture">Architecture</a>
-      <a href="../index.html#projects">Projects</a>
-      <a href="../index.html#contact">Contact</a>
+      <a href="../index.html#architecture" data-i18n="nav.architecture">Architecture</a>
+      <a href="../index.html#arch-diagram" data-i18n="nav.diagram">Diagram</a>
+      <a href="../index.html#projects" data-i18n="nav.projects">Projects</a>
+      <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
+      <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="nav-linkedin">LinkedIn ↗</a>
     </div>
     <div class="nav-right">
-      <a href="../index.html" class="btn-ghost" style="font-size:13px;padding:8px 18px;">← Back to Portfolio</a>
+      <a href="../index.html" class="btn-ghost btn-back" data-i18n="nav.backToPortfolio">← Back to Portfolio</a>
+      <div class="language-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <a href="../index.html#architecture">Architecture</a>
-      <a href="../index.html#projects">Projects</a>
-      <a href="../index.html#contact">Contact</a>
-      <a href="../index.html">← Back to Portfolio</a>
+      <a href="../index.html#architecture" data-i18n="nav.architecture">Architecture</a>
+      <a href="../index.html#arch-diagram" data-i18n="nav.diagram">Diagram</a>
+      <a href="../index.html#projects" data-i18n="nav.projects">Projects</a>
+      <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
+      <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="nav-linkedin">LinkedIn ↗</a>
+      <a href="../index.html" data-i18n="nav.backToPortfolio">← Back to Portfolio</a>
+      <div class="mobile-menu-langs">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
     </div>
   </nav>
 
   <div class="project-hero reveal">
-    <a href="../index.html" class="back-link">← All Architecture Projects</a>
+    <a href="../index.html#projects" class="back-link" data-i18n="common.backAllProjects">← All Architecture Projects</a>
     <div class="project-meta">
       <span class="meta-badge blue">Flow Orchestration</span>
       <span class="meta-badge blue">Assignment Routing</span>
@@ -44,76 +58,76 @@
       <span class="meta-badge amber">Validation Guardrails</span>
       <span class="meta-badge green">Reporting Dashboards</span>
     </div>
-    <h1 class="project-title">Enterprise Case Automation<br>Architecture</h1>
-    <p class="project-summary">
+    <h1 class="project-title" data-i18n-html="pca.title">Enterprise Case Automation<br>Architecture</h1>
+    <p class="project-summary" data-i18n="pca.summary">
       Flow-driven intelligent routing, multi-tier escalation guardrails, and validation frameworks for enterprise case management at scale — eliminating manual intervention across the resolution lifecycle.
     </p>
     <div class="impact-bar">
-      <div class="impact-item"><div class="i-num" style="color:#4a9eff">40%</div><div class="i-lbl">Routing time reduction</div></div>
-      <div class="impact-item"><div class="i-num" style="color:#00d4aa">3</div><div class="i-lbl">Escalation tiers automated</div></div>
-      <div class="impact-item"><div class="i-num" style="color:#f59e0b">0</div><div class="i-lbl">Manual routing touchpoints</div></div>
+      <div class="impact-item"><div class="i-num blue">40%</div><div class="i-lbl" data-i18n="pca.impact1">Routing time reduction</div></div>
+      <div class="impact-item"><div class="i-num green">3</div><div class="i-lbl" data-i18n="pca.impact2">Escalation tiers automated</div></div>
+      <div class="impact-item"><div class="i-num amber">0</div><div class="i-lbl" data-i18n="pca.impact3">Manual routing touchpoints</div></div>
     </div>
   </div>
 
   <div class="content-grid">
     <div class="content-block reveal">
-      <span class="block-tag">Context</span>
-      <h3>Business Problem</h3>
-      <ul style="--li-color:#4a9eff">
-        <li style="--before:'→'">Manual case assignment causing 40%+ delay in first response times</li>
-        <li>No escalation logic — cases stalling without SLA enforcement</li>
-        <li>Inconsistent validation at case creation causing data quality issues</li>
-        <li>No executive visibility into resolution pipeline performance</li>
+      <span class="block-tag" data-i18n="pca.b1.tag">Context</span>
+      <h3 data-i18n="pca.b1.title">Business Problem</h3>
+      <ul>
+        <li data-i18n="pca.b1.li1">Manual case assignment causing 40%+ delay in first response times</li>
+        <li data-i18n="pca.b1.li2">No escalation logic — cases stalling without SLA enforcement</li>
+        <li data-i18n="pca.b1.li3">Inconsistent validation at case creation causing data quality issues</li>
+        <li data-i18n="pca.b1.li4">No executive visibility into resolution pipeline performance</li>
       </ul>
     </div>
     <div class="content-block reveal">
-      <span class="block-tag">Architecture Strategy</span>
-      <h3>Solution Design</h3>
+      <span class="block-tag" data-i18n="pca.b2.tag">Architecture Strategy</span>
+      <h3 data-i18n="pca.b2.title">Solution Design</h3>
       <ul>
-        <li>Record-Triggered Flow for intake validation and initial routing logic</li>
-        <li>Scheduled Flow for time-based SLA monitoring and escalation triggers</li>
-        <li>Flow-invoked Apex for complex routing decisions at scale</li>
-        <li>Custom metadata for configurable routing rules without code changes</li>
+        <li data-i18n="pca.b2.li1">Record-Triggered Flow for intake validation and initial routing logic</li>
+        <li data-i18n="pca.b2.li2">Scheduled Flow for time-based SLA monitoring and escalation triggers</li>
+        <li data-i18n="pca.b2.li3">Flow-invoked Apex for complex routing decisions at scale</li>
+        <li data-i18n="pca.b2.li4">Custom metadata for configurable routing rules without code changes</li>
       </ul>
     </div>
     <div class="content-block reveal">
-      <span class="block-tag">Flow Orchestration</span>
-      <h3>Implementation Layers</h3>
+      <span class="block-tag" data-i18n="pca.b3.tag">Flow Orchestration</span>
+      <h3 data-i18n="pca.b3.title">Implementation Layers</h3>
       <ul>
-        <li>Entry criteria gates preventing invalid record progression</li>
-        <li>Assignment routing via queue-based ownership transfer</li>
-        <li>Multi-branch escalation via scheduled paths with wait elements</li>
-        <li>Auto-close logic for stale cases meeting resolution criteria</li>
+        <li data-i18n="pca.b3.li1">Entry criteria gates preventing invalid record progression</li>
+        <li data-i18n="pca.b3.li2">Assignment routing via queue-based ownership transfer</li>
+        <li data-i18n="pca.b3.li3">Multi-branch escalation via scheduled paths with wait elements</li>
+        <li data-i18n="pca.b3.li4">Auto-close logic for stale cases meeting resolution criteria</li>
       </ul>
     </div>
     <div class="content-block reveal">
-      <span class="block-tag">Security Model</span>
-      <h3>Access &amp; Compliance</h3>
+      <span class="block-tag" data-i18n="pca.b4.tag">Security Model</span>
+      <h3 data-i18n="pca.b4.title">Access &amp; Compliance</h3>
       <ul>
-        <li>OWD set to Private; sharing rules for cross-team visibility</li>
-        <li>Queue-based assignment preserving full audit trail integrity</li>
-        <li>Field-level security on sensitive case fields by profile</li>
-        <li>Flow run-as context enforced for proper record access</li>
+        <li data-i18n="pca.b4.li1">OWD set to Private; sharing rules for cross-team visibility</li>
+        <li data-i18n="pca.b4.li2">Queue-based assignment preserving full audit trail integrity</li>
+        <li data-i18n="pca.b4.li3">Field-level security on sensitive case fields by profile</li>
+        <li data-i18n="pca.b4.li4">Flow run-as context enforced for proper record access</li>
       </ul>
     </div>
     <div class="content-block reveal">
-      <span class="block-tag">Scalability</span>
-      <h3>Growth Architecture</h3>
+      <span class="block-tag" data-i18n="pca.b5.tag">Scalability</span>
+      <h3 data-i18n="pca.b5.title">Growth Architecture</h3>
       <ul>
-        <li>Custom metadata routing table — zero code changes for new rules</li>
-        <li>Bulkification-safe Apex invocable methods for batch processing</li>
-        <li>Flow subflow architecture for modular, reusable logic components</li>
-        <li>Platform events for decoupled async escalation notifications</li>
+        <li data-i18n="pca.b5.li1">Custom metadata routing table — zero code changes for new rules</li>
+        <li data-i18n="pca.b5.li2">Bulkification-safe Apex invocable methods for batch processing</li>
+        <li data-i18n="pca.b5.li3">Flow subflow architecture for modular, reusable logic components</li>
+        <li data-i18n="pca.b5.li4">Platform events for decoupled async escalation notifications</li>
       </ul>
     </div>
     <div class="content-block reveal">
-      <span class="block-tag">Business Impact</span>
-      <h3>Delivered Outcomes</h3>
+      <span class="block-tag" data-i18n="pca.b6.tag">Business Impact</span>
+      <h3 data-i18n="pca.b6.title">Delivered Outcomes</h3>
       <ul>
-        <li>40% reduction in average case routing time (manual → automated)</li>
-        <li>3-tier escalation matrix eliminating SLA breaches</li>
-        <li>Executive dashboard surfaces real-time case throughput metrics</li>
-        <li>Validation guardrails reduced data quality incidents to near zero</li>
+        <li data-i18n="pca.b6.li1">40% reduction in average case routing time (manual → automated)</li>
+        <li data-i18n="pca.b6.li2">3-tier escalation matrix eliminating SLA breaches</li>
+        <li data-i18n="pca.b6.li3">Executive dashboard surfaces real-time case throughput metrics</li>
+        <li data-i18n="pca.b6.li4">Validation guardrails reduced data quality incidents to near zero</li>
       </ul>
     </div>
   </div>
@@ -122,34 +136,14 @@
     <div class="footer-inner">
       <div class="footer-brand"><span class="logo-mark">ATH</span><span>Adrian Tobar Hanze © 2026</span></div>
       <div class="footer-links">
-        <a href="../index.html#projects">Projects</a>
-        <a href="../index.html#architecture">Architecture</a>
+        <a href="../index.html#projects" data-i18n="footer.projects">Projects</a>
+        <a href="../index.html#arch-diagram" data-i18n="footer.diagram">Diagram</a>
+        <a href="../index.html#architecture" data-i18n="footer.architecture">Architecture</a>
+        <a href="../index.html#contact" data-i18n="footer.contact">Contact</a>
         <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank">LinkedIn ↗</a>
       </div>
     </div>
   </footer>
-  <script>
-    document.addEventListener("DOMContentLoaded",()=>{
-      const nb=document.getElementById("navbar");
-      window.addEventListener("scroll",()=>nb.classList.toggle("scrolled",window.scrollY>40));
-      document.querySelectorAll(".reveal").forEach(el=>{
-        const check=()=>{ if(el.getBoundingClientRect().top<window.innerHeight-80) el.classList.add("active"); };
-        window.addEventListener("scroll",check,{passive:true}); check();
-      });
-      const navToggle=document.getElementById("navToggle");
-      const mobileMenu=document.getElementById("mobileMenu");
-      if(navToggle&&mobileMenu){
-        const closeMenu=()=>{navToggle.classList.remove("active");mobileMenu.classList.remove("open");navToggle.setAttribute("aria-expanded","false");};
-        navToggle.addEventListener("click",()=>{
-          const isOpen=mobileMenu.classList.toggle("open");
-          navToggle.classList.toggle("active",isOpen);
-          navToggle.setAttribute("aria-expanded",String(isOpen));
-        });
-        mobileMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click",closeMenu));
-        document.addEventListener("keydown",e=>{if(e.key==="Escape")closeMenu();});
-        window.addEventListener("resize",()=>{if(window.innerWidth>900)closeMenu();});
-      }
-    });
-  </script>
+  <script src="../script.js"></script>
 </body>
 </html>

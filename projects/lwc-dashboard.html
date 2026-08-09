@@ -17,26 +17,40 @@
       <span class="logo-name">Adrian Tobar Hanze</span>
     </div>
     <div class="nav-links">
-      <a href="../index.html#architecture">Architecture</a>
-      <a href="../index.html#projects">Projects</a>
-      <a href="../index.html#contact">Contact</a>
+      <a href="../index.html#architecture" data-i18n="nav.architecture">Architecture</a>
+      <a href="../index.html#arch-diagram" data-i18n="nav.diagram">Diagram</a>
+      <a href="../index.html#projects" data-i18n="nav.projects">Projects</a>
+      <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
+      <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="nav-linkedin">LinkedIn ↗</a>
     </div>
     <div class="nav-right">
-      <a href="../index.html" class="btn-ghost" style="font-size:13px;padding:8px 18px;">← Back to Portfolio</a>
+      <a href="../index.html" class="btn-ghost btn-back" data-i18n="nav.backToPortfolio">← Back to Portfolio</a>
+      <div class="language-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <a href="../index.html#architecture">Architecture</a>
-      <a href="../index.html#projects">Projects</a>
-      <a href="../index.html#contact">Contact</a>
-      <a href="../index.html">← Back to Portfolio</a>
+      <a href="../index.html#architecture" data-i18n="nav.architecture">Architecture</a>
+      <a href="../index.html#arch-diagram" data-i18n="nav.diagram">Diagram</a>
+      <a href="../index.html#projects" data-i18n="nav.projects">Projects</a>
+      <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
+      <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="nav-linkedin">LinkedIn ↗</a>
+      <a href="../index.html" data-i18n="nav.backToPortfolio">← Back to Portfolio</a>
+      <div class="mobile-menu-langs">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
     </div>
   </nav>
 
   <div class="project-hero reveal">
-    <a href="../index.html" class="back-link">← All Architecture Projects</a>
+    <a href="../index.html#projects" class="back-link" data-i18n="common.backAllProjects">← All Architecture Projects</a>
     <div class="project-meta">
       <span class="meta-badge green">LWC</span>
       <span class="meta-badge green">Executive Analytics</span>
@@ -44,76 +58,76 @@
       <span class="meta-badge blue">Cross-Object Reporting</span>
       <span class="meta-badge purple">Dynamic Filtering</span>
     </div>
-    <h1 class="project-title">LWC Executive<br>Dashboard Architecture</h1>
-    <p class="project-summary">
+    <h1 class="project-title" data-i18n-html="plwc.title">LWC Executive<br>Dashboard Architecture</h1>
+    <p class="project-summary" data-i18n="plwc.summary">
       Real-time executive dashboards built on Lightning Web Components with dynamic Apex data providers, cross-object reporting, and role-based UI visibility strategy — transforming raw data into decision-ready insights.
     </p>
     <div class="impact-bar">
-      <div class="impact-item"><div class="i-num" style="color:#00d4aa">3×</div><div class="i-lbl">Adoption improvement</div></div>
-      <div class="impact-item"><div class="i-num" style="color:#4a9eff">5</div><div class="i-lbl">Exec personas served</div></div>
-      <div class="impact-item"><div class="i-num" style="color:#a78bfa">RT</div><div class="i-lbl">Real-time data sync</div></div>
+      <div class="impact-item"><div class="i-num green">3×</div><div class="i-lbl" data-i18n="plwc.impact1">Adoption improvement</div></div>
+      <div class="impact-item"><div class="i-num blue">5</div><div class="i-lbl" data-i18n="plwc.impact2">Exec personas served</div></div>
+      <div class="impact-item"><div class="i-num purple">RT</div><div class="i-lbl" data-i18n="plwc.impact3">Real-time data sync</div></div>
     </div>
   </div>
 
   <div class="content-grid">
     <div class="content-block reveal">
-      <span class="block-tag">Context</span>
-      <h3>Business Problem</h3>
+      <span class="block-tag" data-i18n="plwc.b1.tag">Context</span>
+      <h3 data-i18n="plwc.b1.title">Business Problem</h3>
       <ul>
-        <li>Executives relying on weekly spreadsheet exports for pipeline visibility</li>
-        <li>No real-time cross-object reporting across Cases, Opportunities, Accounts</li>
-        <li>Generic report layouts not aligned to exec decision-making workflows</li>
-        <li>Low adoption of native Salesforce reports — perceived as too complex</li>
+        <li data-i18n="plwc.b1.li1">Executives relying on weekly spreadsheet exports for pipeline visibility</li>
+        <li data-i18n="plwc.b1.li2">No real-time cross-object reporting across Cases, Opportunities, Accounts</li>
+        <li data-i18n="plwc.b1.li3">Generic report layouts not aligned to exec decision-making workflows</li>
+        <li data-i18n="plwc.b1.li4">Low adoption of native Salesforce reports — perceived as too complex</li>
       </ul>
     </div>
     <div class="content-block reveal">
-      <span class="block-tag">Architecture Strategy</span>
-      <h3>Solution Design</h3>
+      <span class="block-tag" data-i18n="plwc.b2.tag">Architecture Strategy</span>
+      <h3 data-i18n="plwc.b2.title">Solution Design</h3>
       <ul>
-        <li>LWC component architecture with @wire adapters for live data binding</li>
-        <li>Apex controller layer for complex cross-object SOQL aggregations</li>
-        <li>FlexiPage layouts with dynamic visibility rules per user profile</li>
-        <li>Custom property editor for non-developer dashboard configuration</li>
+        <li data-i18n="plwc.b2.li1">LWC component architecture with @wire adapters for live data binding</li>
+        <li data-i18n="plwc.b2.li2">Apex controller layer for complex cross-object SOQL aggregations</li>
+        <li data-i18n="plwc.b2.li3">FlexiPage layouts with dynamic visibility rules per user profile</li>
+        <li data-i18n="plwc.b2.li4">Custom property editor for non-developer dashboard configuration</li>
       </ul>
     </div>
     <div class="content-block reveal">
-      <span class="block-tag">Component Architecture</span>
-      <h3>LWC Implementation</h3>
+      <span class="block-tag" data-i18n="plwc.b3.tag">Component Architecture</span>
+      <h3 data-i18n="plwc.b3.title">LWC Implementation</h3>
       <ul>
-        <li>Parent-child component communication via custom events and @api</li>
-        <li>Dynamic filtering using @track reactive properties</li>
-        <li>KPI visualization integration within LWC components</li>
-        <li>Conditional rendering with template directives for role-based views</li>
+        <li data-i18n="plwc.b3.li1">Parent-child component communication via custom events and @api</li>
+        <li data-i18n="plwc.b3.li2">Dynamic filtering using @track reactive properties</li>
+        <li data-i18n="plwc.b3.li3">KPI visualization integration within LWC components</li>
+        <li data-i18n="plwc.b3.li4">Conditional rendering with template directives for role-based views</li>
       </ul>
     </div>
     <div class="content-block reveal">
-      <span class="block-tag">Security Model</span>
-      <h3>Access Architecture</h3>
+      <span class="block-tag" data-i18n="plwc.b4.tag">Security Model</span>
+      <h3 data-i18n="plwc.b4.title">Access Architecture</h3>
       <ul>
-        <li>Apex with-sharing enforced — data filtered by running user's access</li>
-        <li>FlexiPage visibility rules gating sensitive KPIs by permission set</li>
-        <li>Field-level security respected at SOQL query level via schema checks</li>
-        <li>Read-only profiles for dashboard consumers, no write risk surface</li>
+        <li data-i18n="plwc.b4.li1">Apex with-sharing enforced — data filtered by running user's access</li>
+        <li data-i18n="plwc.b4.li2">FlexiPage visibility rules gating sensitive KPIs by permission set</li>
+        <li data-i18n="plwc.b4.li3">Field-level security respected at SOQL query level via schema checks</li>
+        <li data-i18n="plwc.b4.li4">Read-only profiles for dashboard consumers, no write risk surface</li>
       </ul>
     </div>
     <div class="content-block reveal">
-      <span class="block-tag">Scalability</span>
-      <h3>Growth Architecture</h3>
+      <span class="block-tag" data-i18n="plwc.b5.tag">Scalability</span>
+      <h3 data-i18n="plwc.b5.title">Growth Architecture</h3>
       <ul>
-        <li>SOQL aggregated queries to minimize data volume at scale</li>
-        <li>Server-side filtering reducing payload to LWC components</li>
-        <li>Modular component design — new KPI cards added without refactoring</li>
-        <li>Custom labels for all strings enabling multilingual exec personas</li>
+        <li data-i18n="plwc.b5.li1">SOQL aggregated queries to minimize data volume at scale</li>
+        <li data-i18n="plwc.b5.li2">Server-side filtering reducing payload to LWC components</li>
+        <li data-i18n="plwc.b5.li3">Modular component design — new KPI cards added without refactoring</li>
+        <li data-i18n="plwc.b5.li4">Custom labels for all strings enabling multilingual exec personas</li>
       </ul>
     </div>
     <div class="content-block reveal">
-      <span class="block-tag">Business Impact</span>
-      <h3>Delivered Outcomes</h3>
+      <span class="block-tag" data-i18n="plwc.b6.tag">Business Impact</span>
+      <h3 data-i18n="plwc.b6.title">Delivered Outcomes</h3>
       <ul>
-        <li>3× increase in executive dashboard adoption within 30 days of launch</li>
-        <li>Real-time pipeline visibility replacing 5 manually curated reports</li>
-        <li>Exec decision cycles reduced from weekly to daily cadence</li>
-        <li>Zero IT dependency for dashboard layout adjustments post-launch</li>
+        <li data-i18n="plwc.b6.li1">3× increase in executive dashboard adoption within 30 days of launch</li>
+        <li data-i18n="plwc.b6.li2">Real-time pipeline visibility replacing 5 manually curated reports</li>
+        <li data-i18n="plwc.b6.li3">Exec decision cycles reduced from weekly to daily cadence</li>
+        <li data-i18n="plwc.b6.li4">Zero IT dependency for dashboard layout adjustments post-launch</li>
       </ul>
     </div>
   </div>
@@ -122,34 +136,14 @@
     <div class="footer-inner">
       <div class="footer-brand"><span class="logo-mark">ATH</span><span>Adrian Tobar Hanze © 2026</span></div>
       <div class="footer-links">
-        <a href="../index.html#projects">Projects</a>
-        <a href="../index.html#architecture">Architecture</a>
+        <a href="../index.html#projects" data-i18n="footer.projects">Projects</a>
+        <a href="../index.html#arch-diagram" data-i18n="footer.diagram">Diagram</a>
+        <a href="../index.html#architecture" data-i18n="footer.architecture">Architecture</a>
+        <a href="../index.html#contact" data-i18n="footer.contact">Contact</a>
         <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank">LinkedIn ↗</a>
       </div>
     </div>
   </footer>
-  <script>
-    document.addEventListener("DOMContentLoaded",()=>{
-      const nb=document.getElementById("navbar");
-      window.addEventListener("scroll",()=>nb.classList.toggle("scrolled",window.scrollY>40));
-      document.querySelectorAll(".reveal").forEach(el=>{
-        const check=()=>{ if(el.getBoundingClientRect().top<window.innerHeight-80) el.classList.add("active"); };
-        window.addEventListener("scroll",check,{passive:true}); check();
-      });
-      const navToggle=document.getElementById("navToggle");
-      const mobileMenu=document.getElementById("mobileMenu");
-      if(navToggle&&mobileMenu){
-        const closeMenu=()=>{navToggle.classList.remove("active");mobileMenu.classList.remove("open");navToggle.setAttribute("aria-expanded","false");};
-        navToggle.addEventListener("click",()=>{
-          const isOpen=mobileMenu.classList.toggle("open");
-          navToggle.classList.toggle("active",isOpen);
-          navToggle.setAttribute("aria-expanded",String(isOpen));
-        });
-        mobileMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click",closeMenu));
-        document.addEventListener("keydown",e=>{if(e.key==="Escape")closeMenu();});
-        window.addEventListener("resize",()=>{if(window.innerWidth>900)closeMenu();});
-      }
-    });
-  </script>
+  <script src="../script.js"></script>
 </body>
 </html>
