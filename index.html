@@ -35,6 +35,21 @@
         <span class="pulse-dot"></span>
         <span id="availability-text">Available for Remote Roles</span>
       </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#architecture">Architecture</a>
+      <a href="#arch-diagram">Diagram</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="nav-linkedin">LinkedIn ↗</a>
+      <div class="mobile-menu-langs">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
     </div>
   </nav>
 
@@ -53,7 +68,7 @@
       </p>
       <div class="hero-cta-group">
         <a href="#projects" class="btn-primary">View Architecture Projects</a>
-        <a href="Adrian Tobar CV.pdf" target="_blank" class="btn-ghost">Download Resume ↓</a>
+        <a href="Adrian%20Tobar%20CV.pdf" target="_blank" class="btn-ghost">Download Resume ↓</a>
         <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="btn-ghost">LinkedIn ↗</a>
       </div>
     </div>
@@ -76,39 +91,45 @@
     <div class="certs-grid">
       <div class="cert-card">
         <div class="cert-img-wrap">
-          <img src="assets/certifications/Platform Administrator.png" alt="Platform Administrator" onerror="this.parentElement.innerHTML='<div class=cert-fallback>Admin</div>'">
+          <img src="assets/certifications/Platform%20Administrator.png" alt="Platform Administrator" onerror="this.parentElement.innerHTML='<div class=cert-fallback>Admin</div>'">
         </div>
         <span class="cert-name">Platform Administrator</span>
       </div>
       <div class="cert-card">
         <div class="cert-img-wrap">
-          <img src="assets/certifications/Platform App Builder.png" alt="Platform App Builder" onerror="this.parentElement.innerHTML='<div class=cert-fallback>App Builder</div>'">
+          <img src="assets/certifications/Platform%20App%20Builder.png" alt="Platform App Builder" onerror="this.parentElement.innerHTML='<div class=cert-fallback>App Builder</div>'">
         </div>
         <span class="cert-name">Platform App Builder</span>
       </div>
       <div class="cert-card">
         <div class="cert-img-wrap">
-          <img src="assets/certifications/Platform Developer.png" alt="Platform Developer I" onerror="this.parentElement.innerHTML='<div class=cert-fallback>Dev I</div>'">
+          <img src="assets/certifications/Platform%20Developer.png" alt="Platform Developer I" onerror="this.parentElement.innerHTML='<div class=cert-fallback>Dev I</div>'">
         </div>
         <span class="cert-name">Platform Developer I</span>
       </div>
       <div class="cert-card">
         <div class="cert-img-wrap">
-          <img src="assets/certifications/Platform Developer II.png" alt="Platform Developer II" onerror="this.parentElement.innerHTML='<div class=cert-fallback>Dev II</div>'">
+          <img src="assets/certifications/Platform%20Developer%20II.png" alt="Platform Developer II" onerror="this.parentElement.innerHTML='<div class=cert-fallback>Dev II</div>'">
         </div>
         <span class="cert-name">Platform Developer II</span>
       </div>
       <div class="cert-card">
         <div class="cert-img-wrap">
-          <img src="assets/certifications/Platform Foundations.png" alt="Platform Foundations" onerror="this.parentElement.innerHTML='<div class=cert-fallback>Foundations</div>'">
+          <img src="assets/certifications/Platform%20Foundations.png" alt="Platform Foundations" onerror="this.parentElement.innerHTML='<div class=cert-fallback>Foundations</div>'">
         </div>
         <span class="cert-name">Platform Foundations</span>
       </div>
       <div class="cert-card">
         <div class="cert-img-wrap">
-          <img src="assets/certifications/Agentforce Specialist.png" alt="Agentforce Specialist" onerror="this.parentElement.innerHTML='<div class=cert-fallback>Agentforce</div>'">
+          <img src="assets/certifications/Agentforce%20Specialist.png" alt="Agentforce Specialist" onerror="this.parentElement.innerHTML='<div class=cert-fallback>Agentforce</div>'">
         </div>
         <span class="cert-name">Agentforce Specialist</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-img-wrap">
+          <img src="assets/certifications/SF-Certified_Plat-Sharing-and-Vis-Arch.png" alt="Sharing and Visibility Architect" onerror="this.parentElement.innerHTML='<div class=cert-fallback>Sharing &amp; Visibility</div>'">
+        </div>
+        <span class="cert-name">Sharing and Visibility Architect</span>
       </div>
     </div>
   </section>
@@ -175,38 +196,38 @@
     <div class="arch-diagram-wrap">
       <div class="diagram-nodes">
         <button class="diag-node" data-node="experience">
-          <div class="node-icon">◫</div>
-          <div class="node-label">Experience</div>
-          <div class="node-sub">LWC · Lightning UI</div>
-          <div class="node-arrow">↓</div>
+          <span class="node-icon">◫</span>
+          <span class="node-label">Experience</span>
+          <span class="node-sub">LWC · Lightning UI</span>
+          <span class="node-arrow">↓</span>
         </button>
         <div class="diag-connector"></div>
         <button class="diag-node" data-node="orchestration">
-          <div class="node-icon">◈</div>
-          <div class="node-label">Orchestration</div>
-          <div class="node-sub">Flow · Events</div>
-          <div class="node-arrow">↓</div>
+          <span class="node-icon">◈</span>
+          <span class="node-label">Orchestration</span>
+          <span class="node-sub">Flow · Events</span>
+          <span class="node-arrow">↓</span>
         </button>
         <div class="diag-connector"></div>
         <button class="diag-node" data-node="service">
-          <div class="node-icon">⬡</div>
-          <div class="node-label">Service</div>
-          <div class="node-sub">Apex · Async</div>
-          <div class="node-arrow">↓</div>
+          <span class="node-icon">⬡</span>
+          <span class="node-label">Service</span>
+          <span class="node-sub">Apex · Async</span>
+          <span class="node-arrow">↓</span>
         </button>
         <div class="diag-connector"></div>
         <button class="diag-node" data-node="data">
-          <div class="node-icon">⬢</div>
-          <div class="node-label">Data</div>
-          <div class="node-sub">Objects · Security</div>
-          <div class="node-arrow">↓</div>
+          <span class="node-icon">⬢</span>
+          <span class="node-label">Data</span>
+          <span class="node-sub">Objects · Security</span>
+          <span class="node-arrow">↓</span>
         </button>
         <div class="diag-connector"></div>
         <button class="diag-node" data-node="integration">
-          <div class="node-icon">◬</div>
-          <div class="node-label">Integration</div>
-          <div class="node-sub">REST · Named Creds</div>
-          <div class="node-arrow">↓</div>
+          <span class="node-icon">◬</span>
+          <span class="node-label">Integration</span>
+          <span class="node-sub">REST · Named Creds</span>
+          <span class="node-arrow">↓</span>
         </button>
       </div>
 
@@ -558,7 +579,7 @@
       <p id="availability-desc" class="cta-sub">Available for remote Salesforce Platform Engineer (Flow + Apex + Integrations) roles across US-aligned timezones.<br>Designing scalable automation frameworks that balance admin maintainability, developer extensibility, and integration reliability.</p>
       <div class="cta-actions">
         <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="btn-primary">Connect on LinkedIn ↗</a>
-        <a href="Adrian Tobar CV.pdf" target="_blank" class="btn-ghost">Download Resume ↓</a>
+        <a href="Adrian%20Tobar%20CV.pdf" target="_blank" class="btn-ghost">Download Resume ↓</a>
       </div>
     </div>
   </section>
