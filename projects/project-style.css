@@ -69,7 +69,9 @@
   padding-left: 16px; position: relative; line-height: 1.55;
 }
 .content-block li::before {
+  content: var(--before, '→');
   position: absolute; left: 0; font-size: 11px; top: 2px;
+  color: var(--li-color, var(--accent));
 }
 
 @media (max-width: 900px) {

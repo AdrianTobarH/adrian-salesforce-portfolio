@@ -154,10 +154,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.addEventListener("click", () => {
-      document.querySelectorAll(".lang-btn").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      setLanguage(btn.dataset.lang);
+      const lang = btn.dataset.lang;
+      document.querySelectorAll(".lang-btn").forEach(b => {
+        b.classList.toggle("active", b.dataset.lang === lang);
+      });
+      setLanguage(lang);
     });
   });
+
+  /* ─── MOBILE MENU TOGGLE ─── */
+  const navToggle  = document.getElementById("navToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+  if (navToggle && mobileMenu) {
+    const closeMobileMenu = () => {
+      navToggle.classList.remove("active");
+      mobileMenu.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+    };
+    navToggle.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.toggle("open");
+      navToggle.classList.toggle("active", isOpen);
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+    mobileMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", closeMobileMenu);
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMobileMenu();
+    });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 900) closeMobileMenu();
+    });
+  }
 
 });

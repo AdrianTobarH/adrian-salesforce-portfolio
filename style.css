@@ -609,25 +609,89 @@ body::after {
 }
 .footer-links a:hover { color: var(--text-primary); }
 
+/* ─── MOBILE NAV TOGGLE ─── */
+.nav-toggle {
+  display: none;
+  flex-direction: column; justify-content: center; align-items: center;
+  gap: 5px; width: 32px; height: 32px; flex-shrink: 0;
+  background: none; border: none; cursor: pointer; padding: 0;
+}
+.nav-toggle span {
+  display: block; width: 100%; height: 2px; border-radius: 2px;
+  background: var(--text-primary);
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.nav-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.active span:nth-child(2) { opacity: 0; }
+.nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute; top: 100%; left: 0; right: 0;
+  background: rgba(6,11,20,0.98);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 24px 20px;
+  max-height: calc(100vh - var(--nav-h));
+  overflow-y: auto;
+  z-index: 999;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-size: 15px; font-weight: 500; color: var(--text-secondary);
+  padding: 14px 2px; border-bottom: 1px solid var(--border);
+  transition: color 0.2s;
+}
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu a:hover { color: var(--text-primary); }
+.mobile-menu .nav-linkedin { color: var(--accent); }
+.mobile-menu-langs {
+  display: flex; gap: 2px; margin-top: 14px;
+  background: var(--bg-surface); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 3px; width: fit-content;
+}
+
 /* ─── RESPONSIVE ─── */
+@media (max-width: 1200px) {
+  .hero { padding: 90px 40px; gap: 40px; }
+  .section { padding: 90px 40px; }
+}
 @media (max-width: 1024px) {
   .panel-grid { grid-template-columns: 1fr 1fr; }
+  .hero-stack-preview { width: 240px; }
 }
 @media (max-width: 900px) {
-  .nav { padding: 0 24px; }
+  .nav { padding: 0 20px; }
   .nav-links { display: none; }
   .timezone-badge { display: none; }
-  .hero { flex-direction: column; padding: 60px 24px; min-height: unset; }
-  .hero-visual { display: none; }
-  .section { padding: 60px 24px; }
+  .nav-toggle { display: flex; }
+  .hero { flex-direction: column; align-items: flex-start; padding: 56px 24px; min-height: unset; gap: 36px; }
+  .hero-content { max-width: 100%; }
+  .hero-visual { align-self: stretch; }
+  .hero-stack-preview { width: 100%; max-width: 360px; }
+  .section { padding: 56px 24px; }
   .footer { padding: 24px; }
   .footer-inner { flex-direction: column; text-align: center; }
   .panel-inner { padding: 24px; }
-  .panel-grid { grid-template-columns: 1fr; }
+  .panel-grid { grid-template-columns: 1fr; gap: 22px; }
   .diagram-governance { padding: 20px 24px; }
   .diagram-nodes { padding: 24px 16px 20px; gap: 4px; }
   .diag-connector { width: 16px; }
   .diag-node { min-width: 100px; padding: 14px 10px; }
+  .cert-card { padding: 18px 12px; }
+}
+@media (max-width: 680px) {
+  .hero { padding: 48px 20px; }
+  .section { padding: 48px 20px; }
+  .hero-eyebrow { gap: 10px; }
+  .hero-cta-group { flex-direction: column; align-items: stretch; }
+  .hero-cta-group a { justify-content: center; }
+  .certs-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 14px; }
+  .cert-img-wrap, .cert-fallback { width: 60px; height: 60px; }
+  .arch-layer { flex-wrap: wrap; gap: 12px; padding: 18px 20px; }
+  .layer-tech { white-space: normal; }
 }
 @media (max-width: 600px) {
   .availability-badge span:last-child { display: none; }
@@ -635,4 +699,18 @@ body::after {
   .hero-headline { font-size: 34px; }
   .diag-node { min-width: 80px; }
   .diag-connector { display: none; }
+  .diagram-nodes { justify-content: stretch; }
+  .diag-node { flex: 1 1 calc(50% - 4px); }
+  .panel-badges { gap: 5px; }
+  .stack-row { flex-wrap: wrap; gap: 6px 20px; padding: 14px 20px; }
+  .cta-actions { flex-direction: column; align-items: stretch; }
+}
+@media (max-width: 420px) {
+  .nav { padding: 0 14px; }
+  .nav-right { gap: 8px; }
+  .hero { padding: 40px 16px; }
+  .section { padding: 40px 16px; }
+  .hero-headline { font-size: 28px; }
+  .certs-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
+  .diag-node { flex: 1 1 100%; }
 }
