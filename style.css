@@ -41,7 +41,6 @@ body {
   font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
-  overflow-wrap: break-word;
 }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
@@ -184,9 +183,10 @@ body::after {
 }
 .hero-headline {
   font-family: var(--font-display);
-  font-size: clamp(40px,5vw,68px); font-weight: 800;
+  font-size: clamp(22px,3.2vw,56px); font-weight: 800;
   line-height: 1.08; letter-spacing: -0.02em;
   color: var(--text-primary); margin-bottom: 24px;
+  overflow-wrap: normal;
 }
 .hero-sub {
   font-size: 15px; color: var(--text-secondary); line-height: 1.7;
@@ -448,7 +448,7 @@ body::after {
 .gov-title {
   font-family: var(--font-mono); font-size: 11px; font-weight: 500;
   letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted);
-  flex-shrink: 0;
+  flex-shrink: 1; min-width: 0; max-width: 100%;
 }
 .gov-pillars { display: flex; flex-wrap: wrap; gap: 8px; }
 .gov-pill {
@@ -597,8 +597,9 @@ body::after {
 .cta-inner { max-width: 640px; margin: 0 auto; text-align: center; }
 .cta-headline {
   font-family: var(--font-display);
-  font-size: clamp(28px,4vw,48px); font-weight: 800;
+  font-size: clamp(22px,4vw,48px); font-weight: 800;
   color: var(--text-primary); letter-spacing: -0.025em; margin-bottom: 16px;
+  overflow-wrap: normal;
 }
 .cta-sub { font-size: 15px; color: var(--text-secondary); margin-bottom: 36px; line-height: 1.7; }
 .cta-actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
@@ -688,7 +689,7 @@ body::after {
   .nav-links { display: none; }
   .btn-back { display: none; }
   .nav-toggle { display: flex; }
-  .hero { flex-direction: column; align-items: flex-start; padding: 56px 24px; min-height: unset; gap: 36px; }
+  .hero { flex-direction: column; align-items: center; padding: 56px 24px; min-height: unset; gap: 36px; }
   .hero-content { max-width: 100%; }
   .hero-visual { align-self: stretch; }
   .hero-stack-preview { width: 100%; max-width: 360px; }
@@ -717,7 +718,6 @@ body::after {
 @media (max-width: 600px) {
   .availability-badge span:last-child { display: none; }
   .logo-name { display: none; }
-  .hero-headline { font-size: 34px; }
   .diag-node { min-width: 80px; }
   .diag-connector { display: none; }
   .diagram-nodes { justify-content: stretch; }
@@ -731,7 +731,6 @@ body::after {
   .nav-right { gap: 8px; }
   .hero { padding: 40px 16px; }
   .section { padding: 40px 16px; }
-  .hero-headline { font-size: 28px; }
   .certs-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
   .diag-node { flex: 1 1 100%; }
 }
