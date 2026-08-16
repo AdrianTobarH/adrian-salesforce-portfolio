@@ -102,6 +102,15 @@
       </ul>
     </div>
     <div class="content-block reveal">
+      <span class="block-tag">Options Considered</span>
+      <h3>Why Not Middleware?</h3>
+      <ul>
+        <li><strong>Hardcoded per-integration credentials</strong> — the status quo being replaced, not a real option; the original security problem.</li>
+        <li><strong>Middleware / iPaaS layer</strong> — considered for future-proofing; not adopted for this scope, since Named Credentials solved the immediate need without introducing new infrastructure or licensing.</li>
+        <li><strong>Named Credentials + reusable service class (chosen)</strong> — centralizes secret management without a new platform dependency.</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
       <span class="block-tag" data-i18n="papi.b3.tag">Integration Layers</span>
       <h3 data-i18n="papi.b3.title">Technical Implementation</h3>
       <ul>
@@ -119,6 +128,14 @@
         <li data-i18n="papi.b4.li2">Per-user credential delegation via User-level Named Credentials</li>
         <li data-i18n="papi.b4.li3">CSP Trusted Sites and CORS configured for outbound security</li>
         <li data-i18n="papi.b4.li4">Callout log with field-level encryption on sensitive response data</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
+      <span class="block-tag">Risks &amp; Mitigations</span>
+      <h3>What Could Break</h3>
+      <ul>
+        <li><strong>Shared service as a single point of failure</strong> — one HttpCallout class serving every integration means a bug there affects all of them; mitigated with per-endpoint configuration via custom metadata and isolated error handling per callout rather than one shared catch-all.</li>
+        <li><strong>Duplicate downstream records from retries</strong> — a retry without idempotency protection can create the same record twice; mitigated by pairing retry logic with idempotent request keys wherever the external system supports them.</li>
       </ul>
     </div>
     <div class="content-block reveal">

@@ -133,7 +133,9 @@
     <div class="adr-block reveal">
       <span class="adr-block-num" data-i18n="padr.b6.num">06 · Architecture Tradeoffs</span>
       <h2 data-i18n="padr.b6.title">Decision Rationale</h2>
-      <div class="tradeoff-grid">
+
+      <div class="block-tag" style="margin-bottom:8px;">ADR-001 · Who Owns Orchestration</div>
+      <div class="tradeoff-grid" style="margin-bottom:24px;">
         <div class="tradeoff-card">
           <span class="tc-label tc-selected" data-i18n="padr.b6.c1.label">✓ Selected: Flow-first orchestration</span>
           <p data-i18n="padr.b6.c1.p">Maximizes admin maintainability. Business stakeholders can adjust routing logic without developer dependency. Reduces change cycle time from weeks to hours.</p>
@@ -142,6 +144,10 @@
           <span class="tc-label tc-vs" data-i18n="padr.b6.c2.label">○ Considered: Full Apex trigger</span>
           <p data-i18n="padr.b6.c2.p">Higher performance ceiling but eliminates admin visibility. Requires developer for every routing rule change. Selected against due to team structure and maintenance cost.</p>
         </div>
+      </div>
+
+      <div class="block-tag" style="margin-bottom:8px;">ADR-002 · Reuse Across Queues</div>
+      <div class="tradeoff-grid">
         <div class="tradeoff-card">
           <span class="tc-label tc-selected" data-i18n="padr.b6.c3.label">✓ Selected: Modular subflow pattern</span>
           <p data-i18n="padr.b6.c3.p">Routing logic reusable across multiple case queues without duplication. Enables consistent behavior enforcement across all process entry points.</p>

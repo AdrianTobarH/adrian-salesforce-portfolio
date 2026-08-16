@@ -101,6 +101,15 @@
       </ul>
     </div>
     <div class="content-block reveal">
+      <span class="block-tag">Options Considered</span>
+      <h3>Why Not Native Reports?</h3>
+      <ul>
+        <li><strong>Native Salesforce Reports/Dashboards</strong> — evaluated first as the zero-code option; rejected because the exec personas needed cross-object aggregation and a decision-focused layout native reports couldn't match.</li>
+        <li><strong>Third-party BI tool</strong> — out of scope. Staying in-platform was a constraint; introducing a new licensed tool wasn't justified for this need.</li>
+        <li><strong>Custom LWC + Apex controller (chosen)</strong> — higher upfront build cost than native reports, justified by the adoption gap it needed to close.</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
       <span class="block-tag" data-i18n="plwc.b3.tag">Component Architecture</span>
       <h3 data-i18n="plwc.b3.title">LWC Implementation</h3>
       <ul>
@@ -118,6 +127,14 @@
         <li data-i18n="plwc.b4.li2">FlexiPage visibility rules gating sensitive KPIs by permission set</li>
         <li data-i18n="plwc.b4.li3">Field-level security respected at SOQL query level via schema checks</li>
         <li data-i18n="plwc.b4.li4">Read-only profiles for dashboard consumers, no write risk surface</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
+      <span class="block-tag">Risks &amp; Mitigations</span>
+      <h3>What Could Break</h3>
+      <ul>
+        <li><strong>Apex controller becomes a bottleneck</strong> as data volume grows — mitigated with aggregated SOQL rather than record-by-record processing, and server-side filtering before data ever reaches the component.</li>
+        <li><strong>Tight coupling to one layout</strong> as exec needs evolve — mitigated by a modular component design so new KPI cards can be added without refactoring the ones already in production.</li>
       </ul>
     </div>
     <div class="content-block reveal">
