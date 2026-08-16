@@ -70,7 +70,7 @@
     </div>
     <h1 class="project-title" data-i18n-html="pca.title">Enterprise Case Automation<br>Architecture</h1>
     <p class="project-summary" data-i18n="pca.summary">
-      Flow-driven intelligent routing, multi-tier escalation guardrails, and validation frameworks for enterprise case management at scale — eliminating manual intervention across the resolution lifecycle.
+      Flow-driven intelligent routing, multi-tier escalation guardrails, and validation frameworks for enterprise case management at scale — reducing manual intervention across the resolution lifecycle.
     </p>
     <p class="case-disclosure" data-i18n="common.caseStudyDisclosure">Composite case study based on real Salesforce production work. Client-specific details have been anonymized and generalized; some elements combine patterns from multiple engagements.</p>
     <div class="impact-bar">
@@ -101,12 +101,12 @@
       </ul>
     </div>
     <div class="content-block reveal">
-      <span class="block-tag">Options Considered</span>
-      <h3>Why Not Apex-Only, or Flow-Only?</h3>
+      <span class="block-tag">Architecture Alternatives</span>
+      <h3>Flow-Only vs. Apex-Only vs. Hybrid</h3>
       <ul>
-        <li><strong>Apex trigger-only routing</strong> — rejected. Faster to build, but removes admin visibility into routing rules; every rule change becomes a deployment.</li>
-        <li><strong>Flow-only, no Apex</strong> — considered first. Hit a complexity ceiling once multi-tier escalation logic exceeded what declarative branching could express cleanly.</li>
-        <li><strong>Hybrid (chosen)</strong> — Record-Triggered Flow owns intake and entry criteria; Apex is invoked only for the routing-decision step that needed programmatic control.</li>
+        <li><strong>Apex trigger-only routing</strong> — stronger performance ceiling, but removes admin visibility into routing rules; every rule change becomes a deployment.</li>
+        <li><strong>Flow-only, no Apex</strong> — most transparent option, but hits a complexity ceiling once multi-tier escalation logic exceeds what declarative branching can express cleanly.</li>
+        <li><strong>Hybrid (used in this design)</strong> — Record-Triggered Flow owns intake and entry criteria; Apex is invoked only for the routing-decision step that needs programmatic control.</li>
       </ul>
     </div>
     <div class="content-block reveal">
@@ -144,7 +144,7 @@
         <li data-i18n="pca.b5.li1">Custom metadata routing table — zero code changes for new rules</li>
         <li data-i18n="pca.b5.li2">Bulkification-safe Apex invocable methods for batch processing</li>
         <li data-i18n="pca.b5.li3">Flow subflow architecture for modular, reusable logic components</li>
-        <li data-i18n="pca.b5.li4">Platform events for decoupled async escalation notifications</li>
+        <li data-i18n="pca.b5.li4">Platform Events as the pattern to evaluate for decoupled, async escalation notifications to external systems</li>
       </ul>
     </div>
     <div class="content-block reveal">
@@ -152,9 +152,9 @@
       <h3 data-i18n="pca.b6.title">Delivered Outcomes</h3>
       <ul>
         <li data-i18n="pca.b6.li1">Reduced average case routing time by replacing manual assignment with automated routing</li>
-        <li data-i18n="pca.b6.li2">3-tier escalation matrix eliminating SLA breaches</li>
+        <li data-i18n="pca.b6.li2">Introduced a 3-tier escalation matrix with automated SLA visibility and time-based routing</li>
         <li data-i18n="pca.b6.li3">Executive dashboard surfaces real-time case throughput metrics</li>
-        <li data-i18n="pca.b6.li4">Validation guardrails reduced data quality incidents to near zero</li>
+        <li data-i18n="pca.b6.li4">Validation guardrails at intake improved case data consistency</li>
       </ul>
     </div>
   </div>

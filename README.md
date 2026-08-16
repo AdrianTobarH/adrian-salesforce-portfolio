@@ -23,7 +23,7 @@ npx serve .
 ## Language strategy
 
 - **Trilingual (EN/ES/FR):** navigation, footer, Hero, CTA, certification summaries, project card summaries, and the pre-existing case-study body content (all still fully translated from earlier work).
-- **English-only, by design:** `architecture.html`'s deep content (Principles, Layered Architecture writeup, Automation Decision Framework, Security/Data/Integration/Operational Architecture, Risks), `about.html`, and the new "Options Considered" / "Risks & Mitigations" blocks added to the case studies. This is a deliberate choice, not an oversight — the target audience for this reference material is primarily English-reading, and tripling hundreds of lines of dense technical prose into ES/FR wasn't judged worth the translation/QA burden it would add. If that changes, add the new keys to the `translations` object in `script.js` following the existing `idx.*` / `pca.*` / `padr.*` naming convention, and tag the corresponding elements with `data-i18n`.
+- **English-only, by design:** `architecture.html`'s deep content (Principles, Layered Architecture writeup, Automation Decision Framework, Security/Data/Integration/Operational Architecture, Risks), `about.html`, and the "Architecture Alternatives" / "Risks & Mitigations" blocks added to the case studies. This is a deliberate choice, not an oversight — the target audience for this reference material is primarily English-reading, and tripling hundreds of lines of dense technical prose into ES/FR wasn't judged worth the translation/QA burden it would add. If that changes, add the new keys to the `translations` object in `script.js` following the existing `idx.*` / `pca.*` / `padr.*` naming convention, and tag the corresponding elements with `data-i18n`.
 
 ## How certification data works
 
@@ -59,8 +59,10 @@ This is the specific update the whole data model was built for. When Salesforce 
 
 Each case study is a hand-authored HTML page under `projects/`. They are **composite case studies based on real Salesforce production work** — not one-to-one retrospectives of a single client engagement, and not fiction either. Every case study page carries a `.case-disclosure` paragraph saying so explicitly. When extending a case study:
 - Never invent a client name, industry, team size, or metric.
-- If a number can't be sourced/measured, describe the mechanism instead ("replaced manual assignment with rule-driven routing"), not a percentage.
-- New sections (Options Considered, Risks & Mitigations) are English-only per the language strategy above.
+- If a number can't be sourced/measured, describe the mechanism instead ("replaced manual assignment with rule-driven routing"), not a percentage. Absolutes like "eliminated," "zero," or "near zero" are metrics in disguise — hold them to the same standard as a percentage.
+- "Architecture Alternatives" sections describe alternatives evaluated in this composite design ("used in this design" / a named trade-off), not a specific real client's formal decision history — don't word them as if one client team deliberated and rejected options, since that implies engagement-specific history that isn't confirmed.
+- Where a technology or pattern isn't confirmed as actually implemented, split it into its own "Architecture Considerations" block (see `projects/api-integration.html` for the pattern) rather than listing it alongside confirmed implementation detail. Framing matters: "pattern to evaluate" / "I'd consider" is honest; stating it as delivered when it isn't, isn't.
+- These sections (Architecture Alternatives, Architecture Considerations, Risks & Mitigations) are English-only per the language strategy above.
 
 ## How ADRs are maintained
 
@@ -68,7 +70,7 @@ The one formal ADR-labeled content lives in `projects/case-study-enterprise-auto
 
 ## Creating a new case study
 1. Copy the structure of an existing project page (nav, `.project-hero`, `.case-disclosure`, `.content-grid` of `.content-block`s).
-2. Include, at minimum: Context, Business Problem, Solution Design, Options Considered, Security Model, Risks & Mitigations, Scalability, Business Impact.
+2. Include, at minimum: Context, Business Problem, Solution Design, Architecture Alternatives, Security Model, Risks & Mitigations, Scalability, Business Impact. If part of the design isn't confirmed as actually built, give it its own Architecture Considerations block instead of folding it into confirmed content.
 3. Add the project to the `.project-grid` on `index.html` (card + `<a>` link) and to `sitemap.xml`.
 4. Keep metrics qualitative unless you can source a real number (see `#metrics` in project history — several fabricated-sounding percentages were removed for exactly this reason).
 

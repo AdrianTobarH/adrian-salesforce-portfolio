@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>API Integration Architecture — Adrian Tobar Hanze</title>
-  <meta name="description" content="A composite Salesforce case study on reusable Named Credential integration architecture, OAuth 2.0 Auth Providers, and real-time sync — based on real production patterns.">
+  <meta name="description" content="A composite Salesforce case study on reusable Named Credential integration architecture and configuration-driven REST endpoints — based on real production patterns.">
   <link rel="canonical" href="https://adrian-salesforce-portfolio.vercel.app/projects/api-integration.html">
   <meta property="og:type" content="article">
   <meta property="og:title" content="API Integration Architecture — Adrian Tobar Hanze">
-  <meta property="og:description" content="A composite Salesforce case study on reusable Named Credential integration architecture and real-time sync.">
+  <meta property="og:description" content="A composite Salesforce case study on reusable Named Credential integration architecture and configuration-driven REST endpoints.">
   <meta property="og:url" content="https://adrian-salesforce-portfolio.vercel.app/projects/api-integration.html">
   <meta property="og:image" content="https://adrian-salesforce-portfolio.vercel.app/assets/profile.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234a9eff'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='24' font-weight='700' fill='%23060b14' text-anchor='middle'%3EATH%3C/text%3E%3C/svg%3E">
@@ -70,13 +70,13 @@
     </div>
     <h1 class="project-title" data-i18n-html="papi.title">Enterprise API<br>Integration Layer</h1>
     <p class="project-summary" data-i18n="papi.summary">
-      Reusable Named Credential architecture with secure REST endpoints, OAuth 2.0 Auth Providers, and real-time sync layers — building an integration foundation that scales across all external system boundaries.
+      Reusable Named Credential architecture with secure REST endpoints and a configuration-driven service layer — an integration foundation designed to extend to additional external systems without new code per integration.
     </p>
     <p class="case-disclosure" data-i18n="common.caseStudyDisclosure">Composite case study based on real Salesforce production work. Client-specific details have been anonymized and generalized; some elements combine patterns from multiple engagements.</p>
     <div class="impact-bar">
       <div class="impact-item"><div class="i-num amber">∞</div><div class="i-lbl" data-i18n="papi.impact1">Reusable credential layer</div></div>
       <div class="impact-item"><div class="i-num blue">0</div><div class="i-lbl" data-i18n="papi.impact2">Secrets stored in Apex code</div></div>
-      <div class="impact-item"><div class="i-num green">RT</div><div class="i-lbl" data-i18n="papi.impact3">Real-time sync</div></div>
+      <div class="impact-item"><div class="i-num green">CFG</div><div class="i-lbl" data-i18n="papi.impact3">New endpoints via configuration</div></div>
     </div>
   </div>
 
@@ -95,39 +95,38 @@
       <span class="block-tag" data-i18n="papi.b2.tag">Architecture Strategy</span>
       <h3 data-i18n="papi.b2.title">Solution Design</h3>
       <ul>
-        <li data-i18n="papi.b2.li1">Named Credentials + Auth Provider for zero-secret Apex callouts</li>
-        <li data-i18n="papi.b2.li2">Apex HttpCallout service class — single integration point for all APIs</li>
-        <li data-i18n="papi.b2.li3">Platform Events for async real-time sync decoupled from transactions</li>
-        <li data-i18n="papi.b2.li4">Custom object logging layer for callout auditing and retry management</li>
+        <li data-i18n="papi.b2.li1">Named Credentials as the single source of truth for outbound credentials — no secrets stored in Apex</li>
+        <li data-i18n="papi.b2.li2">A reusable Apex service class as the single integration point for REST callouts, replacing bespoke per-system code</li>
+        <li data-i18n="papi.b2.li3">Custom object logging layer for callout auditing and retry visibility</li>
       </ul>
     </div>
     <div class="content-block reveal">
-      <span class="block-tag">Options Considered</span>
+      <span class="block-tag">Architecture Alternatives</span>
       <h3>Why Not Middleware?</h3>
       <ul>
-        <li><strong>Hardcoded per-integration credentials</strong> — the status quo being replaced, not a real option; the original security problem.</li>
-        <li><strong>Middleware / iPaaS layer</strong> — considered for future-proofing; not adopted for this scope, since Named Credentials solved the immediate need without introducing new infrastructure or licensing.</li>
-        <li><strong>Named Credentials + reusable service class (chosen)</strong> — centralizes secret management without a new platform dependency.</li>
+        <li><strong>Hardcoded per-integration credentials</strong> — the problem this design replaces, not a real alternative.</li>
+        <li><strong>Middleware / iPaaS layer</strong> — a stronger fit at higher integration counts or when external systems need to talk to each other directly; not necessary here since Named Credentials solved the immediate need without new infrastructure or licensing.</li>
+        <li><strong>Named Credentials + reusable service class (used in this design)</strong> — centralizes secret management without adding a new platform dependency.</li>
       </ul>
     </div>
     <div class="content-block reveal">
-      <span class="block-tag" data-i18n="papi.b3.tag">Integration Layers</span>
-      <h3 data-i18n="papi.b3.title">Technical Implementation</h3>
+      <span class="block-tag" data-i18n="papi.b3.tag">Architecture Considerations</span>
+      <h3 data-i18n="papi.b3.title">Patterns I'd Evaluate at Scale</h3>
       <ul>
-        <li data-i18n="papi.b3.li1">OAuth 2.0 Auth Provider managing token refresh automatically</li>
-        <li data-i18n="papi.b3.li2">Named Credential as abstraction layer — no URL or credential in code</li>
-        <li data-i18n="papi.b3.li3">Apex Queueable chain for retry-safe async callout architecture</li>
-        <li data-i18n="papi.b3.li4">External Services for no-code API schema registration where viable</li>
+        <li data-i18n="papi.b3.li1">OAuth 2.0 Auth Provider for automatic token refresh, where the external system supports it, instead of managing tokens manually</li>
+        <li data-i18n="papi.b3.li2">Platform Events to decouple downstream sync from the request transaction, when near-real-time updates matter more than immediate consistency</li>
+        <li data-i18n="papi.b3.li3">Apex Queueable chaining for retry-safe asynchronous callout sequences</li>
+        <li data-i18n="papi.b3.li4">External Services for no-code API schema registration, where the external API exposes a stable OpenAPI spec</li>
       </ul>
     </div>
     <div class="content-block reveal">
       <span class="block-tag" data-i18n="papi.b4.tag">Security Model</span>
-      <h3 data-i18n="papi.b4.title">Credential Architecture</h3>
+      <h3 data-i18n="papi.b4.title">Credential &amp; Runtime Security</h3>
       <ul>
-        <li data-i18n="papi.b4.li1">All credentials stored in Named Credentials — zero exposure in Apex</li>
-        <li data-i18n="papi.b4.li2">Per-user credential delegation via User-level Named Credentials</li>
-        <li data-i18n="papi.b4.li3">CSP Trusted Sites and CORS configured for outbound security</li>
-        <li data-i18n="papi.b4.li4">Callout log with field-level encryption on sensitive response data</li>
+        <li data-i18n="papi.b4.li1">All outbound credentials stored in Named Credentials — never hardcoded in Apex</li>
+        <li data-i18n="papi.b4.li2">Apex callouts authenticate through the Named Credential / External Credential layer, not through CSP or CORS — those govern browser- and Lightning-originated requests, not server-side callouts</li>
+        <li data-i18n="papi.b4.li3">CSP Trusted Sites evaluated separately for any Lightning component that calls the external system directly from the browser</li>
+        <li data-i18n="papi.b4.li4">Callout logging designed to avoid persisting sensitive response fields, rather than storing raw response bodies indefinitely</li>
       </ul>
     </div>
     <div class="content-block reveal">
@@ -142,10 +141,8 @@
       <span class="block-tag" data-i18n="papi.b5.tag">Scalability</span>
       <h3 data-i18n="papi.b5.title">Reusable Architecture</h3>
       <ul>
-        <li data-i18n="papi.b5.li1">Single HttpCallout service class supports any REST endpoint via config</li>
-        <li data-i18n="papi.b5.li2">Custom metadata for endpoint registration — new APIs without code</li>
-        <li data-i18n="papi.b5.li3">Platform Event bus absorbs volume spikes without governor limit risk</li>
-        <li data-i18n="papi.b5.li4">Retry queue with exponential backoff for transient failure resilience</li>
+        <li data-i18n="papi.b5.li1">A single Apex service class supports additional REST endpoints through configuration, rather than a new class per integration</li>
+        <li data-i18n="papi.b5.li2">Custom metadata for endpoint registration — adding a new API is a configuration change, not a deployment</li>
       </ul>
     </div>
     <div class="content-block reveal">
@@ -153,9 +150,8 @@
       <h3 data-i18n="papi.b6.title">Delivered Outcomes</h3>
       <ul>
         <li data-i18n="papi.b6.li1">API secrets moved out of Apex code and into Named Credentials</li>
-        <li data-i18n="papi.b6.li2">Reusable layer reduced new integration time from weeks to days</li>
-        <li data-i18n="papi.b6.li3">Real-time sync replaced nightly batch — latency cut from 24h to seconds</li>
-        <li data-i18n="papi.b6.li4">Callout logging surfaces integration health in executive dashboard</li>
+        <li data-i18n="papi.b6.li2">Reusable integration service reduced duplication when adding additional endpoints</li>
+        <li data-i18n="papi.b6.li3">Callout logging replaced silent failures with visibility into integration health and failure patterns</li>
       </ul>
     </div>
   </div>

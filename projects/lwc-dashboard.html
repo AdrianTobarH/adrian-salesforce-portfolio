@@ -101,12 +101,12 @@
       </ul>
     </div>
     <div class="content-block reveal">
-      <span class="block-tag">Options Considered</span>
+      <span class="block-tag">Architecture Alternatives</span>
       <h3>Why Not Native Reports?</h3>
       <ul>
-        <li><strong>Native Salesforce Reports/Dashboards</strong> — evaluated first as the zero-code option; rejected because the exec personas needed cross-object aggregation and a decision-focused layout native reports couldn't match.</li>
-        <li><strong>Third-party BI tool</strong> — out of scope. Staying in-platform was a constraint; introducing a new licensed tool wasn't justified for this need.</li>
-        <li><strong>Custom LWC + Apex controller (chosen)</strong> — higher upfront build cost than native reports, justified by the adoption gap it needed to close.</li>
+        <li><strong>Native Salesforce Reports/Dashboards</strong> — the zero-code option; a good fit when exec needs stay within standard cross-object reporting, but insufficient once the layout needs to be decision-focused rather than tabular.</li>
+        <li><strong>Third-party BI tool</strong> — stronger analytics depth, but introduces a new licensed tool and a data-sync dependency outside the platform; only worth it once the reporting need outgrows what Salesforce natively supports.</li>
+        <li><strong>Custom LWC + Apex controller (used in this design)</strong> — higher upfront build cost than native reports, worth it when the adoption gap and layout requirements justify it.</li>
       </ul>
     </div>
     <div class="content-block reveal">
@@ -151,10 +151,10 @@
       <span class="block-tag" data-i18n="plwc.b6.tag">Business Impact</span>
       <h3 data-i18n="plwc.b6.title">Delivered Outcomes</h3>
       <ul>
-        <li data-i18n="plwc.b6.li1">Replaced weekly spreadsheet exports with a live executive dashboard within 30 days of launch</li>
-        <li data-i18n="plwc.b6.li2">Real-time pipeline visibility replacing 5 manually curated reports</li>
-        <li data-i18n="plwc.b6.li3">Exec decision cycles reduced from weekly to daily cadence</li>
-        <li data-i18n="plwc.b6.li4">Zero IT dependency for dashboard layout adjustments post-launch</li>
+        <li data-i18n="plwc.b6.li1">Replaced weekly spreadsheet exports with an in-platform, live executive dashboard</li>
+        <li data-i18n="plwc.b6.li2">Consolidated several manually curated reports into a single real-time pipeline view</li>
+        <li data-i18n="plwc.b6.li3">Gave executives on-demand access to pipeline data instead of waiting on the next scheduled report</li>
+        <li data-i18n="plwc.b6.li4">Custom property editor lets admins adjust dashboard layout without a developer or IT ticket</li>
       </ul>
     </div>
   </div>

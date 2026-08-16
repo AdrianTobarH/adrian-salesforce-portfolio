@@ -113,7 +113,7 @@
         </div>
         <div class="principle-card">
           <h3>Bulkification by Design</h3>
-          <p>Every trigger, Flow, and Apex service is built assuming more than one record at a time. Governor limits don't negotiate, and "it works for one record" is not a passing test.</p>
+          <p>I evaluate automations for bulk behavior rather than validating only the single-record happy path. Governor limits don't negotiate, and "it works for one record" is not a passing test.</p>
         </div>
         <div class="principle-card">
           <h3>Trade-offs Are Explicit</h3>
@@ -135,7 +135,7 @@
       <p>Flow owns orchestration and human-readable process logic by default. Apex is introduced at this layer only as invocable methods called <em>by</em> Flow, for operations exceeding declarative limits. <strong>Trade-off:</strong> Flow-first orchestration is more maintainable by admins but has a lower performance ceiling and weaker native error handling than an equivalent Apex trigger — acceptable when admin ownership matters more than raw throughput.</p>
 
       <h3 style="font-size:16px;margin:22px 0 8px;color:var(--text-primary);">03 · Service Layer — Apex · Queueable · Batch</h3>
-      <p>Encapsulates transaction-level logic: reusable Apex services, invocable methods, async processing. Services are stateless and bulkification-safe by construction, not by afterthought. <strong>Trade-off:</strong> a dedicated service layer adds indirection — a one-off automation could be written faster as an inline trigger — accepted because reuse and testability compound in value as the org grows.</p>
+      <p>Encapsulates transaction-level logic: reusable Apex services, invocable methods, async processing. Services are designed to be stateless and bulk-safe by default, not as an afterthought. <strong>Trade-off:</strong> a dedicated service layer adds indirection — a one-off automation could be written faster as an inline trigger — accepted because reuse and testability compound in value as the org grows.</p>
 
       <h3 style="font-size:16px;margin:22px 0 8px;color:var(--text-primary);">04 · Data &amp; Governance Layer — Objects · Sharing · Validation</h3>
       <p>Owns schema, validation, and the security model — OWD, role hierarchy, sharing rules, permission sets. This layer is the source of truth: access is earned by the sharing model, never assumed by a UI hiding a button. <strong>Trade-off:</strong> a strict OWD-private-plus-sharing-rules model is more auditable than a permissive OWD, but requires more upfront design of exactly who needs to see what.</p>
@@ -199,10 +199,10 @@
         <div class="flow-arrow">↓</div>
         <div class="flow-node"><div class="fn-title">External User Access</div><div class="fn-desc">Experience Cloud sharing sets and license-specific visibility rules — external users need a narrower, more deliberate model than internal ones.</div></div>
         <div class="flow-arrow">↓</div>
-        <div class="flow-node"><div class="fn-title">Runtime Enforcement</div><div class="fn-desc">Apex sharing keywords (<code>with sharing</code> / <code>inherited sharing</code>) and CRUD/FLS checks decide whether code respects everything above it, or bypasses it in <code>without sharing</code>.</div></div>
+        <div class="flow-node"><div class="fn-title">Runtime Enforcement</div><div class="fn-desc">Apex sharing keywords (<code>with sharing</code> / <code>without sharing</code> / <code>inherited sharing</code>) control record-level sharing enforcement only. Object and field access (CRUD/FLS) is a separate concern, enforced deliberately through user-mode database operations or explicit checks — not a side effect of the sharing keyword.</div></div>
       </div>
 
-      <p>The layer that gets the least attention is usually the last one. A perfectly designed sharing model does nothing if an Apex class runs <code>without sharing</code> and never re-checks CRUD/FLS on top of it. I treat runtime enforcement as part of the security model, not an implementation detail.</p>
+      <p>The layer that gets the least attention is usually this one. <code>with sharing</code> / <code>without sharing</code> only decide whether record-level sharing rules apply inside that Apex context — they say nothing about object or field access. A class can run <code>with sharing</code> and still return fields a user shouldn't see, if it never enforces CRUD/FLS itself. I treat these as two separate enforcement decisions, not one switch.</p>
 
       <h3 style="font-size:18px;margin:32px 0 14px;color:var(--text-primary);">Choosing the Right Access Mechanism</h3>
       <div class="matrix-grid">
@@ -305,7 +305,7 @@
         <tbody>
           <tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Immediate response needed</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Request / Reply (synchronous REST)</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Latency tolerance, caller can block</td></tr>
           <tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Loose coupling between systems</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Platform Events</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Consumers can tolerate eventual delivery</td></tr>
-          <tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Propagating record changes</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Change Data Capture</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Downstream needs field-level change history</td></tr>
+          <tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Near-real-time change notification</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Change Data Capture</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Consumers can process change events and tolerate event-driven, eventually-consistent delivery</td></tr>
           <tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);">High-volume synchronization</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Bulk API</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Batch windows are acceptable, API limits matter</td></tr>
           <tr><td style="padding:10px 14px;">Read-only virtualized access</td><td style="padding:10px 14px;">Salesforce Connect</td><td style="padding:10px 14px;">Source system can support the query patterns live</td></tr>
         </tbody>
