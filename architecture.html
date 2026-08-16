@@ -152,12 +152,12 @@
       <p>Selection depends on context. Here's what I actually weigh, organized by which option it tends to favor.</p>
 
       <div class="decision-tabs" role="tablist" aria-label="Automation decision framework">
-        <button class="decision-tab active" data-decision="flow" role="tab" aria-selected="true">Flow</button>
-        <button class="decision-tab" data-decision="apex" role="tab" aria-selected="false">Apex</button>
-        <button class="decision-tab" data-decision="hybrid" role="tab" aria-selected="false">Hybrid</button>
+        <button class="decision-tab active" data-decision="flow" role="tab" id="adf-tab-flow" aria-selected="true" aria-controls="adf-panel-flow" tabindex="0">Flow</button>
+        <button class="decision-tab" data-decision="apex" role="tab" id="adf-tab-apex" aria-selected="false" aria-controls="adf-panel-apex" tabindex="-1">Apex</button>
+        <button class="decision-tab" data-decision="hybrid" role="tab" id="adf-tab-hybrid" aria-selected="false" aria-controls="adf-panel-hybrid" tabindex="-1">Hybrid</button>
       </div>
 
-      <div class="decision-panel active" data-decision-panel="flow">
+      <div class="decision-panel active" data-decision-panel="flow" role="tabpanel" id="adf-panel-flow" aria-labelledby="adf-tab-flow" tabindex="0">
         <div class="decision-criteria">
           <div class="decision-criterion"><span class="dc-label">Admin Maintainability</span><p>Business rules change often and the team needs to adjust them without a deployment.</p></div>
           <div class="decision-criterion"><span class="dc-label">Business Transparency</span><p>Stakeholders benefit from being able to read the logic, not just trust that it works.</p></div>
@@ -165,7 +165,7 @@
           <div class="decision-criterion"><span class="dc-label">Testability</span><p>Flow Tests can cover the paths that matter without needing a full Apex test harness.</p></div>
         </div>
       </div>
-      <div class="decision-panel" data-decision-panel="apex">
+      <div class="decision-panel" data-decision-panel="apex" role="tabpanel" id="adf-panel-apex" aria-labelledby="adf-tab-apex" tabindex="0">
         <div class="decision-criteria">
           <div class="decision-criterion"><span class="dc-label">Transaction Control</span><p>The operation needs explicit savepoints, partial rollback, or precise control over commit boundaries.</p></div>
           <div class="decision-criterion"><span class="dc-label">CPU / SOQL / DML Behavior</span><p>The logic is computation-heavy or needs tight control over query and DML efficiency at bulk scale.</p></div>
@@ -173,7 +173,7 @@
           <div class="decision-criterion"><span class="dc-label">Asynchronous Requirements</span><p>The work needs Queueable chaining, Batch Apex, or scheduled processing beyond what Flow exposes cleanly.</p></div>
         </div>
       </div>
-      <div class="decision-panel" data-decision-panel="hybrid">
+      <div class="decision-panel" data-decision-panel="hybrid" role="tabpanel" id="adf-panel-hybrid" aria-labelledby="adf-tab-hybrid" tabindex="0">
         <div class="decision-criteria">
           <div class="decision-criterion"><span class="dc-label">Default Pattern</span><p>Flow owns orchestration and entry criteria; Apex is invoked only for the specific step that needs programmatic control.</p></div>
           <div class="decision-criterion"><span class="dc-label">Ownership Split</span><p>Admins own the process shape; engineering owns the invocable service contract underneath it.</p></div>

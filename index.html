@@ -104,7 +104,7 @@
         <span class="eyebrow-tag" data-i18n="idx.hero.eyebrow">Salesforce Technical Consultant</span>
         <div id="cert-rotator" class="cert-rotator">Salesforce Certified Platform Sharing and Visibility Architect</div>
       </div>
-      <h1 class="hero-headline" data-i18n-html="headline">I design Salesforce systems built to hold up at scale.</h1>
+      <h1 class="hero-headline" data-i18n="headline">I design Salesforce systems built to hold up at scale.</h1>
       <p class="hero-sub" data-i18n="idx.hero.sub">
         Flow and Apex where each earns its place · sharing designed around the org, not a template · integrations that fail loudly, not silently.
       </p>
@@ -190,68 +190,6 @@
     <!-- ARCHITECT_JOURNEY:END -->
   </section>
 
-  <!-- ═══ ARCHITECTURE CONSOLE ═══ -->
-  <section class="section reveal">
-    <div class="section-header">
-      <span class="section-tag" data-i18n="idx.console.tag">Signature Interaction</span>
-      <h2 class="section-title" data-i18n="idx.console.title">Architecture Console</h2>
-      <p class="section-intro" data-i18n="idx.console.intro">What are you designing?</p>
-    </div>
-    <div class="arch-console">
-      <div class="decision-tabs" role="tablist" aria-label="Architecture Console">
-        <button class="decision-tab active" data-decision="automation" role="tab" aria-selected="true" data-i18n="idx.console.tab.automation">Automation</button>
-        <button class="decision-tab" data-decision="security" role="tab" aria-selected="false" data-i18n="idx.console.tab.security">Security</button>
-        <button class="decision-tab" data-decision="integration" role="tab" aria-selected="false" data-i18n="idx.console.tab.integration">Integration</button>
-        <button class="decision-tab" data-decision="data" role="tab" aria-selected="false" data-i18n="idx.console.tab.data">Data</button>
-      </div>
-
-      <div class="decision-panel active" data-decision-panel="automation">
-        <div class="ac-sequence">
-          <span class="ac-node" data-i18n="idx.console.automation.n1">Ownership</span><span class="ac-seq-arrow">→</span>
-          <span class="ac-node" data-i18n="idx.console.automation.n2">Complexity</span><span class="ac-seq-arrow">→</span>
-          <span class="ac-node" data-i18n="idx.console.automation.n3">Transaction</span><span class="ac-seq-arrow">→</span>
-          <span class="ac-node" data-i18n="idx.console.automation.n4">Scale</span><span class="ac-seq-arrow">→</span>
-          <span class="ac-node" data-i18n="idx.console.automation.n5">Maintainability</span>
-        </div>
-        <p class="ac-message" data-i18n="idx.console.automation.message">Start with who needs to own the process, then decide where declarative orchestration stops earning its place.</p>
-        <a href="architecture.html#automation-decision-framework" class="principles-more" data-i18n="idx.console.automation.cta">Explore Automation Decisions →</a>
-      </div>
-      <div class="decision-panel" data-decision-panel="security">
-        <div class="ac-sequence">
-          <span class="ac-node" data-i18n="idx.console.security.n1">Identity</span><span class="ac-seq-arrow">→</span>
-          <span class="ac-node" data-i18n="idx.console.security.n2">Object</span><span class="ac-seq-arrow">→</span>
-          <span class="ac-node" data-i18n="idx.console.security.n3">Field</span><span class="ac-seq-arrow">→</span>
-          <span class="ac-node" data-i18n="idx.console.security.n4">Record</span><span class="ac-seq-arrow">→</span>
-          <span class="ac-node" data-i18n="idx.console.security.n5">Runtime</span>
-        </div>
-        <p class="ac-message" data-i18n="idx.console.security.message">Start with access boundaries before choosing the sharing mechanism.</p>
-        <a href="architecture.html#security-architecture" class="principles-more" data-i18n="idx.console.security.cta">Explore Security Architecture →</a>
-      </div>
-      <div class="decision-panel" data-decision-panel="integration">
-        <div class="ac-sequence">
-          <span class="ac-node" data-i18n="idx.console.integration.n1">Latency</span><span class="ac-seq-arrow">→</span>
-          <span class="ac-node" data-i18n="idx.console.integration.n2">Coupling</span><span class="ac-seq-arrow">→</span>
-          <span class="ac-node" data-i18n="idx.console.integration.n3">Ownership</span><span class="ac-seq-arrow">→</span>
-          <span class="ac-node" data-i18n="idx.console.integration.n4">Failure</span><span class="ac-seq-arrow">→</span>
-          <span class="ac-node" data-i18n="idx.console.integration.n5">Recovery</span>
-        </div>
-        <p class="ac-message" data-i18n="idx.console.integration.message">Start with the contract and failure behavior before choosing the integration technology.</p>
-        <a href="architecture.html#integration-architecture" class="principles-more" data-i18n="idx.console.integration.cta">Explore Integration Architecture →</a>
-      </div>
-      <div class="decision-panel" data-decision-panel="data">
-        <div class="ac-sequence">
-          <span class="ac-node" data-i18n="idx.console.data.n1">Ownership</span><span class="ac-seq-arrow">→</span>
-          <span class="ac-node" data-i18n="idx.console.data.n2">Model</span><span class="ac-seq-arrow">→</span>
-          <span class="ac-node" data-i18n="idx.console.data.n3">Identity</span><span class="ac-seq-arrow">→</span>
-          <span class="ac-node" data-i18n="idx.console.data.n4">Quality</span><span class="ac-seq-arrow">→</span>
-          <span class="ac-node" data-i18n="idx.console.data.n5">Scale</span>
-        </div>
-        <p class="ac-message" data-i18n="idx.console.data.message">Start with who owns the data before designing the schema.</p>
-        <a href="architecture.html#data-architecture" class="principles-more" data-i18n="idx.console.data.cta">Explore Data Architecture →</a>
-      </div>
-    </div>
-  </section>
-
   <!-- ═══ WHAT I DESIGN ═══ -->
   <section class="section reveal">
     <div class="design-layout">
@@ -296,6 +234,68 @@
           </span>
           <span class="design-reveal" id="design-5" data-i18n="idx.design.row5.reveal">Components consume services and render state — they don't own business logic.</span>
         </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ARCHITECTURE CONSOLE ═══ -->
+  <section class="section reveal">
+    <div class="section-header">
+      <span class="section-tag" data-i18n="idx.console.tag">Signature Interaction</span>
+      <h2 class="section-title" data-i18n="idx.console.title">Architecture Console</h2>
+      <p class="section-intro" data-i18n="idx.console.intro">What are you designing?</p>
+    </div>
+    <div class="arch-console">
+      <div class="decision-tabs" role="tablist" aria-label="Architecture Console">
+        <button class="decision-tab active" data-decision="automation" role="tab" id="ac-tab-automation" aria-selected="true" aria-controls="ac-panel-automation" tabindex="0" data-i18n="idx.console.tab.automation">Automation</button>
+        <button class="decision-tab" data-decision="security" role="tab" id="ac-tab-security" aria-selected="false" aria-controls="ac-panel-security" tabindex="-1" data-i18n="idx.console.tab.security">Security</button>
+        <button class="decision-tab" data-decision="integration" role="tab" id="ac-tab-integration" aria-selected="false" aria-controls="ac-panel-integration" tabindex="-1" data-i18n="idx.console.tab.integration">Integration</button>
+        <button class="decision-tab" data-decision="data" role="tab" id="ac-tab-data" aria-selected="false" aria-controls="ac-panel-data" tabindex="-1" data-i18n="idx.console.tab.data">Data</button>
+      </div>
+
+      <div class="decision-panel active" data-decision-panel="automation" role="tabpanel" id="ac-panel-automation" aria-labelledby="ac-tab-automation" tabindex="0">
+        <div class="ac-sequence">
+          <span class="ac-node" data-i18n="idx.console.automation.n1">Ownership</span><span class="ac-seq-arrow">→</span>
+          <span class="ac-node" data-i18n="idx.console.automation.n2">Complexity</span><span class="ac-seq-arrow">→</span>
+          <span class="ac-node" data-i18n="idx.console.automation.n3">Transaction</span><span class="ac-seq-arrow">→</span>
+          <span class="ac-node" data-i18n="idx.console.automation.n4">Scale</span><span class="ac-seq-arrow">→</span>
+          <span class="ac-node" data-i18n="idx.console.automation.n5">Maintainability</span>
+        </div>
+        <p class="ac-message" data-i18n="idx.console.automation.message">Start with who needs to own the process, then decide where declarative orchestration stops earning its place.</p>
+        <a href="architecture.html#automation-decision-framework" class="principles-more" data-i18n="idx.console.automation.cta">Explore Automation Decisions →</a>
+      </div>
+      <div class="decision-panel" data-decision-panel="security" role="tabpanel" id="ac-panel-security" aria-labelledby="ac-tab-security" tabindex="0">
+        <div class="ac-sequence">
+          <span class="ac-node" data-i18n="idx.console.security.n1">Identity</span><span class="ac-seq-arrow">→</span>
+          <span class="ac-node" data-i18n="idx.console.security.n2">Object</span><span class="ac-seq-arrow">→</span>
+          <span class="ac-node" data-i18n="idx.console.security.n3">Field</span><span class="ac-seq-arrow">→</span>
+          <span class="ac-node" data-i18n="idx.console.security.n4">Record</span><span class="ac-seq-arrow">→</span>
+          <span class="ac-node" data-i18n="idx.console.security.n5">Runtime</span>
+        </div>
+        <p class="ac-message" data-i18n="idx.console.security.message">Start with access boundaries before choosing the sharing mechanism.</p>
+        <a href="architecture.html#security-architecture" class="principles-more" data-i18n="idx.console.security.cta">Explore Security Architecture →</a>
+      </div>
+      <div class="decision-panel" data-decision-panel="integration" role="tabpanel" id="ac-panel-integration" aria-labelledby="ac-tab-integration" tabindex="0">
+        <div class="ac-sequence">
+          <span class="ac-node" data-i18n="idx.console.integration.n1">Latency</span><span class="ac-seq-arrow">→</span>
+          <span class="ac-node" data-i18n="idx.console.integration.n2">Coupling</span><span class="ac-seq-arrow">→</span>
+          <span class="ac-node" data-i18n="idx.console.integration.n3">Ownership</span><span class="ac-seq-arrow">→</span>
+          <span class="ac-node" data-i18n="idx.console.integration.n4">Failure</span><span class="ac-seq-arrow">→</span>
+          <span class="ac-node" data-i18n="idx.console.integration.n5">Recovery</span>
+        </div>
+        <p class="ac-message" data-i18n="idx.console.integration.message">Start with the contract and failure behavior before choosing the integration technology.</p>
+        <a href="architecture.html#integration-architecture" class="principles-more" data-i18n="idx.console.integration.cta">Explore Integration Architecture →</a>
+      </div>
+      <div class="decision-panel" data-decision-panel="data" role="tabpanel" id="ac-panel-data" aria-labelledby="ac-tab-data" tabindex="0">
+        <div class="ac-sequence">
+          <span class="ac-node" data-i18n="idx.console.data.n1">Ownership</span><span class="ac-seq-arrow">→</span>
+          <span class="ac-node" data-i18n="idx.console.data.n2">Model</span><span class="ac-seq-arrow">→</span>
+          <span class="ac-node" data-i18n="idx.console.data.n3">Identity</span><span class="ac-seq-arrow">→</span>
+          <span class="ac-node" data-i18n="idx.console.data.n4">Quality</span><span class="ac-seq-arrow">→</span>
+          <span class="ac-node" data-i18n="idx.console.data.n5">Scale</span>
+        </div>
+        <p class="ac-message" data-i18n="idx.console.data.message">Start with who owns the data before designing the schema.</p>
+        <a href="architecture.html#data-architecture" class="principles-more" data-i18n="idx.console.data.cta">Explore Data Architecture →</a>
       </div>
     </div>
   </section>
@@ -703,8 +703,8 @@
   <!-- ═══ CTA — SALESFORCE BLUE MOMENT ═══ -->
   <section id="contact" class="section section-blue cta-section reveal">
     <div class="cta-inner">
-      <h2 class="cta-headline" data-i18n-html="ctaTitle">Building a Salesforce system where automation, security, and integrations all need to work together?</h2>
-      <p class="cta-sub" data-i18n-html="idx.cta.sub">Available for remote Salesforce Platform Engineer (Flow + Apex + Integrations) roles across US-aligned timezones.<br>Designing scalable automation frameworks that balance admin maintainability, developer extensibility, and integration reliability.</p>
+      <h2 class="cta-headline" data-i18n="ctaTitle">Building a Salesforce system where automation, security, and integrations all need to work together?</h2>
+      <p class="cta-sub" data-i18n-html="idx.cta.sub">Available for remote Salesforce Technical Consultant (Flow + Apex + Integrations) roles across US-aligned timezones.<br>Designing scalable automation frameworks that balance admin maintainability, developer extensibility, and integration reliability.</p>
       <div class="cta-actions">
         <a href="architecture.html" class="btn-primary" data-i18n="common.viewArchitecture">View Architecture →</a>
         <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="btn-ghost" data-i18n="common.connectLinkedin">Connect on LinkedIn ↗</a>
