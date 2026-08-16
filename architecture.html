@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architecture — Adrian Tobar Hanze</title>
+  <meta name="description" content="How Adrian Tobar Hanze designs Salesforce systems: automation decision framework, security architecture, data architecture, integration patterns, and operational reliability.">
+  <link rel="canonical" href="https://adrian-salesforce-portfolio.vercel.app/architecture.html">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Architecture — Adrian Tobar Hanze">
+  <meta property="og:description" content="How I design Salesforce systems: automation decisions, security, data, integrations, and operations.">
+  <meta property="og:url" content="https://adrian-salesforce-portfolio.vercel.app/architecture.html">
+  <meta property="og:image" content="https://adrian-salesforce-portfolio.vercel.app/assets/og-image.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234a9eff'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='24' font-weight='700' fill='%23060b14' text-anchor='middle'%3EATH%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects/project-style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
+
+  <nav id="navbar" class="nav">
+    <div class="logo">
+      <a href="index.html" style="display:flex;align-items:center;gap:10px;">
+        <span class="logo-mark">ATH</span>
+        <span class="logo-name">Adrian Tobar Hanze</span>
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="architecture.html" data-i18n="nav.architecture">Architecture</a>
+      <a href="index.html#projects" data-i18n="nav.projects">Case Studies</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+      <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="nav-linkedin">LinkedIn ↗</a>
+    </div>
+    <div class="nav-right">
+      <div class="language-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="architecture.html" data-i18n="nav.architecture">Architecture</a>
+      <a href="index.html#projects" data-i18n="nav.projects">Case Studies</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+      <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="nav-linkedin">LinkedIn ↗</a>
+      <div class="mobile-menu-langs">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-hero reveal">
+    <span class="section-tag">Architecture</span>
+    <h1>How I Design Salesforce Systems</h1>
+    <p class="page-dek">This page is a reasoning framework, not a client engagement report — it shows how I evaluate trade-offs across automation, security, data, integration, and operations. Specific implementations are covered in the <a href="index.html#projects">case studies</a>. This content is English-only by design; it's reference material for a technical audience rather than narrative content.</p>
+  </div>
+
+  <div class="subnav-wrap">
+    <nav class="subnav" aria-label="Architecture sections">
+      <a href="#principles">Principles</a>
+      <a href="#layered-architecture">Layered Architecture</a>
+      <a href="#automation-decision-framework">Automation Decisions</a>
+      <a href="#security-architecture">Security</a>
+      <a href="#data-architecture">Data</a>
+      <a href="#integration-architecture">Integration</a>
+      <a href="#operational-architecture">Operations</a>
+      <a href="#architecture-risks">Risks</a>
+    </nav>
+  </div>
+
+  <main id="main-content">
+  <div class="adr-section">
+
+    <!-- ═══ PRINCIPLES ═══ -->
+    <section id="principles" class="adr-block reveal" style="border-left:none;padding-left:0;">
+      <h2 style="font-size:26px;margin-bottom:18px;">Architecture Principles</h2>
+      <p style="max-width:700px;margin-bottom:28px;">These are the defaults I design against — not universal Salesforce law, just the judgment calls I make until a specific constraint says otherwise.</p>
+      <div class="principles-grid">
+        <div class="principle-card">
+          <h3>Security by Default</h3>
+          <p>Least privilege, explicit sharing models, and secure execution contexts by default. Access is granted deliberately — it is never inherited by accident because a profile was cloned or a sharing rule was copy-pasted from somewhere else.</p>
+        </div>
+        <div class="principle-card">
+          <h3>Declarative Where It Makes Sense</h3>
+          <p>Flow and configuration own orchestration and process logic by default, because they keep the system transparent and admin-maintainable. This holds until the requirement genuinely needs programmatic control — not because Flow is "easier."</p>
+        </div>
+        <div class="principle-card">
+          <h3>Code With Purpose</h3>
+          <p>Apex earns its place when transaction control, reuse across many entry points, performance under bulk load, or an integration boundary makes the added engineering lifecycle cost — tests, deployments, code review — worth paying.</p>
+        </div>
+        <div class="principle-card">
+          <h3>Integration Through Clear Contracts</h3>
+          <p>Systems communicate through explicit ownership boundaries: which system is the source of truth for a field, what the retry contract is, and what happens when the other side is down. Implicit assumptions are where integrations quietly break.</p>
+        </div>
+        <div class="principle-card">
+          <h3>Observable Operations</h3>
+          <p>A solution isn't finished when the happy path works in a demo. It's finished when whoever supports it in six months can tell what failed, why, and whether it's safe to retry.</p>
+        </div>
+        <div class="principle-card">
+          <h3>Design for Change</h3>
+          <p>Custom Metadata over hardcoded values, modular Flow and Apex over monolithic logic, and clear layer boundaries — because the second change to a system is always cheaper than the first if the architecture allows for it.</p>
+        </div>
+        <div class="principle-card">
+          <h3>Bulkification by Design</h3>
+          <p>I evaluate automations for bulk behavior rather than validating only the single-record happy path. Governor limits don't negotiate, and "it works for one record" is not a passing test.</p>
+        </div>
+        <div class="principle-card">
+          <h3>Trade-offs Are Explicit</h3>
+          <p>No technology choice is free. Choosing Flow over Apex, sync over async, or a custom object over a standard one always trades something for something else — and that trade should be named, not hidden behind a confident tone.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ LAYERED ARCHITECTURE ═══ -->
+    <section id="layered-architecture" class="adr-block reveal">
+      <span class="adr-block-num">Layered Architecture</span>
+      <h2>My Default Model, Not <em>The</em> Salesforce Model</h2>
+      <p>I organize Salesforce solutions into five layers. This is a starting model I adapt per engagement, not a claim that it's the only correct way to build on the platform.</p>
+
+      <h3 style="font-size:16px;margin:22px 0 8px;color:var(--text-primary);">01 · Experience Layer — LWC · Aura · FlexiPage</h3>
+      <p>Owns role-based interaction surfaces. Components stay data-agnostic by default: they consume services and render state, they don't own business logic. <strong>Trade-off:</strong> pushing logic down to the service layer means an extra Apex round-trip for things a component could technically compute itself — accepted because it keeps UI logic testable independently of business rules.</p>
+
+      <h3 style="font-size:16px;margin:22px 0 8px;color:var(--text-primary);">02 · Orchestration Layer — Flow · Platform Events</h3>
+      <p>Flow owns orchestration and human-readable process logic by default. Apex is introduced at this layer only as invocable methods called <em>by</em> Flow, for operations exceeding declarative limits. <strong>Trade-off:</strong> Flow-first orchestration is more maintainable by admins but has a lower performance ceiling and weaker native error handling than an equivalent Apex trigger — acceptable when admin ownership matters more than raw throughput.</p>
+
+      <h3 style="font-size:16px;margin:22px 0 8px;color:var(--text-primary);">03 · Service Layer — Apex · Queueable · Batch</h3>
+      <p>Encapsulates transaction-level logic: reusable Apex services, invocable methods, async processing. Services are designed to be stateless and bulk-safe by default, not as an afterthought. <strong>Trade-off:</strong> a dedicated service layer adds indirection — a one-off automation could be written faster as an inline trigger — accepted because reuse and testability compound in value as the org grows.</p>
+
+      <h3 style="font-size:16px;margin:22px 0 8px;color:var(--text-primary);">04 · Data &amp; Governance Layer — Objects · Sharing · Validation</h3>
+      <p>Owns schema, validation, and the security model — OWD, role hierarchy, sharing rules, permission sets. This layer is the source of truth: access is earned by the sharing model, never assumed by a UI hiding a button. <strong>Trade-off:</strong> a strict OWD-private-plus-sharing-rules model is more auditable than a permissive OWD, but requires more upfront design of exactly who needs to see what.</p>
+
+      <h3 style="font-size:16px;margin:22px 0 8px;color:var(--text-primary);">05 · Integration Layer — REST · Named Credentials</h3>
+      <p>Provides secure authentication abstraction and reusable connectivity to external systems, so one integration framework supports many external systems rather than one bespoke class per API. <strong>Trade-off:</strong> a generic HttpCallout service is more work to build upfront than a hardcoded one-off callout — it pays for itself on the second integration, not the first.</p>
+    </section>
+
+    <!-- ═══ AUTOMATION DECISION FRAMEWORK ═══ -->
+    <section id="automation-decision-framework" class="adr-block reveal">
+      <span class="adr-block-num">Automation Decision Framework</span>
+      <h2>Flow, Apex, or Hybrid?</h2>
+      <p>Selection depends on context. Here's what I actually weigh, organized by which option it tends to favor.</p>
+
+      <div class="decision-tabs" role="tablist" aria-label="Automation decision framework">
+        <button class="decision-tab active" data-decision="flow" role="tab" id="adf-tab-flow" aria-selected="true" aria-controls="adf-panel-flow" tabindex="0">Flow</button>
+        <button class="decision-tab" data-decision="apex" role="tab" id="adf-tab-apex" aria-selected="false" aria-controls="adf-panel-apex" tabindex="-1">Apex</button>
+        <button class="decision-tab" data-decision="hybrid" role="tab" id="adf-tab-hybrid" aria-selected="false" aria-controls="adf-panel-hybrid" tabindex="-1">Hybrid</button>
+      </div>
+
+      <div class="decision-panel active" data-decision-panel="flow" role="tabpanel" id="adf-panel-flow" aria-labelledby="adf-tab-flow" tabindex="0">
+        <div class="decision-criteria">
+          <div class="decision-criterion"><span class="dc-label">Admin Maintainability</span><p>Business rules change often and the team needs to adjust them without a deployment.</p></div>
+          <div class="decision-criterion"><span class="dc-label">Business Transparency</span><p>Stakeholders benefit from being able to read the logic, not just trust that it works.</p></div>
+          <div class="decision-criterion"><span class="dc-label">Complexity</span><p>The logic is orchestration-shaped: sequence, branching, and record updates — not heavy computation.</p></div>
+          <div class="decision-criterion"><span class="dc-label">Testability</span><p>Flow Tests can cover the paths that matter without needing a full Apex test harness.</p></div>
+        </div>
+      </div>
+      <div class="decision-panel" data-decision-panel="apex" role="tabpanel" id="adf-panel-apex" aria-labelledby="adf-tab-apex" tabindex="0">
+        <div class="decision-criteria">
+          <div class="decision-criterion"><span class="dc-label">Transaction Control</span><p>The operation needs explicit savepoints, partial rollback, or precise control over commit boundaries.</p></div>
+          <div class="decision-criterion"><span class="dc-label">CPU / SOQL / DML Behavior</span><p>The logic is computation-heavy or needs tight control over query and DML efficiency at bulk scale.</p></div>
+          <div class="decision-criterion"><span class="dc-label">Reusability</span><p>The same logic needs to be callable from multiple triggers, batch jobs, and integrations without duplication.</p></div>
+          <div class="decision-criterion"><span class="dc-label">Asynchronous Requirements</span><p>The work needs Queueable chaining, Batch Apex, or scheduled processing beyond what Flow exposes cleanly.</p></div>
+        </div>
+      </div>
+      <div class="decision-panel" data-decision-panel="hybrid" role="tabpanel" id="adf-panel-hybrid" aria-labelledby="adf-tab-hybrid" tabindex="0">
+        <div class="decision-criteria">
+          <div class="decision-criterion"><span class="dc-label">Default Pattern</span><p>Flow owns orchestration and entry criteria; Apex is invoked only for the specific step that needs programmatic control.</p></div>
+          <div class="decision-criterion"><span class="dc-label">Ownership Split</span><p>Admins own the process shape; engineering owns the invocable service contract underneath it.</p></div>
+          <div class="decision-criterion"><span class="dc-label">Deployment Complexity</span><p>Two moving parts to release instead of one — worth it when it keeps both maintainability and performance.</p></div>
+          <div class="decision-criterion"><span class="dc-label">Rate of Change</span><p>The orchestration shape changes often; the underlying service logic changes rarely. Splitting them lets each evolve at its own pace.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SECURITY ARCHITECTURE ═══ -->
+    <section id="security-architecture" class="adr-block reveal">
+      <span class="adr-block-num">Security Architecture</span>
+      <h2>How the Layers Actually Connect</h2>
+      <p>Salesforce security isn't one setting — it's several layers that have to agree with each other. This is the order I reason about them in:</p>
+
+      <div class="flow-diagram" style="margin:24px 0 30px;">
+        <div class="flow-node"><div class="fn-title">Identity &amp; Org Access</div><div class="fn-desc">MFA, login policies, session settings — who can get into the org at all.</div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node"><div class="fn-title">Object Access</div><div class="fn-desc">Profiles for the baseline, Permission Sets and Permission Set Groups for everything additive and role-specific.</div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node"><div class="fn-title">Field Access</div><div class="fn-desc">Field-Level Security — enforced at the object layer, and separately inside Apex when running in user mode.</div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node"><div class="fn-title">Record Access</div><div class="fn-desc">OWD sets the default, Role Hierarchy extends it upward, Sharing Rules and Teams extend it sideways, Apex Managed Sharing covers what declarative rules can't model.</div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node"><div class="fn-title">External User Access</div><div class="fn-desc">Experience Cloud sharing sets and license-specific visibility rules — external users need a narrower, more deliberate model than internal ones.</div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node"><div class="fn-title">Runtime Enforcement</div><div class="fn-desc">Apex sharing keywords (<code>with sharing</code> / <code>without sharing</code> / <code>inherited sharing</code>) control record-level sharing enforcement only. Object and field access (CRUD/FLS) is a separate concern, enforced deliberately through user-mode database operations or explicit checks — not a side effect of the sharing keyword.</div></div>
+      </div>
+
+      <p>The layer that gets the least attention is usually this one. <code>with sharing</code> / <code>without sharing</code> only decide whether record-level sharing rules apply inside that Apex context — they say nothing about object or field access. A class can run <code>with sharing</code> and still return fields a user shouldn't see, if it never enforces CRUD/FLS itself. I treat these as two separate enforcement decisions, not one switch.</p>
+
+      <h3 style="font-size:18px;margin:32px 0 14px;color:var(--text-primary);">Choosing the Right Access Mechanism</h3>
+      <div class="matrix-grid">
+        <div class="matrix-card matrix-flow">
+          <h3>Role Hierarchy</h3>
+          <ul>
+            <li>Visibility should flow upward through management naturally</li>
+            <li>Org structure is stable and mirrors the sharing need</li>
+          </ul>
+          <div class="matrix-tag">Structural</div>
+        </div>
+        <div class="matrix-card matrix-apex">
+          <h3>Sharing Rules</h3>
+          <ul>
+            <li>Access criteria are predictable and rule-based (by role, group, or criteria)</li>
+            <li>The rule set is small enough to stay auditable</li>
+          </ul>
+          <div class="matrix-tag">Rule-Driven</div>
+        </div>
+        <div class="matrix-card matrix-hybrid">
+          <h3>Apex Managed Sharing</h3>
+          <ul>
+            <li>Access depends on dynamic, computed conditions declarative sharing can't express</li>
+            <li>Worth the maintenance cost of code-owned share records</li>
+          </ul>
+          <div class="matrix-tag">Dynamic</div>
+        </div>
+      </div>
+      <p style="margin-top:16px;">Manual Sharing covers the exceptional, human-judgment case — a single record shared to a single user for a specific reason, not a repeatable pattern. Experience Cloud sharing depends heavily on license type and data model, so I treat it as its own evaluation rather than an extension of internal sharing rules.</p>
+    </section>
+
+    <!-- ═══ DATA ARCHITECTURE ═══ -->
+    <section id="data-architecture" class="adr-block reveal">
+      <span class="adr-block-num">Data Architecture</span>
+      <h2>Ownership Before Schema</h2>
+      <p>Before modeling an object, I want an answer to: which system is the system of record for this data, and who is allowed to create or change it? Most data-quality problems I've seen trace back to that question never being answered explicitly.</p>
+
+      <div class="flow-diagram horizontal" style="margin:26px 0 30px;">
+        <div class="flow-node"><div class="fn-title">External System</div><div class="fn-desc">Owns its domain of truth</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node"><div class="fn-title">Integration Boundary</div><div class="fn-desc">Named Credentials, External IDs</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node"><div class="fn-title">Salesforce Domain</div><div class="fn-desc">Core objects, relationships</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node"><div class="fn-title">Security Boundary</div><div class="fn-desc">Sharing, FLS enforcement</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node"><div class="fn-title">Reporting</div><div class="fn-desc">Downstream consumption</div></div>
+      </div>
+
+      <div class="content-grid" style="padding:0;">
+        <div class="content-block">
+          <span class="block-tag">Modeling</span>
+          <h3>Relationships</h3>
+          <ul>
+            <li>Lookup when the relationship is optional or the child can outlive the parent</li>
+            <li>Master-Detail when the child's security and lifecycle should follow the parent</li>
+            <li>Junction objects for genuine many-to-many, not as a workaround for a missing field</li>
+          </ul>
+        </div>
+        <div class="content-block">
+          <span class="block-tag">Integration Identity</span>
+          <h3>External IDs &amp; Upsert</h3>
+          <ul>
+            <li>External ID fields as the join key between Salesforce and the system of record</li>
+            <li>Upsert over separate create/update calls wherever idempotency matters</li>
+            <li>One system named as authoritative per field — never two systems both allowed to overwrite the same value</li>
+          </ul>
+        </div>
+        <div class="content-block">
+          <span class="block-tag">Scale</span>
+          <h3>Volume &amp; Query Performance</h3>
+          <ul>
+            <li>Selective, indexed filters on any query expected to run against a large object</li>
+            <li>Awareness of data skew (a single account or owner holding a disproportionate share of records) before it becomes a locking problem</li>
+            <li>Archiving strategy considered up front for objects with an expected multi-year growth curve</li>
+          </ul>
+        </div>
+        <div class="content-block">
+          <span class="block-tag">Quality</span>
+          <h3>Validation &amp; Duplicates</h3>
+          <ul>
+            <li>Validation rules enforced at write time, not caught later in a report</li>
+            <li>Duplicate rules and matching criteria set deliberately, not left at the org defaults</li>
+            <li>A clear answer for what "clean" means for each object before automation starts enforcing it</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:20px; font-size:13px; color:var(--text-muted);">This is the evaluation framework I bring to a data model. Advanced Large Data Volume patterns (skew remediation at scale, deep archiving strategies) are exactly what the Platform Data Architect credential formalizes — I'm building toward that certification rather than claiming production experience at that scale today.</p>
+    </section>
+
+    <!-- ═══ INTEGRATION ARCHITECTURE ═══ -->
+    <section id="integration-architecture" class="adr-block reveal">
+      <span class="adr-block-num">Integration Architecture</span>
+      <h2>Pattern Selection, Not a Technology List</h2>
+      <p>The question is never "which integration technology do I know" — it's which pattern fits the actual constraints: latency tolerance, coupling, volume, and what happens when the other side fails.</p>
+
+      <div class="tbl-wrap" style="overflow-x:auto;">
+      <table style="border-collapse:collapse;width:100%;font-size:13.5px;min-width:520px;">
+        <thead><tr style="text-align:left;"><th style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text-muted);font-family:var(--font-mono);font-size:11px;text-transform:uppercase;">Requirement</th><th style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text-muted);font-family:var(--font-mono);font-size:11px;text-transform:uppercase;">Pattern to Evaluate</th><th style="padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text-muted);font-family:var(--font-mono);font-size:11px;text-transform:uppercase;">Depends On</th></tr></thead>
+        <tbody>
+          <tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Immediate response needed</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Request / Reply (synchronous REST)</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Latency tolerance, caller can block</td></tr>
+          <tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Loose coupling between systems</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Platform Events</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Consumers can tolerate eventual delivery</td></tr>
+          <tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Near-real-time change notification</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Change Data Capture</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Consumers can process change events and tolerate event-driven, eventually-consistent delivery</td></tr>
+          <tr><td style="padding:10px 14px;border-bottom:1px solid var(--border);">High-volume synchronization</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Bulk API</td><td style="padding:10px 14px;border-bottom:1px solid var(--border);">Batch windows are acceptable, API limits matter</td></tr>
+          <tr><td style="padding:10px 14px;">Read-only virtualized access</td><td style="padding:10px 14px;">Salesforce Connect</td><td style="padding:10px 14px;">Source system can support the query patterns live</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p style="margin-top:14px;">None of these are universal rules — they're the first questions I ask before defaulting to whichever pattern is most familiar.</p>
+
+      <h3 style="font-size:18px;margin:34px 0 14px;color:var(--text-primary);">How I Evaluate Integration Reliability</h3>
+      <p>This is a reasoning model, not a claim that every project below implements every stage — each case study states what was actually built.</p>
+      <div class="flow-diagram" style="margin:20px 0;">
+        <div class="flow-node"><div class="fn-title">Request</div><div class="fn-desc">Outbound callout or inbound event</div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node"><div class="fn-title">Failure / Timeout</div><div class="fn-desc">The other side doesn't respond as expected</div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node"><div class="fn-title">Retry with Backoff</div><div class="fn-desc">Bounded retries, not an infinite loop</div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node"><div class="fn-title">Persistent Error State</div><div class="fn-desc">Logged somewhere a human can find it — not just a debug log</div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node"><div class="fn-title">Alerting</div><div class="fn-desc">Someone is told, rather than someone happening to notice</div></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-node"><div class="fn-title">Remediation &amp; Replay</div><div class="fn-desc">A safe, idempotent way to re-run the failed operation</div></div>
+      </div>
+    </section>
+
+    <!-- ═══ OPERATIONAL ARCHITECTURE ═══ -->
+    <section id="operational-architecture" class="adr-block reveal">
+      <span class="adr-block-num">Operational Architecture</span>
+      <h2>Finished Means Supportable, Not Just Working</h2>
+      <p>A solution isn't done when the happy path works in a sandbox. It's done when someone who isn't me can find out what failed and fix it.</p>
+      <div class="content-grid" style="padding:0;">
+        <div class="content-block">
+          <span class="block-tag">Monitoring</span>
+          <h3>What Needs Watching</h3>
+          <ul>
+            <li>Flow fault paths and Apex exceptions, not just successful runs</li>
+            <li>Asynchronous job health — Queueable, Batch, and Scheduled Apex failures</li>
+            <li>Integration and event processing backlogs</li>
+          </ul>
+        </div>
+        <div class="content-block">
+          <span class="block-tag">Logging</span>
+          <h3>What a Useful Log Entry Contains</h3>
+          <ul>
+            <li>A correlation ID that ties a failure back to the record and transaction it came from</li>
+            <li>Execution context, external system involved, and an error classification — not just a raw stack trace</li>
+            <li>Retry state, so it's clear whether a failure is still being worked or already exhausted</li>
+          </ul>
+        </div>
+        <div class="content-block">
+          <span class="block-tag">Alerting</span>
+          <h3>Severity &amp; Ownership</h3>
+          <ul>
+            <li>Severity tied to business impact, not just "an error occurred"</li>
+            <li>A clear owner for each alert class — admin, developer, or an external team</li>
+            <li>An escalation path defined before the first incident, not during it</li>
+          </ul>
+        </div>
+        <div class="content-block">
+          <span class="block-tag">Recovery</span>
+          <h3>Getting Back to Healthy</h3>
+          <ul>
+            <li>Retry and replay mechanisms designed to be idempotent — safe to run twice</li>
+            <li>Manual remediation paths documented for the failures automation can't self-heal</li>
+            <li>A support handoff that assumes the original builder isn't the one debugging it</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ARCHITECTURE RISKS ═══ -->
+    <section id="architecture-risks" class="adr-block reveal">
+      <span class="adr-block-num">Architecture Risks</span>
+      <h2>What I'm Watching For</h2>
+      <p>These are the risk patterns most relevant to Flow/Apex-heavy Salesforce architectures — the ones I check for on every build, not a generic compliance checklist.</p>
+      <div class="risk-grid">
+        <div class="risk-card">
+          <div class="risk-title">Governor Limit Saturation</div>
+          <div class="risk-why">SOQL, DML, and CPU limits are per-transaction, and they don't scale just because the org grows.</div>
+          <div class="risk-mitigation"><strong>Mitigation:</strong> bulkified triggers and Flows by default, async boundaries (Queueable/Batch) for anything that could exceed synchronous limits.</div>
+        </div>
+        <div class="risk-card">
+          <div class="risk-title">Automation Recursion</div>
+          <div class="risk-why">A Flow or trigger that updates the same object it's triggered from can re-enter itself, unintentionally.</div>
+          <div class="risk-mitigation"><strong>Mitigation:</strong> strict entry criteria, recursion guards, and testing the "what if this fires twice" case explicitly.</div>
+        </div>
+        <div class="risk-card">
+          <div class="risk-title">Permission Drift</div>
+          <div class="risk-why">Profiles and permission sets accumulate one-off changes over time until nobody can explain why a user can do something.</div>
+          <div class="risk-mitigation"><strong>Mitigation:</strong> Permission Sets and Permission Set Groups over profile cloning, and periodic access review built into the operating model.</div>
+        </div>
+        <div class="risk-card">
+          <div class="risk-title">Integration Outage</div>
+          <div class="risk-why">An external system going down shouldn't take the Salesforce transaction down with it.</div>
+          <div class="risk-mitigation"><strong>Mitigation:</strong> async decoupling for non-blocking calls, persistent error logging so failures are visible instead of silent.</div>
+        </div>
+        <div class="risk-card">
+          <div class="risk-title">Data Skew</div>
+          <div class="risk-why">A disproportionate number of records under one account or owner can cause record-locking contention during bulk updates.</div>
+          <div class="risk-mitigation"><strong>Mitigation:</strong> ownership strategy reviewed before it becomes a production incident, not after.</div>
+        </div>
+        <div class="risk-card">
+          <div class="risk-title">API Limit Exhaustion</div>
+          <div class="risk-why">Chatty, one-record-at-a-time integrations burn through daily API limits faster than expected as volume grows.</div>
+          <div class="risk-mitigation"><strong>Mitigation:</strong> batching, Bulk API for volume, and Platform Events to absorb spikes instead of synchronous point-to-point calls.</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><span class="logo-mark">ATH</span><span>Adrian Tobar Hanze © 2026</span></div>
+      <div class="footer-links">
+        <a href="index.html#projects" data-i18n="footer.projects">Case Studies</a>
+        <a href="architecture.html" data-i18n="footer.architecture">Architecture</a>
+        <a href="about.html" data-i18n="footer.about">About</a>
+        <a href="index.html#contact" data-i18n="footer.contact">Contact</a>
+        <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank">LinkedIn ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

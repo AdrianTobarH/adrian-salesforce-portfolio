@@ -4,22 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Case Automation Architecture — Adrian Tobar Hanze</title>
+  <meta name="description" content="A composite Salesforce case study on Flow-driven case routing, multi-tier SLA escalation, and validation architecture — based on real production patterns.">
+  <link rel="canonical" href="https://adrian-salesforce-portfolio.vercel.app/projects/case-automation.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Case Automation Architecture — Adrian Tobar Hanze">
+  <meta property="og:description" content="A composite Salesforce case study on Flow-driven case routing, multi-tier SLA escalation, and validation architecture.">
+  <meta property="og:url" content="https://adrian-salesforce-portfolio.vercel.app/projects/case-automation.html">
+  <meta property="og:image" content="https://adrian-salesforce-portfolio.vercel.app/assets/og-image.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234a9eff'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='24' font-weight='700' fill='%23060b14' text-anchor='middle'%3EATH%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="project-style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
   <nav id="navbar" class="nav">
     <div class="logo">
       <span class="logo-mark">ATH</span>
       <span class="logo-name">Adrian Tobar Hanze</span>
     </div>
     <div class="nav-links">
-      <a href="../index.html#architecture" data-i18n="nav.architecture">Architecture</a>
-      <a href="../index.html#arch-diagram" data-i18n="nav.diagram">Diagram</a>
-      <a href="../index.html#projects" data-i18n="nav.projects">Projects</a>
+      <a href="../architecture.html" data-i18n="nav.architecture">Architecture</a>
+      <a href="../index.html#projects" data-i18n="nav.projects">Case Studies</a>
+      <a href="../about.html" data-i18n="nav.about">About</a>
       <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
       <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="nav-linkedin">LinkedIn ↗</a>
     </div>
@@ -35,9 +45,9 @@
       </button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <a href="../index.html#architecture" data-i18n="nav.architecture">Architecture</a>
-      <a href="../index.html#arch-diagram" data-i18n="nav.diagram">Diagram</a>
-      <a href="../index.html#projects" data-i18n="nav.projects">Projects</a>
+      <a href="../architecture.html" data-i18n="nav.architecture">Architecture</a>
+      <a href="../index.html#projects" data-i18n="nav.projects">Case Studies</a>
+      <a href="../about.html" data-i18n="nav.about">About</a>
       <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
       <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="nav-linkedin">LinkedIn ↗</a>
       <a href="../index.html" data-i18n="nav.backToPortfolio">← Back to Portfolio</a>
@@ -49,6 +59,7 @@
     </div>
   </nav>
 
+  <main id="main-content">
   <div class="project-hero reveal">
     <a href="../index.html#projects" class="back-link" data-i18n="common.backAllProjects">← All Architecture Projects</a>
     <div class="project-meta">
@@ -60,10 +71,10 @@
     </div>
     <h1 class="project-title" data-i18n-html="pca.title">Enterprise Case Automation<br>Architecture</h1>
     <p class="project-summary" data-i18n="pca.summary">
-      Flow-driven intelligent routing, multi-tier escalation guardrails, and validation frameworks for enterprise case management at scale — eliminating manual intervention across the resolution lifecycle.
+      Flow-driven intelligent routing, multi-tier escalation guardrails, and validation frameworks for enterprise case management at scale — reducing manual intervention across the resolution lifecycle.
     </p>
+    <p class="case-disclosure" data-i18n="common.caseStudyDisclosure">Composite case study based on real Salesforce production work. Client-specific details have been anonymized and generalized; some elements combine patterns from multiple engagements.</p>
     <div class="impact-bar">
-      <div class="impact-item"><div class="i-num blue">40%</div><div class="i-lbl" data-i18n="pca.impact1">Routing time reduction</div></div>
       <div class="impact-item"><div class="i-num green">3</div><div class="i-lbl" data-i18n="pca.impact2">Escalation tiers automated</div></div>
       <div class="impact-item"><div class="i-num amber">0</div><div class="i-lbl" data-i18n="pca.impact3">Manual routing touchpoints</div></div>
     </div>
@@ -74,7 +85,7 @@
       <span class="block-tag" data-i18n="pca.b1.tag">Context</span>
       <h3 data-i18n="pca.b1.title">Business Problem</h3>
       <ul>
-        <li data-i18n="pca.b1.li1">Manual case assignment causing 40%+ delay in first response times</li>
+        <li data-i18n="pca.b1.li1">Manual case assignment causing significant delay in first response times</li>
         <li data-i18n="pca.b1.li2">No escalation logic — cases stalling without SLA enforcement</li>
         <li data-i18n="pca.b1.li3">Inconsistent validation at case creation causing data quality issues</li>
         <li data-i18n="pca.b1.li4">No executive visibility into resolution pipeline performance</li>
@@ -85,9 +96,18 @@
       <h3 data-i18n="pca.b2.title">Solution Design</h3>
       <ul>
         <li data-i18n="pca.b2.li1">Record-Triggered Flow for intake validation and initial routing logic</li>
-        <li data-i18n="pca.b2.li2">Scheduled Flow for time-based SLA monitoring and escalation triggers</li>
+        <li data-i18n="pca.b2.li2">Time-based SLA monitoring and escalation implemented with Salesforce Flow</li>
         <li data-i18n="pca.b2.li3">Flow-invoked Apex for complex routing decisions at scale</li>
         <li data-i18n="pca.b2.li4">Custom metadata for configurable routing rules without code changes</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
+      <span class="block-tag">Architecture Alternatives</span>
+      <h3>Flow-Only vs. Apex-Only vs. Hybrid</h3>
+      <ul>
+        <li><strong>Apex trigger-only routing</strong> — stronger performance ceiling, but removes admin visibility into routing rules; every rule change becomes a deployment.</li>
+        <li><strong>Flow-only, no Apex</strong> — most transparent option, but hits a complexity ceiling once multi-tier escalation logic exceeds what declarative branching can express cleanly.</li>
+        <li><strong>Hybrid (used in this design)</strong> — Record-Triggered Flow owns intake and entry criteria; Apex is invoked only for the routing-decision step that needs programmatic control.</li>
       </ul>
     </div>
     <div class="content-block reveal">
@@ -96,7 +116,7 @@
       <ul>
         <li data-i18n="pca.b3.li1">Entry criteria gates preventing invalid record progression</li>
         <li data-i18n="pca.b3.li2">Assignment routing via queue-based ownership transfer</li>
-        <li data-i18n="pca.b3.li3">Multi-branch escalation via scheduled paths with wait elements</li>
+        <li data-i18n="pca.b3.li3">Multi-branch escalation logic implemented with Salesforce Flow</li>
         <li data-i18n="pca.b3.li4">Auto-close logic for stale cases meeting resolution criteria</li>
       </ul>
     </div>
@@ -111,34 +131,43 @@
       </ul>
     </div>
     <div class="content-block reveal">
+      <span class="block-tag">Risks &amp; Mitigations</span>
+      <h3>What Could Break</h3>
+      <ul>
+        <li><strong>Automation recursion</strong> if a routing update re-triggers the same Flow — mitigated with entry criteria scoped to only the fields that should cause re-evaluation, and explicit testing of the "fires twice" case.</li>
+        <li><strong>Escalation backlog</strong> if scheduled processing volume grows faster than expected — mitigated by keeping the escalation path fully bulkified with no per-record synchronous callouts inside it.</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
       <span class="block-tag" data-i18n="pca.b5.tag">Scalability</span>
       <h3 data-i18n="pca.b5.title">Growth Architecture</h3>
       <ul>
         <li data-i18n="pca.b5.li1">Custom metadata routing table — zero code changes for new rules</li>
         <li data-i18n="pca.b5.li2">Bulkification-safe Apex invocable methods for batch processing</li>
         <li data-i18n="pca.b5.li3">Flow subflow architecture for modular, reusable logic components</li>
-        <li data-i18n="pca.b5.li4">Platform events for decoupled async escalation notifications</li>
+        <li data-i18n="pca.b5.li4">Platform Events as the pattern to evaluate for decoupled, async escalation notifications to external systems</li>
       </ul>
     </div>
     <div class="content-block reveal">
       <span class="block-tag" data-i18n="pca.b6.tag">Business Impact</span>
       <h3 data-i18n="pca.b6.title">Delivered Outcomes</h3>
       <ul>
-        <li data-i18n="pca.b6.li1">40% reduction in average case routing time (manual → automated)</li>
-        <li data-i18n="pca.b6.li2">3-tier escalation matrix eliminating SLA breaches</li>
+        <li data-i18n="pca.b6.li1">Reduced average case routing time by replacing manual assignment with automated routing</li>
+        <li data-i18n="pca.b6.li2">Introduced a 3-tier escalation matrix with automated SLA visibility and time-based routing</li>
         <li data-i18n="pca.b6.li3">Executive dashboard surfaces real-time case throughput metrics</li>
-        <li data-i18n="pca.b6.li4">Validation guardrails reduced data quality incidents to near zero</li>
+        <li data-i18n="pca.b6.li4">Validation guardrails at intake improved case data consistency</li>
       </ul>
     </div>
   </div>
+  </main>
 
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand"><span class="logo-mark">ATH</span><span>Adrian Tobar Hanze © 2026</span></div>
       <div class="footer-links">
-        <a href="../index.html#projects" data-i18n="footer.projects">Projects</a>
-        <a href="../index.html#arch-diagram" data-i18n="footer.diagram">Diagram</a>
-        <a href="../index.html#architecture" data-i18n="footer.architecture">Architecture</a>
+        <a href="../index.html#projects" data-i18n="footer.projects">Case Studies</a>
+        <a href="../architecture.html" data-i18n="footer.architecture">Architecture</a>
+        <a href="../about.html" data-i18n="footer.about">About</a>
         <a href="../index.html#contact" data-i18n="footer.contact">Contact</a>
         <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank">LinkedIn ↗</a>
       </div>

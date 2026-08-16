@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Adrian Tobar Hanze</title>
+  <meta name="description" content="Adrian Tobar Hanze is a Salesforce Technical Consultant working across Flow automation, Apex, LWC, sharing &amp; security architecture, and integrations — progressing toward Application Architect.">
+  <link rel="canonical" href="https://adrian-salesforce-portfolio.vercel.app/about.html">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="About — Adrian Tobar Hanze">
+  <meta property="og:description" content="Salesforce Technical Consultant working across automation, development, security, and integrations.">
+  <meta property="og:url" content="https://adrian-salesforce-portfolio.vercel.app/about.html">
+  <meta property="og:image" content="https://adrian-salesforce-portfolio.vercel.app/assets/og-image.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234a9eff'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='24' font-weight='700' fill='%23060b14' text-anchor='middle'%3EATH%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects/project-style.css">
+  <style>
+    .about-prose { max-width: 700px; }
+    .about-prose p { font-size: 15.5px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 16px; }
+    .about-prose h2 { font-family: var(--font-display); font-size: 22px; color: var(--text-primary); margin: 8px 0 14px; }
+    .skills-domain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 18px; }
+    .skills-domain { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 22px; }
+    .skills-domain h3 { font-family: var(--font-display); font-size: 15px; color: var(--accent); margin-bottom: 10px; }
+    .skills-domain ul { display: flex; flex-direction: column; gap: 6px; }
+    .skills-domain li { font-size: 13.5px; color: var(--text-secondary); }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
+
+  <nav id="navbar" class="nav">
+    <div class="logo">
+      <a href="index.html" style="display:flex;align-items:center;gap:10px;">
+        <span class="logo-mark">ATH</span>
+        <span class="logo-name">Adrian Tobar Hanze</span>
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="architecture.html" data-i18n="nav.architecture">Architecture</a>
+      <a href="index.html#projects" data-i18n="nav.projects">Case Studies</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+      <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="nav-linkedin">LinkedIn ↗</a>
+    </div>
+    <div class="nav-right">
+      <div class="language-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="architecture.html" data-i18n="nav.architecture">Architecture</a>
+      <a href="index.html#projects" data-i18n="nav.projects">Case Studies</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+      <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="nav-linkedin">LinkedIn ↗</a>
+      <div class="mobile-menu-langs">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+  <!-- ═══ ABOUT HERO — SPLIT PORTRAIT LAYOUT ═══ -->
+  <section class="about-hero">
+    <div class="about-hero-copy">
+      <span class="section-tag" data-i18n="about.hero.tag">PROFILE / 01</span>
+      <h1 class="about-hero-headline" data-i18n="about.hero.headline">I fix the gap between "it's configured" and "it's designed."</h1>
+      <div class="about-hero-identity">
+        <span data-i18n="idx.hero.eyebrow">Salesforce Technical Consultant</span>
+        <span>Platform Developer II</span>
+        <span>Platform Sharing &amp; Visibility Architect</span>
+      </div>
+      <p class="about-hero-lede" data-i18n="about.hero.lede">Working across Flow, Apex, LWC, security architecture, and integrations — currently 3 of 4 requirements into Salesforce Certified Application Architect.</p>
+      <div class="about-hero-caps">
+        <span data-i18n="nav.architecture">Architecture</span><span>·</span><span data-i18n="idx.console.tab.automation">Automation</span><span>·</span><span data-i18n="idx.console.tab.security">Security</span><span>·</span><span data-i18n="idx.console.tab.integration">Integration</span>
+      </div>
+    </div>
+    <div class="about-hero-portrait-col">
+      <div class="portrait-frame">
+        <picture>
+          <source type="image/webp" srcset="assets/profile/adrian-tobar-architect-hero-560.webp 560w, assets/profile/adrian-tobar-architect-hero.webp 896w" sizes="(max-width: 980px) 100vw, 45vw">
+          <img src="assets/profile/adrian-tobar-architect-hero.jpg" alt="Adrian Tobar Hanze, Salesforce Technical Consultant" width="896" height="1193" fetchpriority="high">
+        </picture>
+        <div class="portrait-caption">
+          <span data-i18n="about.hero.portraitCaption1">Salesforce Platform</span>
+          <span><span data-i18n="nav.architecture">Architecture</span> · <span data-i18n="idx.console.tab.security">Security</span> · <span data-i18n="idx.console.tab.automation">Automation</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="content-grid" style="grid-template-columns:1fr; max-width:820px; margin:0 auto;">
+
+    <!-- ═══ APPROACH (existing prose, kept) ═══ -->
+    <section class="content-block reveal about-prose" style="border:none;background:none;padding:56px 0 40px;">
+      <span class="section-tag" data-i18n="about.approach.tag">APPROACH / 02</span>
+      <h2 style="margin-top:16px;" data-i18n="about.approach.h1">What I actually do</h2>
+      <p data-i18n="about.approach.p1">A lot of Salesforce work isn't "build a new feature" — it's "this automation works until it doesn't," or "we're not sure who's allowed to see what anymore." My focus sits on the boundary between admin-configured automation and engineered systems: where an automation that works under light transaction volume may behave very differently as volume, concurrency, and data complexity increase, or where a permission model that was fine for one team stops making sense for three.</p>
+      <p data-i18n="about.approach.p2">My day-to-day spans Flow automation, Apex development, Lightning Web Components, REST integrations, and the sharing/security model underneath all of it. I don't treat those as separate skills — a routing automation is also a security decision (who does the queue-based reassignment run as?) and a data decision (what happens to the record's field history when it moves).</p>
+
+      <h2 data-i18n="about.approach.h2">How I decide between configuration and code</h2>
+      <p data-i18n="about.approach.p3">Flow is my default. It's transparent, admins can maintain it without a deployment, and most business process logic doesn't need anything more powerful than what it exposes. I move to Apex when one of a few specific things is true: the logic needs real transaction control, it has to be reused across more entry points than Flow can cleanly share, it's computation- or bulk-heavy enough that governor limits become the real constraint, or it sits at an integration boundary that needs proper error handling. That's a judgment call, not a rule I apply mechanically — and I'd rather explain the reasoning in an interview than hide behind "best practice."</p>
+
+      <h2 data-i18n="about.approach.h3">How I think about security</h2>
+      <p data-i18n-html="about.approach.p4">Sharing and security has become one of my strongest technical focus areas, reinforced by the Platform Sharing and Visibility Architect credential. The mental model I use: object and field access (CRUD/FLS) set the ceiling on what's possible at all, record-level sharing decides who's let in under that ceiling, and Apex runtime behavior is a separate decision on top of both — sharing keywords (<code>with sharing</code>, <code>without sharing</code>, <code>inherited sharing</code>) control whether record-level sharing is enforced inside that code, while CRUD/FLS still has to be enforced deliberately, since it isn't automatically tied to the sharing keyword. A lot of real-world security gaps live in that distinction being missed.</p>
+
+      <h2 data-i18n="about.approach.h4">Where this is heading</h2>
+      <p data-i18n="about.approach.p5">I'm progressing toward Salesforce Certified Application Architect — three of the four requirements are done (Platform App Builder, Platform Developer, Platform Sharing and Visibility Architect), and I'm targeting Platform Data Architect next. That's a deliberate direction, not a rebrand: the work increasingly involves data ownership and system-boundary questions rather than configuration mechanics, and the certification path reflects where that work is heading.</p>
+    </section>
+
+  </div>
+
+  <!-- ═══ ARCHITECTURE DNA ═══ -->
+  <section class="section reveal">
+    <div class="section-header">
+      <span class="section-tag" data-i18n="about.dna.tag">ARCHITECTURE DNA / 03</span>
+      <h2 class="section-title" data-i18n="about.dna.title">Architecture DNA</h2>
+      <p class="section-intro" data-i18n="about.dna.intro">Five things this work is built from. Tap or hover each one for the principle behind it.</p>
+    </div>
+    <div class="dna-grid">
+      <button class="dna-card" type="button" aria-expanded="false" aria-controls="dna-automate">
+        <span class="dna-verb" data-i18n="about.dna.automate.verb">I automate</span>
+        <span class="dna-stack">Flow · Apex · Metadata</span>
+        <span class="dna-reveal" id="dna-automate" data-i18n="about.dna.automate.reveal">Flow owns orchestration by default — until a requirement genuinely needs programmatic control.</span>
+        <span class="dna-plus" aria-hidden="true">+</span>
+      </button>
+      <button class="dna-card" type="button" aria-expanded="false" aria-controls="dna-build">
+        <span class="dna-verb" data-i18n="about.dna.build.verb">I build</span>
+        <span class="dna-stack">Apex · LWC · SOQL</span>
+        <span class="dna-reveal" id="dna-build" data-i18n="about.dna.build.reveal">Components consume services and render state — they don't own business logic.</span>
+        <span class="dna-plus" aria-hidden="true">+</span>
+      </button>
+      <button class="dna-card" type="button" aria-expanded="false" aria-controls="dna-secure">
+        <span class="dna-verb" data-i18n="about.dna.secure.verb">I secure</span>
+        <span class="dna-stack">Sharing · CRUD/FLS · Experience Cloud</span>
+        <span class="dna-reveal" id="dna-secure" data-i18n="about.dna.secure.reveal">Access starts with explicit boundaries, not accumulated permissions.</span>
+        <span class="dna-plus" aria-hidden="true">+</span>
+      </button>
+      <button class="dna-card" type="button" aria-expanded="false" aria-controls="dna-connect">
+        <span class="dna-verb" data-i18n="about.dna.connect.verb">I connect</span>
+        <span class="dna-stack">REST · OAuth · Named Credentials</span>
+        <span class="dna-reveal" id="dna-connect" data-i18n="about.dna.connect.reveal">An integration needs a contract for what happens when the other side is down, not just a happy path.</span>
+        <span class="dna-plus" aria-hidden="true">+</span>
+      </button>
+      <button class="dna-card" type="button" aria-expanded="false" aria-controls="dna-design">
+        <span class="dna-verb" data-i18n="about.dna.design.verb">I design</span>
+        <span class="dna-stack">Automation · Security · Data · Integration</span>
+        <span class="dna-reveal" id="dna-design" data-i18n="about.dna.design.reveal">Every decision names its trade-off, not just its benefit.</span>
+        <span class="dna-plus" aria-hidden="true">+</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ═══ PROFESSIONAL JOURNEY ═══ -->
+  <section class="section reveal">
+    <div class="section-header">
+      <span class="section-tag" data-i18n="about.journey.tag">JOURNEY / 04</span>
+      <h2 class="section-title" data-i18n="about.journey.title">Professional Journey</h2>
+      <p class="section-intro" data-i18n="about.journey.intro">Verified certification history — not a claim, a timeline. The next credential is deliberate, not a rebrand.</p>
+    </div>
+    <div class="journey-timeline">
+      <div class="jt-item jt-done">
+        <span class="jt-year">2023</span>
+        <div class="jt-dot"></div>
+        <div class="jt-content"><span class="jt-cert">Platform Foundations</span></div>
+      </div>
+      <div class="jt-item jt-done">
+        <span class="jt-year">2024</span>
+        <div class="jt-dot"></div>
+        <div class="jt-content"><span class="jt-cert">Platform Administrator</span></div>
+      </div>
+      <div class="jt-item jt-done">
+        <span class="jt-year">2025</span>
+        <div class="jt-dot"></div>
+        <div class="jt-content">
+          <span class="jt-cert">Platform App Builder</span>
+          <span class="jt-cert">Agentforce Specialist</span>
+          <span class="jt-cert">Platform Developer I</span>
+          <span class="jt-cert">Platform Developer II</span>
+        </div>
+      </div>
+      <div class="jt-item jt-done jt-current">
+        <span class="jt-year">2026</span>
+        <div class="jt-dot"></div>
+        <div class="jt-content"><span class="jt-cert">Platform Sharing &amp; Visibility Architect</span></div>
+      </div>
+      <div class="jt-item jt-next">
+        <span class="jt-year" data-i18n="common.next">Next</span>
+        <div class="jt-dot"></div>
+        <div class="jt-content"><span class="jt-cert">Platform Data Architect</span></div>
+      </div>
+      <div class="jt-item jt-target">
+        <span class="jt-year" data-i18n="about.journey.target">Target</span>
+        <div class="jt-dot"></div>
+        <div class="jt-content">
+          <span class="jt-cert">Application Architect</span>
+          <span class="jt-caption" data-i18n="about.journey.targetCaption">Requires all 4 credentials above — not yet issued</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HOW I THINK ═══ -->
+  <section class="section reveal">
+    <div class="section-header">
+      <span class="section-tag" data-i18n="about.think.tag">HOW I THINK / 05</span>
+      <h2 class="section-title" data-i18n="about.think.title">Principles I Design Against</h2>
+    </div>
+    <div class="think-list">
+      <button class="think-item" type="button" aria-expanded="false" aria-controls="think-1">
+        <span class="think-num">01</span>
+        <span class="think-statement" data-i18n="about.think.1.statement">Declarative first. Not declarative at all costs.</span>
+        <span class="think-toggle" aria-hidden="true">+</span>
+      </button>
+      <div class="think-panel" id="think-1">
+        <p data-i18n="about.think.1.explain">Flow owns orchestration by default because it keeps the system admin-maintainable. Apex earns its place when transaction control, reuse, or bulk performance justify the added engineering lifecycle — not because a requirement merely could be coded.</p>
+      </div>
+
+      <button class="think-item" type="button" aria-expanded="false" aria-controls="think-2">
+        <span class="think-num">02</span>
+        <span class="think-statement" data-i18n="about.think.2.statement">Security isn't a permission set. It's a model.</span>
+        <span class="think-toggle" aria-hidden="true">+</span>
+      </button>
+      <div class="think-panel" id="think-2">
+        <p data-i18n="about.think.2.explain">Object access, field access, record-level sharing, and Apex runtime behavior are four separate decisions that have to agree with each other. A permission set alone doesn't answer any of them completely.</p>
+      </div>
+
+      <button class="think-item" type="button" aria-expanded="false" aria-controls="think-3">
+        <span class="think-num">03</span>
+        <span class="think-statement" data-i18n="about.think.3.statement">Integrations need a failure strategy.</span>
+        <span class="think-toggle" aria-hidden="true">+</span>
+      </button>
+      <div class="think-panel" id="think-3">
+        <p data-i18n="about.think.3.explain">The interesting design question isn't which API to call — it's what happens when the other side times out, and whether a human finds out about it.</p>
+      </div>
+
+      <button class="think-item" type="button" aria-expanded="false" aria-controls="think-4">
+        <span class="think-num">04</span>
+        <span class="think-statement" data-i18n="about.think.4.statement">The happy path is only half the architecture.</span>
+        <span class="think-toggle" aria-hidden="true">+</span>
+      </button>
+      <div class="think-panel" id="think-4">
+        <p data-i18n="about.think.4.explain">A solution that only works when everything succeeds isn't finished. Bulk behavior, partial failure, and recovery paths are part of the requirement, not an edge case.</p>
+      </div>
+
+      <button class="think-item" type="button" aria-expanded="false" aria-controls="think-5">
+        <span class="think-num">05</span>
+        <span class="think-statement" data-i18n="about.think.5.statement">Scale changes design decisions.</span>
+        <span class="think-toggle" aria-hidden="true">+</span>
+      </button>
+      <div class="think-panel" id="think-5">
+        <p data-i18n="about.think.5.explain">An automation or query pattern that's fine at low volume can become the org's next governor-limit incident as record counts, concurrency, and data complexity grow — so I design for where the org is headed, not just where it is today.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="content-grid" style="grid-template-columns:1fr; max-width:820px; margin:0 auto;">
+
+    <!-- ═══ WHAT I WORK WITH ═══ -->
+    <section class="content-block reveal" style="border:none;background:none;padding:16px 0 40px;">
+      <span class="section-tag" data-i18n="about.capabilities.tag">CAPABILITIES / 06</span>
+      <h2 style="font-family:var(--font-display);font-size:22px;color:var(--text-primary);margin:16px 0 18px;" data-i18n="about.capabilities.title">What I Work With</h2>
+      <div class="skills-domain-grid">
+        <div class="skills-domain">
+          <h3 data-i18n="about.capabilities.d1.title">Platform Development</h3>
+          <ul>
+            <li data-i18n="about.capabilities.d1.li1">Apex</li>
+            <li data-i18n="about.capabilities.d1.li2">Lightning Web Components</li>
+            <li data-i18n="about.capabilities.d1.li3">SOQL</li>
+            <li data-i18n="about.capabilities.d1.li4">Asynchronous Apex</li>
+            <li data-i18n="about.capabilities.d1.li5">Apex testing (bulk &amp; negative paths)</li>
+          </ul>
+        </div>
+        <div class="skills-domain">
+          <h3 data-i18n="about.capabilities.d2.title">Automation</h3>
+          <ul>
+            <li data-i18n="about.capabilities.d2.li1">Salesforce Flow</li>
+            <li data-i18n="about.capabilities.d2.li2">Invocable Apex</li>
+            <li data-i18n="about.capabilities.d2.li3">Automation ownership &amp; decision-making</li>
+          </ul>
+        </div>
+        <div class="skills-domain">
+          <h3 data-i18n="about.capabilities.d3.title">Architecture</h3>
+          <ul>
+            <li data-i18n="about.capabilities.d3.li1">Sharing &amp; Visibility design</li>
+            <li data-i18n="about.capabilities.d3.li2">Data modeling</li>
+            <li data-i18n="about.capabilities.d3.li3">Solution design</li>
+            <li data-i18n="about.capabilities.d3.li4">Automation decision frameworks</li>
+          </ul>
+        </div>
+        <div class="skills-domain">
+          <h3 data-i18n="about.capabilities.d4.title">Integration</h3>
+          <ul>
+            <li data-i18n="about.capabilities.d4.li1">REST APIs</li>
+            <li data-i18n="about.capabilities.d4.li2">OAuth 2.0</li>
+            <li data-i18n="about.capabilities.d4.li3">Named Credentials</li>
+          </ul>
+        </div>
+        <div class="skills-domain">
+          <h3>Experience Cloud</h3>
+          <ul>
+            <li data-i18n="about.capabilities.d5.li1">External user access</li>
+            <li data-i18n="about.capabilities.d5.li2">Sharing for portal users</li>
+            <li data-i18n="about.capabilities.d5.li3">Security considerations for external-facing data</li>
+          </ul>
+        </div>
+        <div class="skills-domain">
+          <h3 data-i18n="about.capabilities.d6.title">Emerging</h3>
+          <ul>
+            <li data-i18n="about.capabilities.d6.li1">Agentforce (Certified Specialist)</li>
+            <li data-i18n="about.capabilities.d6.li2">Applied as a complement to the platform/architecture core, not a pivot away from it</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block reveal" style="border:none;background:none;padding:0 0 40px;">
+      <h2 style="font-family:var(--font-display);font-size:22px;color:var(--text-primary);margin-bottom:14px;" data-i18n="about.testing.title">Testing &amp; Delivery</h2>
+      <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.7;max-width:700px;" data-i18n="about.testing.p">I test Apex for bulk behavior and negative paths, not just the single-record happy case a governor limit will never catch in a demo. Delivery runs through sandboxes, Git-based version control, and Salesforce DX / Change Sets for promotion between environments — the fundamentals that make a release safe to repeat, not a one-time event.</p>
+    </section>
+
+    <!-- ═══ BEYOND THE PLATFORM ═══ -->
+    <section class="content-block reveal beyond-platform" style="border:none;background:none;padding:0 0 56px;">
+      <span class="section-tag" data-i18n="about.beyond.tag">BEYOND THE PLATFORM / 07</span>
+      <h2 style="font-family:var(--font-display);font-size:22px;color:var(--text-primary);margin:16px 0 14px;" data-i18n="about.beyond.title">Beyond the Platform</h2>
+      <p data-i18n="about.beyond.p">Most of what shapes how I work isn't Salesforce-specific: staying deliberate about what I don't know yet, treating certifications as a forcing function for depth rather than a checkbox, and working comfortably across technical and business conversations without needing a translator in between. I work across English, Spanish, and French — which shows up here as much as anywhere else.</p>
+    </section>
+
+  </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><span class="logo-mark">ATH</span><span>Adrian Tobar Hanze © 2026</span></div>
+      <div class="footer-links">
+        <a href="index.html#projects" data-i18n="footer.projects">Case Studies</a>
+        <a href="architecture.html" data-i18n="footer.architecture">Architecture</a>
+        <a href="about.html" data-i18n="footer.about">About</a>
+        <a href="index.html#contact" data-i18n="footer.contact">Contact</a>
+        <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank">LinkedIn ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -4,22 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LWC Dashboard Architecture — Adrian Tobar Hanze</title>
+  <meta name="description" content="A composite Salesforce case study on executive dashboards built with Lightning Web Components, live Apex data providers, and role-based visibility — based on real production patterns.">
+  <link rel="canonical" href="https://adrian-salesforce-portfolio.vercel.app/projects/lwc-dashboard.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="LWC Dashboard Architecture — Adrian Tobar Hanze">
+  <meta property="og:description" content="A composite Salesforce case study on executive dashboards built with Lightning Web Components and live Apex data providers.">
+  <meta property="og:url" content="https://adrian-salesforce-portfolio.vercel.app/projects/lwc-dashboard.html">
+  <meta property="og:image" content="https://adrian-salesforce-portfolio.vercel.app/assets/og-image.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234a9eff'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='24' font-weight='700' fill='%23060b14' text-anchor='middle'%3EATH%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="project-style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
   <nav id="navbar" class="nav">
     <div class="logo">
       <span class="logo-mark">ATH</span>
       <span class="logo-name">Adrian Tobar Hanze</span>
     </div>
     <div class="nav-links">
-      <a href="../index.html#architecture" data-i18n="nav.architecture">Architecture</a>
-      <a href="../index.html#arch-diagram" data-i18n="nav.diagram">Diagram</a>
-      <a href="../index.html#projects" data-i18n="nav.projects">Projects</a>
+      <a href="../architecture.html" data-i18n="nav.architecture">Architecture</a>
+      <a href="../index.html#projects" data-i18n="nav.projects">Case Studies</a>
+      <a href="../about.html" data-i18n="nav.about">About</a>
       <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
       <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="nav-linkedin">LinkedIn ↗</a>
     </div>
@@ -35,9 +45,9 @@
       </button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <a href="../index.html#architecture" data-i18n="nav.architecture">Architecture</a>
-      <a href="../index.html#arch-diagram" data-i18n="nav.diagram">Diagram</a>
-      <a href="../index.html#projects" data-i18n="nav.projects">Projects</a>
+      <a href="../architecture.html" data-i18n="nav.architecture">Architecture</a>
+      <a href="../index.html#projects" data-i18n="nav.projects">Case Studies</a>
+      <a href="../about.html" data-i18n="nav.about">About</a>
       <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
       <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="nav-linkedin">LinkedIn ↗</a>
       <a href="../index.html" data-i18n="nav.backToPortfolio">← Back to Portfolio</a>
@@ -49,6 +59,7 @@
     </div>
   </nav>
 
+  <main id="main-content">
   <div class="project-hero reveal">
     <a href="../index.html#projects" class="back-link" data-i18n="common.backAllProjects">← All Architecture Projects</a>
     <div class="project-meta">
@@ -62,8 +73,8 @@
     <p class="project-summary" data-i18n="plwc.summary">
       Real-time executive dashboards built on Lightning Web Components with dynamic Apex data providers, cross-object reporting, and role-based UI visibility strategy — transforming raw data into decision-ready insights.
     </p>
+    <p class="case-disclosure" data-i18n="common.caseStudyDisclosure">Composite case study based on real Salesforce production work. Client-specific details have been anonymized and generalized; some elements combine patterns from multiple engagements.</p>
     <div class="impact-bar">
-      <div class="impact-item"><div class="i-num green">3×</div><div class="i-lbl" data-i18n="plwc.impact1">Adoption improvement</div></div>
       <div class="impact-item"><div class="i-num blue">5</div><div class="i-lbl" data-i18n="plwc.impact2">Exec personas served</div></div>
       <div class="impact-item"><div class="i-num purple">RT</div><div class="i-lbl" data-i18n="plwc.impact3">Real-time data sync</div></div>
     </div>
@@ -91,6 +102,15 @@
       </ul>
     </div>
     <div class="content-block reveal">
+      <span class="block-tag">Architecture Alternatives</span>
+      <h3>Why Not Native Reports?</h3>
+      <ul>
+        <li><strong>Native Salesforce Reports/Dashboards</strong> — the zero-code option; a good fit when exec needs stay within standard cross-object reporting, but insufficient once the layout needs to be decision-focused rather than tabular.</li>
+        <li><strong>Third-party BI tool</strong> — stronger analytics depth, but introduces a new licensed tool and a data-sync dependency outside the platform; only worth it once the reporting need outgrows what Salesforce natively supports.</li>
+        <li><strong>Custom LWC + Apex controller (used in this design)</strong> — higher upfront build cost than native reports, worth it when the adoption gap and layout requirements justify it.</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
       <span class="block-tag" data-i18n="plwc.b3.tag">Component Architecture</span>
       <h3 data-i18n="plwc.b3.title">LWC Implementation</h3>
       <ul>
@@ -111,6 +131,14 @@
       </ul>
     </div>
     <div class="content-block reveal">
+      <span class="block-tag">Risks &amp; Mitigations</span>
+      <h3>What Could Break</h3>
+      <ul>
+        <li><strong>Apex controller becomes a bottleneck</strong> as data volume grows — mitigated with aggregated SOQL rather than record-by-record processing, and server-side filtering before data ever reaches the component.</li>
+        <li><strong>Tight coupling to one layout</strong> as exec needs evolve — mitigated by a modular component design so new KPI cards can be added without refactoring the ones already in production.</li>
+      </ul>
+    </div>
+    <div class="content-block reveal">
       <span class="block-tag" data-i18n="plwc.b5.tag">Scalability</span>
       <h3 data-i18n="plwc.b5.title">Growth Architecture</h3>
       <ul>
@@ -124,21 +152,22 @@
       <span class="block-tag" data-i18n="plwc.b6.tag">Business Impact</span>
       <h3 data-i18n="plwc.b6.title">Delivered Outcomes</h3>
       <ul>
-        <li data-i18n="plwc.b6.li1">3× increase in executive dashboard adoption within 30 days of launch</li>
-        <li data-i18n="plwc.b6.li2">Real-time pipeline visibility replacing 5 manually curated reports</li>
-        <li data-i18n="plwc.b6.li3">Exec decision cycles reduced from weekly to daily cadence</li>
-        <li data-i18n="plwc.b6.li4">Zero IT dependency for dashboard layout adjustments post-launch</li>
+        <li data-i18n="plwc.b6.li1">Replaced weekly spreadsheet exports with an in-platform, live executive dashboard</li>
+        <li data-i18n="plwc.b6.li2">Consolidated several manually curated reports into a single real-time pipeline view</li>
+        <li data-i18n="plwc.b6.li3">Gave executives on-demand access to pipeline data instead of waiting on the next scheduled report</li>
+        <li data-i18n="plwc.b6.li4">Custom property editor lets admins adjust dashboard layout without a developer or IT ticket</li>
       </ul>
     </div>
   </div>
+  </main>
 
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand"><span class="logo-mark">ATH</span><span>Adrian Tobar Hanze © 2026</span></div>
       <div class="footer-links">
-        <a href="../index.html#projects" data-i18n="footer.projects">Projects</a>
-        <a href="../index.html#arch-diagram" data-i18n="footer.diagram">Diagram</a>
-        <a href="../index.html#architecture" data-i18n="footer.architecture">Architecture</a>
+        <a href="../index.html#projects" data-i18n="footer.projects">Case Studies</a>
+        <a href="../architecture.html" data-i18n="footer.architecture">Architecture</a>
+        <a href="../about.html" data-i18n="footer.about">About</a>
         <a href="../index.html#contact" data-i18n="footer.contact">Contact</a>
         <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank">LinkedIn ↗</a>
       </div>
