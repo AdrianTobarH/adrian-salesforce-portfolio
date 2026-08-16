@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>API Integration Architecture — Adrian Tobar Hanze</title>
+  <meta name="description" content="A composite Salesforce case study on reusable Named Credential integration architecture, OAuth 2.0 Auth Providers, and real-time sync — based on real production patterns.">
+  <link rel="canonical" href="https://adrian-salesforce-portfolio.vercel.app/projects/api-integration.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="API Integration Architecture — Adrian Tobar Hanze">
+  <meta property="og:description" content="A composite Salesforce case study on reusable Named Credential integration architecture and real-time sync.">
+  <meta property="og:url" content="https://adrian-salesforce-portfolio.vercel.app/projects/api-integration.html">
+  <meta property="og:image" content="https://adrian-salesforce-portfolio.vercel.app/assets/profile.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234a9eff'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='24' font-weight='700' fill='%23060b14' text-anchor='middle'%3EATH%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -11,6 +19,7 @@
   <link rel="stylesheet" href="project-style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <nav id="navbar" class="nav">
     <div class="logo">
       <span class="logo-mark">ATH</span>
@@ -49,6 +58,7 @@
     </div>
   </nav>
 
+  <main id="main-content">
   <div class="project-hero reveal">
     <a href="../index.html#projects" class="back-link" data-i18n="common.backAllProjects">← All Architecture Projects</a>
     <div class="project-meta">
@@ -62,9 +72,10 @@
     <p class="project-summary" data-i18n="papi.summary">
       Reusable Named Credential architecture with secure REST endpoints, OAuth 2.0 Auth Providers, and real-time sync layers — building an integration foundation that scales across all external system boundaries.
     </p>
+    <p class="case-disclosure" data-i18n="common.caseStudyDisclosure">Composite case study based on real Salesforce production work. Client-specific details have been anonymized and generalized; some elements combine patterns from multiple engagements.</p>
     <div class="impact-bar">
       <div class="impact-item"><div class="i-num amber">∞</div><div class="i-lbl" data-i18n="papi.impact1">Reusable credential layer</div></div>
-      <div class="impact-item"><div class="i-num blue">100%</div><div class="i-lbl" data-i18n="papi.impact2">Secrets removed from Apex</div></div>
+      <div class="impact-item"><div class="i-num blue">0</div><div class="i-lbl" data-i18n="papi.impact2">Secrets stored in Apex code</div></div>
       <div class="impact-item"><div class="i-num green">RT</div><div class="i-lbl" data-i18n="papi.impact3">Real-time sync</div></div>
     </div>
   </div>
@@ -124,13 +135,14 @@
       <span class="block-tag" data-i18n="papi.b6.tag">Business Impact</span>
       <h3 data-i18n="papi.b6.title">Delivered Outcomes</h3>
       <ul>
-        <li data-i18n="papi.b6.li1">100% of API secrets removed from codebase — security audit passed</li>
+        <li data-i18n="papi.b6.li1">API secrets moved out of Apex code and into Named Credentials</li>
         <li data-i18n="papi.b6.li2">Reusable layer reduced new integration time from weeks to days</li>
         <li data-i18n="papi.b6.li3">Real-time sync replaced nightly batch — latency cut from 24h to seconds</li>
         <li data-i18n="papi.b6.li4">Callout logging surfaces integration health in executive dashboard</li>
       </ul>
     </div>
   </div>
+  </main>
 
   <footer class="footer">
     <div class="footer-inner">

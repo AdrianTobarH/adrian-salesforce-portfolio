@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Case Automation Architecture — Adrian Tobar Hanze</title>
+  <meta name="description" content="A composite Salesforce case study on Flow-driven case routing, multi-tier SLA escalation, and validation architecture — based on real production patterns.">
+  <link rel="canonical" href="https://adrian-salesforce-portfolio.vercel.app/projects/case-automation.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Case Automation Architecture — Adrian Tobar Hanze">
+  <meta property="og:description" content="A composite Salesforce case study on Flow-driven case routing, multi-tier SLA escalation, and validation architecture.">
+  <meta property="og:url" content="https://adrian-salesforce-portfolio.vercel.app/projects/case-automation.html">
+  <meta property="og:image" content="https://adrian-salesforce-portfolio.vercel.app/assets/profile.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234a9eff'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='24' font-weight='700' fill='%23060b14' text-anchor='middle'%3EATH%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -11,6 +19,7 @@
   <link rel="stylesheet" href="project-style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <nav id="navbar" class="nav">
     <div class="logo">
       <span class="logo-mark">ATH</span>
@@ -49,6 +58,7 @@
     </div>
   </nav>
 
+  <main id="main-content">
   <div class="project-hero reveal">
     <a href="../index.html#projects" class="back-link" data-i18n="common.backAllProjects">← All Architecture Projects</a>
     <div class="project-meta">
@@ -62,8 +72,8 @@
     <p class="project-summary" data-i18n="pca.summary">
       Flow-driven intelligent routing, multi-tier escalation guardrails, and validation frameworks for enterprise case management at scale — eliminating manual intervention across the resolution lifecycle.
     </p>
+    <p class="case-disclosure" data-i18n="common.caseStudyDisclosure">Composite case study based on real Salesforce production work. Client-specific details have been anonymized and generalized; some elements combine patterns from multiple engagements.</p>
     <div class="impact-bar">
-      <div class="impact-item"><div class="i-num blue">40%</div><div class="i-lbl" data-i18n="pca.impact1">Routing time reduction</div></div>
       <div class="impact-item"><div class="i-num green">3</div><div class="i-lbl" data-i18n="pca.impact2">Escalation tiers automated</div></div>
       <div class="impact-item"><div class="i-num amber">0</div><div class="i-lbl" data-i18n="pca.impact3">Manual routing touchpoints</div></div>
     </div>
@@ -74,7 +84,7 @@
       <span class="block-tag" data-i18n="pca.b1.tag">Context</span>
       <h3 data-i18n="pca.b1.title">Business Problem</h3>
       <ul>
-        <li data-i18n="pca.b1.li1">Manual case assignment causing 40%+ delay in first response times</li>
+        <li data-i18n="pca.b1.li1">Manual case assignment causing significant delay in first response times</li>
         <li data-i18n="pca.b1.li2">No escalation logic — cases stalling without SLA enforcement</li>
         <li data-i18n="pca.b1.li3">Inconsistent validation at case creation causing data quality issues</li>
         <li data-i18n="pca.b1.li4">No executive visibility into resolution pipeline performance</li>
@@ -85,7 +95,7 @@
       <h3 data-i18n="pca.b2.title">Solution Design</h3>
       <ul>
         <li data-i18n="pca.b2.li1">Record-Triggered Flow for intake validation and initial routing logic</li>
-        <li data-i18n="pca.b2.li2">Scheduled Flow for time-based SLA monitoring and escalation triggers</li>
+        <li data-i18n="pca.b2.li2">Time-based SLA monitoring and escalation implemented with Salesforce Flow</li>
         <li data-i18n="pca.b2.li3">Flow-invoked Apex for complex routing decisions at scale</li>
         <li data-i18n="pca.b2.li4">Custom metadata for configurable routing rules without code changes</li>
       </ul>
@@ -96,7 +106,7 @@
       <ul>
         <li data-i18n="pca.b3.li1">Entry criteria gates preventing invalid record progression</li>
         <li data-i18n="pca.b3.li2">Assignment routing via queue-based ownership transfer</li>
-        <li data-i18n="pca.b3.li3">Multi-branch escalation via scheduled paths with wait elements</li>
+        <li data-i18n="pca.b3.li3">Multi-branch escalation logic implemented with Salesforce Flow</li>
         <li data-i18n="pca.b3.li4">Auto-close logic for stale cases meeting resolution criteria</li>
       </ul>
     </div>
@@ -124,13 +134,14 @@
       <span class="block-tag" data-i18n="pca.b6.tag">Business Impact</span>
       <h3 data-i18n="pca.b6.title">Delivered Outcomes</h3>
       <ul>
-        <li data-i18n="pca.b6.li1">40% reduction in average case routing time (manual → automated)</li>
+        <li data-i18n="pca.b6.li1">Reduced average case routing time by replacing manual assignment with automated routing</li>
         <li data-i18n="pca.b6.li2">3-tier escalation matrix eliminating SLA breaches</li>
         <li data-i18n="pca.b6.li3">Executive dashboard surfaces real-time case throughput metrics</li>
         <li data-i18n="pca.b6.li4">Validation guardrails reduced data quality incidents to near zero</li>
       </ul>
     </div>
   </div>
+  </main>
 
   <footer class="footer">
     <div class="footer-inner">

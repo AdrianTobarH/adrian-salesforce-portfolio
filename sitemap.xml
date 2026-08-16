@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://adrian-salesforce-portfolio.vercel.app/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://adrian-salesforce-portfolio.vercel.app/projects/case-automation.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adrian-salesforce-portfolio.vercel.app/projects/lwc-dashboard.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adrian-salesforce-portfolio.vercel.app/projects/api-integration.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adrian-salesforce-portfolio.vercel.app/projects/case-study-enterprise-automation.html</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>

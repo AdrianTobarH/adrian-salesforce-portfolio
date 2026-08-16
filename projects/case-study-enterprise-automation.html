@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Enterprise Automation Deep Dive — Adrian Tobar Hanze</title>
+  <meta name="description" content="A composite Architecture Decision Record (ADR) covering context, constraints, options considered, trade-offs, security, and scalability — based on real Salesforce production patterns.">
+  <link rel="canonical" href="https://adrian-salesforce-portfolio.vercel.app/projects/case-study-enterprise-automation.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Enterprise Automation Deep Dive — Adrian Tobar Hanze">
+  <meta property="og:description" content="A composite Architecture Decision Record (ADR) covering context, constraints, trade-offs, security, and scalability.">
+  <meta property="og:url" content="https://adrian-salesforce-portfolio.vercel.app/projects/case-study-enterprise-automation.html">
+  <meta property="og:image" content="https://adrian-salesforce-portfolio.vercel.app/assets/profile.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234a9eff'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='24' font-weight='700' fill='%23060b14' text-anchor='middle'%3EATH%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -11,6 +19,7 @@
   <link rel="stylesheet" href="project-style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <nav id="navbar" class="nav">
     <div class="logo">
       <span class="logo-mark">ATH</span>
@@ -49,6 +58,7 @@
     </div>
   </nav>
 
+  <main id="main-content">
   <div class="project-hero reveal">
     <a href="../index.html#projects" class="back-link" data-i18n="common.backAllProjects">← All Architecture Projects</a>
     <div class="project-meta">
@@ -59,11 +69,11 @@
     </div>
     <h1 class="project-title" data-i18n-html="padr.title">Enterprise Automation<br>Deep Dive</h1>
     <p class="project-summary" data-i18n="padr.summary">
-      A complete Architecture Decision Record (ADR) — covering context, problem statement, constraints, decision rationale, solution layers, security model, scalability architecture, tradeoffs, and quantified business impact.
+      A complete Architecture Decision Record (ADR) — covering context, problem statement, constraints, decision rationale, solution layers, security model, scalability architecture, tradeoffs, and business impact.
     </p>
+    <p class="case-disclosure" data-i18n="common.caseStudyDisclosure">Composite case study based on real Salesforce production work. Client-specific details have been anonymized and generalized; some elements combine patterns from multiple engagements.</p>
     <div class="impact-bar">
       <div class="impact-item"><div class="i-num blue">ADR</div><div class="i-lbl" data-i18n="padr.impact1">Architecture Decision Record</div></div>
-      <div class="impact-item"><div class="i-num green">40%</div><div class="i-lbl" data-i18n="padr.impact2">Routing reduction</div></div>
       <div class="impact-item"><div class="i-num purple">8</div><div class="i-lbl" data-i18n="padr.impact3">Architecture decisions documented</div></div>
     </div>
   </div>
@@ -81,7 +91,7 @@
       <span class="adr-block-num" data-i18n="padr.b2.num">02 · Problem Statement</span>
       <h2 data-i18n="padr.b2.title">Core Failure Points</h2>
       <ul>
-        <li data-i18n="padr.b2.li1">Manual routing created ownership delays averaging 40% above SLA target</li>
+        <li data-i18n="padr.b2.li1">Manual routing created ownership delays that regularly missed the SLA target</li>
         <li data-i18n="padr.b2.li2">No structured escalation model — cases stalled without automated path</li>
         <li data-i18n="padr.b2.li3">SLA compliance visibility was limited to manual dashboard review</li>
         <li data-i18n="padr.b2.li4">Leadership lacked real-time reporting on resolution pipeline throughput</li>
@@ -115,7 +125,7 @@
         <li data-i18n="padr.b5.li1">Record-Triggered Flow as the primary orchestration entry point on Case creation</li>
         <li data-i18n="padr.b5.li2">Reusable assignment routing subflow — callable across any queue-based process</li>
         <li data-i18n="padr.b5.li3">Status transition validation controls preventing invalid case state progressions</li>
-        <li data-i18n="padr.b5.li4">Scheduled Flow for SLA monitoring — automated escalation via wait paths</li>
+        <li data-i18n="padr.b5.li4">Time-based SLA monitoring and automated escalation implemented with Salesforce Flow</li>
         <li data-i18n="padr.b5.li5">Leadership reporting dashboards with real-time pipeline visibility components</li>
       </ul>
     </div>
@@ -163,7 +173,7 @@
         <li data-i18n="padr.b8.li1">Custom Metadata routing table enables rule changes without Flow or Apex modification</li>
         <li data-i18n="padr.b8.li2">Bulkification-safe Apex invocable methods handle batch-level routing scenarios</li>
         <li data-i18n="padr.b8.li3">Platform Events enable future async escalation notifications to external systems</li>
-        <li data-i18n="padr.b8.li4">Architecture supports horizontal queue expansion — estimated 10× current volume capacity</li>
+        <li data-i18n="padr.b8.li4">Architecture supports horizontal queue expansion without introducing logic duplication</li>
       </ul>
     </div>
 
@@ -171,7 +181,7 @@
       <span class="adr-block-num" data-i18n="padr.b9.num">09 · Business Impact</span>
       <h2 data-i18n="padr.b9.title">Measured Outcomes</h2>
       <ul>
-        <li data-i18n="padr.b9.li1">Reduced manual assignment workload approximately 40% within first 30 days</li>
+        <li data-i18n="padr.b9.li1">Replaced manual assignment workload with automated routing within the first 30 days</li>
         <li data-i18n="padr.b9.li2">Improved SLA tracking visibility — compliance now measurable in real time</li>
         <li data-i18n="padr.b9.li3">Enabled leadership-level reporting dashboards with live pipeline metrics</li>
         <li data-i18n="padr.b9.li4">Validation guardrails eliminated recurring data quality incidents at intake</li>
@@ -180,6 +190,7 @@
     </div>
 
   </div>
+  </main>
 
   <footer class="footer">
     <div class="footer-inner">
