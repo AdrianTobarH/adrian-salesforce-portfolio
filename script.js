@@ -32,7 +32,7 @@ const translations = {
     "common.connectLinkedin": "Connect on LinkedIn ↗",
     "common.caseStudyDisclosure": "Composite case study based on real Salesforce production work. Client-specific details have been anonymized and generalized; some elements combine patterns from multiple engagements.",
 
-    "headline": "I design Salesforce systems<br>built to hold up at scale.",
+    "headline": "I design Salesforce systems built to hold up at scale.",
     "architectureTitle": "Enterprise Salesforce Architecture Strategy",
     "flowMatrixTitle": "Flow vs Apex Decision Matrix",
     "decisionPanelTitle": "Architecture Decision Review Panel",
@@ -40,7 +40,7 @@ const translations = {
     "ctaTitle": "Building a Salesforce system where automation, security, and integrations all need to work together?",
     "idx.hero.eyebrow": "Salesforce Technical Consultant",
     "idx.hero.sub": "Flow and Apex where each earns its place · sharing designed around the org, not a template · integrations that fail loudly, not silently.",
-    "idx.hero.ctaProjects": "View Architecture Projects",
+    "idx.hero.ctaProjects": "Explore Architecture",
 
     "idx.certs.tag": "Credentials",
     "idx.certs.title": "Salesforce Certifications",
@@ -49,14 +49,9 @@ const translations = {
     "common.next": "Next",
     "common.notYetEarned": "Not Yet Earned",
     "idx.aj.tag": "Certification Path",
-    "idx.aj.sectionTitle": "Progressing Toward Application Architect",
+    "idx.aj.sectionTitle": "The architecture path I'm building.",
     "idx.aj.title": "Application Architect Journey",
     "idx.aj.note": "Not yet a Salesforce Certified Application Architect — that credential requires all four requirements above to be complete.",
-
-    "idx.meet.tag": "Meet Adrian",
-    "idx.meet.title": "Technical depth without losing the business problem.",
-    "idx.meet.intro": "Salesforce automation, platform development, security, and integrations — approached as one architectural discipline, not four separate specialties.",
-    "idx.meet.cta": "Read my story →",
 
     "idx.console.tag": "Signature Interaction",
     "idx.console.title": "Architecture Console",
@@ -85,6 +80,23 @@ const translations = {
     "idx.console.data.n5": "Scale",
     "idx.console.data.message": "Start with who owns the data before designing the schema.",
     "idx.console.data.cta": "Explore Data Architecture →",
+
+    "idx.design.tag": "Capabilities",
+    "idx.design.title": "What I Design",
+    "idx.design.intro": "Five surfaces, one architectural discipline. Tap or hover a row for the principle behind it.",
+    "idx.design.row1.verb": "Automation Systems",
+    "idx.design.row1.reveal": "Flow owns orchestration by default — until a requirement genuinely needs programmatic control.",
+    "idx.design.row2.verb": "Security Models",
+    "idx.design.row2.reveal": "Access starts with explicit boundaries, not accumulated permissions.",
+    "idx.design.row3.verb": "Integration Boundaries",
+    "idx.design.row3.reveal": "An integration needs a contract for what happens when the other side is down, not just a happy path.",
+    "idx.design.row4.verb": "Data Architecture",
+    "idx.design.row4.reveal": "Data ownership gets decided before the schema does, not after.",
+    "idx.design.row5.verb": "Platform Experiences",
+    "idx.design.row5.reveal": "Components consume services and render state — they don't own business logic.",
+
+    "common.compositeProductionCase": "Composite Production Case",
+    "idx.projects.categoryAdr": "Architecture Decision Record",
 
     "idx.principles.tag": "Design Philosophy",
     "idx.principles.title": "How I Design Salesforce Systems",
@@ -217,7 +229,7 @@ const translations = {
     "idx.stack.row4": "Data Layer",
     "idx.stack.row5": "Integration Layer",
 
-    "idx.cta.sub": "Available for remote Salesforce Platform Engineer (Flow + Apex + Integrations) roles across US-aligned timezones.<br>Designing scalable automation frameworks that balance admin maintainability, developer extensibility, and integration reliability.",
+    "idx.cta.sub": "Available for remote Salesforce Technical Consultant (Flow + Apex + Integrations) roles across US-aligned timezones.<br>Designing scalable automation frameworks that balance admin maintainability, developer extensibility, and integration reliability.",
 
     "pca.title": "Enterprise Case Automation<br>Architecture",
     "pca.summary": "Flow-driven intelligent routing, multi-tier escalation guardrails, and validation frameworks for enterprise case management at scale — reducing manual intervention across the resolution lifecycle.",
@@ -400,7 +412,7 @@ const translations = {
     "common.connectLinkedin": "Conectemos en LinkedIn ↗",
     "common.caseStudyDisclosure": "Estudio de caso compuesto, basado en trabajo real de producción en Salesforce. Los detalles específicos de clientes fueron anonimizados y generalizados; algunos elementos combinan patrones de múltiples proyectos.",
 
-    "headline": "Diseño sistemas Salesforce<br>construidos para sostenerse a escala.",
+    "headline": "Diseño sistemas Salesforce construidos para sostenerse a escala.",
     "architectureTitle": "Estrategia de Arquitectura Empresarial Salesforce",
     "flowMatrixTitle": "Matriz de Decisión Flow vs Apex",
     "decisionPanelTitle": "Panel de Revisión de Decisiones Arquitectónicas",
@@ -408,7 +420,7 @@ const translations = {
     "ctaTitle": "¿Estás construyendo un sistema Salesforce donde automatización, seguridad e integraciones deben funcionar juntos?",
     "idx.hero.eyebrow": "Consultor Técnico Salesforce",
     "idx.hero.sub": "Flow y Apex donde cada uno se gana su lugar · sharing pensado para la organización, no una plantilla · integraciones que fallan de forma visible, no en silencio.",
-    "idx.hero.ctaProjects": "Ver Proyectos de Arquitectura",
+    "idx.hero.ctaProjects": "Explorar Arquitectura",
 
     "idx.certs.tag": "Credenciales",
     "idx.certs.title": "Certificaciones Salesforce",
@@ -417,14 +429,9 @@ const translations = {
     "common.next": "Siguiente",
     "common.notYetEarned": "Aún No Obtenido",
     "idx.aj.tag": "Ruta de Certificación",
-    "idx.aj.sectionTitle": "Avanzando hacia Application Architect",
+    "idx.aj.sectionTitle": "La ruta de arquitectura que estoy construyendo.",
     "idx.aj.title": "Trayectoria hacia Application Architect",
     "idx.aj.note": "Todavía no soy Salesforce Certified Application Architect: esa credencial requiere completar los cuatro requisitos anteriores.",
-
-    "idx.meet.tag": "Conoce a Adrian",
-    "idx.meet.title": "Profundidad técnica sin perder de vista el problema de negocio.",
-    "idx.meet.intro": "Automatización de Salesforce, desarrollo de plataforma, seguridad e integraciones, abordados como una sola disciplina de arquitectura, no como cuatro especialidades separadas.",
-    "idx.meet.cta": "Lee mi historia →",
 
     "idx.console.tag": "Interacción Distintiva",
     "idx.console.title": "Consola de Arquitectura",
@@ -453,6 +460,23 @@ const translations = {
     "idx.console.data.n5": "Escala",
     "idx.console.data.message": "Empieza por quién es dueño de los datos antes de diseñar el esquema.",
     "idx.console.data.cta": "Explorar Arquitectura de Datos →",
+
+    "idx.design.tag": "Capacidades",
+    "idx.design.title": "Lo Que Diseño",
+    "idx.design.intro": "Cinco superficies, una sola disciplina de arquitectura. Pasa el cursor o toca una fila para ver el principio detrás de ella.",
+    "idx.design.row1.verb": "Sistemas de Automatización",
+    "idx.design.row1.reveal": "Flow es dueño de la orquestación por defecto, hasta que un requerimiento realmente necesita control programático.",
+    "idx.design.row2.verb": "Modelos de Seguridad",
+    "idx.design.row2.reveal": "El acceso comienza con límites explícitos, no con permisos acumulados.",
+    "idx.design.row3.verb": "Límites de Integración",
+    "idx.design.row3.reveal": "Una integración necesita un contrato para lo que ocurre cuando el otro lado falla, no solo un camino feliz.",
+    "idx.design.row4.verb": "Arquitectura de Datos",
+    "idx.design.row4.reveal": "La propiedad de los datos se decide antes que el esquema, no después.",
+    "idx.design.row5.verb": "Experiencias de Plataforma",
+    "idx.design.row5.reveal": "Los componentes consumen servicios y renderizan estado: no son dueños de la lógica de negocio.",
+
+    "common.compositeProductionCase": "Caso Compuesto de Producción",
+    "idx.projects.categoryAdr": "Registro de Decisión de Arquitectura",
 
     "idx.principles.tag": "Filosofía de Diseño",
     "idx.principles.title": "Cómo Diseño Sistemas Salesforce",
@@ -585,7 +609,7 @@ const translations = {
     "idx.stack.row4": "Capa de Datos",
     "idx.stack.row5": "Capa de Integración",
 
-    "idx.cta.sub": "Disponible para roles remotos de Salesforce Platform Engineer (Flow + Apex + Integraciones) en zonas horarias alineadas con EE.UU.<br>Diseño frameworks de automatización escalables que equilibran la mantenibilidad para administradores, la extensibilidad para desarrolladores y la confiabilidad de las integraciones.",
+    "idx.cta.sub": "Disponible para roles remotos de Salesforce Technical Consultant (Flow + Apex + Integraciones) en zonas horarias alineadas con EE.UU.<br>Diseño frameworks de automatización escalables que equilibran la mantenibilidad para administradores, la extensibilidad para desarrolladores y la confiabilidad de las integraciones.",
 
     "pca.title": "Arquitectura Empresarial de<br>Automatización de Casos",
     "pca.summary": "Enrutamiento inteligente basado en Flow, barreras de escalamiento en múltiples niveles y frameworks de validación para la gestión de casos a escala empresarial, reduciendo la intervención manual en todo el ciclo de resolución.",
@@ -768,7 +792,7 @@ const translations = {
     "common.connectLinkedin": "Connectons-nous sur LinkedIn ↗",
     "common.caseStudyDisclosure": "Étude de cas composite, basée sur un travail de production Salesforce réel. Les détails spécifiques aux clients ont été anonymisés et généralisés ; certains éléments combinent des schémas provenant de plusieurs missions.",
 
-    "headline": "Je conçois des systèmes Salesforce<br>faits pour tenir à grande échelle.",
+    "headline": "Je conçois des systèmes Salesforce faits pour tenir à grande échelle.",
     "architectureTitle": "Stratégie d'Architecture Salesforce Entreprise",
     "flowMatrixTitle": "Matrice de Décision Flow vs Apex",
     "decisionPanelTitle": "Panel de Revue des Décisions d'Architecture",
@@ -776,7 +800,7 @@ const translations = {
     "ctaTitle": "Vous construisez un système Salesforce où automatisation, sécurité et intégrations doivent fonctionner ensemble ?",
     "idx.hero.eyebrow": "Consultant Technique Salesforce",
     "idx.hero.sub": "Flow et Apex là où chacun mérite sa place · des modèles de sharing pensés pour l'organisation, pas un modèle générique · des intégrations qui échouent de façon visible, jamais en silence.",
-    "idx.hero.ctaProjects": "Voir les Projets d'Architecture",
+    "idx.hero.ctaProjects": "Explorer l'Architecture",
 
     "idx.certs.tag": "Certifications",
     "idx.certs.title": "Certifications Salesforce",
@@ -785,14 +809,9 @@ const translations = {
     "common.next": "Suivant",
     "common.notYetEarned": "Pas Encore Obtenu",
     "idx.aj.tag": "Parcours de Certification",
-    "idx.aj.sectionTitle": "En Route vers Application Architect",
+    "idx.aj.sectionTitle": "Le parcours d'architecture que je construis.",
     "idx.aj.title": "Parcours vers Application Architect",
     "idx.aj.note": "Pas encore Salesforce Certified Application Architect — cette certification exige de compléter les quatre exigences ci-dessus.",
-
-    "idx.meet.tag": "Rencontrez Adrian",
-    "idx.meet.title": "Une profondeur technique sans perdre de vue le problème métier.",
-    "idx.meet.intro": "Automatisation Salesforce, développement de plateforme, sécurité et intégrations — abordés comme une seule discipline d'architecture, pas quatre spécialités séparées.",
-    "idx.meet.cta": "Lisez mon histoire →",
 
     "idx.console.tag": "Interaction Signature",
     "idx.console.title": "Console d'Architecture",
@@ -821,6 +840,23 @@ const translations = {
     "idx.console.data.n5": "Échelle",
     "idx.console.data.message": "Commencez par déterminer qui possède les données avant de concevoir le schéma.",
     "idx.console.data.cta": "Explorer l'Architecture des Données →",
+
+    "idx.design.tag": "Capacités",
+    "idx.design.title": "Ce Que Je Conçois",
+    "idx.design.intro": "Cinq surfaces, une seule discipline d'architecture. Survolez ou touchez une ligne pour voir le principe qui la sous-tend.",
+    "idx.design.row1.verb": "Systèmes d'Automatisation",
+    "idx.design.row1.reveal": "Flow est propriétaire de l'orchestration par défaut, jusqu'à ce qu'un besoin nécessite réellement un contrôle programmatique.",
+    "idx.design.row2.verb": "Modèles de Sécurité",
+    "idx.design.row2.reveal": "L'accès commence par des limites explicites, pas par des permissions accumulées.",
+    "idx.design.row3.verb": "Limites d'Intégration",
+    "idx.design.row3.reveal": "Une intégration a besoin d'un contrat pour ce qui se passe quand l'autre système est en panne, pas seulement d'un chemin nominal.",
+    "idx.design.row4.verb": "Architecture des Données",
+    "idx.design.row4.reveal": "La propriété des données se décide avant le schéma, pas après.",
+    "idx.design.row5.verb": "Expériences de Plateforme",
+    "idx.design.row5.reveal": "Les composants consomment des services et affichent un état — ils ne possèdent pas la logique métier.",
+
+    "common.compositeProductionCase": "Cas de Production Composite",
+    "idx.projects.categoryAdr": "Registre de Décision d'Architecture",
 
     "idx.principles.tag": "Philosophie de Conception",
     "idx.principles.title": "Comment Je Conçois les Systèmes Salesforce",
@@ -953,7 +989,7 @@ const translations = {
     "idx.stack.row4": "Couche de Données",
     "idx.stack.row5": "Couche d'Intégration",
 
-    "idx.cta.sub": "Disponible pour des postes remote de Salesforce Platform Engineer (Flow + Apex + Intégrations) sur des fuseaux horaires alignés US.<br>Je conçois des frameworks d'automatisation scalables qui équilibrent la maintenabilité pour les administrateurs, l'extensibilité pour les développeurs et la fiabilité des intégrations.",
+    "idx.cta.sub": "Disponible pour des postes remote de Salesforce Technical Consultant (Flow + Apex + Intégrations) sur des fuseaux horaires alignés US.<br>Je conçois des frameworks d'automatisation scalables qui équilibrent la maintenabilité pour les administrateurs, l'extensibilité pour les développeurs et la fiabilité des intégrations.",
 
     "pca.title": "Architecture d'Automatisation<br>des Cas en Entreprise",
     "pca.summary": "Routage intelligent piloté par Flow, garde-fous d'escalade multi-niveaux et frameworks de validation pour la gestion des cas à l'échelle de l'entreprise — réduisant l'intervention manuelle sur l'ensemble du cycle de résolution.",
@@ -1302,16 +1338,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const subnavTargets = Array.from(subnavLinks)
       .map(a => document.querySelector(a.getAttribute("href")))
       .filter(Boolean);
-    const updateSubnav = () => {
-      const pos = window.scrollY + 140;
-      let current = subnavTargets[0];
-      subnavTargets.forEach(el => { if (el.offsetTop <= pos) current = el; });
-      subnavLinks.forEach((a, i) => {
-        a.classList.toggle("active", subnavTargets[i] === current);
-      });
+    const linkForTarget = new Map(subnavTargets.map((el, i) => [el, subnavLinks[i]]));
+    const setActive = (link) => {
+      if (!link) return;
+      subnavLinks.forEach(a => a.classList.toggle("active", a === link));
     };
-    window.addEventListener("scroll", updateSubnav, { passive: true });
-    updateSubnav();
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver((entries) => {
+        const visible = entries.filter(e => e.isIntersecting);
+        if (!visible.length) return;
+        visible.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        setActive(linkForTarget.get(visible[0].target));
+      }, { rootMargin: "-140px 0px -70% 0px", threshold: 0 });
+      subnavTargets.forEach(el => io.observe(el));
+      setActive(subnavLinks[0]);
+    } else {
+      const updateSubnav = () => {
+        const pos = window.scrollY + 140;
+        let current = subnavTargets[0];
+        subnavTargets.forEach(el => { if (el.offsetTop <= pos) current = el; });
+        setActive(linkForTarget.get(current));
+      };
+      window.addEventListener("scroll", updateSubnav, { passive: true });
+      updateSubnav();
+    }
   }
 
   /* ─── LANGUAGE SWITCHER ─── */
@@ -1346,8 +1396,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ─── ARCHITECTURE DNA (hover/tap/keyboard reveal) ─── */
-  document.querySelectorAll(".dna-card").forEach(card => {
+  /* ─── ARCHITECTURE DNA / WHAT I DESIGN (hover/tap/keyboard reveal) ─── */
+  document.querySelectorAll(".dna-card, .design-row").forEach(card => {
     card.addEventListener("click", () => {
       const expanded = card.classList.toggle("expanded");
       card.setAttribute("aria-expanded", String(expanded));

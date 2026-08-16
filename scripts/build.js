@@ -55,7 +55,7 @@ function renderCertGrid() {
     .sort((a, b) => a.priority - b.priority);
 
   return shown.map(c => {
-    const priorityClass = c.priority <= 2 ? " cert-priority" : "";
+    const priorityClass = c.priority <= 5 ? " cert-priority" : "";
     const imgSrc = c.badge
       ? `assets/certifications/${encodeURIComponent(c.badge).replace(/%20/g, "%20")}`
       : null;

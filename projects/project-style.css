@@ -1,6 +1,7 @@
 /* project-style.css — scoped overrides for project pages */
 
 .project-hero {
+  max-width: var(--page-max); margin: 0 auto;
   padding: 80px 60px 60px;
   border-bottom: 1px solid var(--border);
   position: relative; z-index: 1;
@@ -28,9 +29,9 @@
 
 .project-title {
   font-family: var(--font-display);
-  font-size: clamp(20px,4.5vw,60px); font-weight: 800;
-  letter-spacing: -0.025em; line-height: 1.05; margin-bottom: 20px;
-  overflow-wrap: normal;
+  font-size: var(--text-display-lg); font-weight: 700;
+  letter-spacing: -0.02em; line-height: 1.12; margin-bottom: 20px;
+  max-width: 780px; text-wrap: balance; overflow-wrap: normal;
 }
 .project-summary {
   font-size: 16px; color: var(--text-secondary);
@@ -55,6 +56,7 @@
 .i-num.purple { color: var(--accent-4); }
 
 .content-grid {
+  max-width: var(--page-max); margin: 0 auto;
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 20px; padding: 60px;
   position: relative; z-index: 1;
@@ -87,6 +89,7 @@
 
 /* ─── ADR / DEEP-DIVE CASE STUDY ─── */
 .adr-section {
+  max-width: var(--page-max); margin: 0 auto;
   padding: 0 60px 60px;
   position: relative; z-index: 1;
 }
