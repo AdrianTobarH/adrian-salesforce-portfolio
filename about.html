@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Adrian Tobar Hanze</title>
+  <meta name="description" content="Adrian Tobar Hanze is a Salesforce Technical Consultant working across Flow automation, Apex, LWC, sharing &amp; security architecture, and integrations — progressing toward Application Architect.">
+  <link rel="canonical" href="https://adrian-salesforce-portfolio.vercel.app/about.html">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="About — Adrian Tobar Hanze">
+  <meta property="og:description" content="Salesforce Technical Consultant working across automation, development, security, and integrations.">
+  <meta property="og:url" content="https://adrian-salesforce-portfolio.vercel.app/about.html">
+  <meta property="og:image" content="https://adrian-salesforce-portfolio.vercel.app/assets/og-image.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234a9eff'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='24' font-weight='700' fill='%23060b14' text-anchor='middle'%3EATH%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects/project-style.css">
+  <style>
+    .about-prose { max-width: 700px; }
+    .about-prose p { font-size: 15.5px; color: var(--text-secondary); line-height: 1.75; margin-bottom: 16px; }
+    .about-prose h2 { font-family: var(--font-display); font-size: 22px; color: var(--text-primary); margin: 8px 0 14px; }
+    .skills-domain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 18px; }
+    .skills-domain { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 22px; }
+    .skills-domain h3 { font-family: var(--font-display); font-size: 15px; color: var(--accent); margin-bottom: 10px; }
+    .skills-domain ul { display: flex; flex-direction: column; gap: 6px; }
+    .skills-domain li { font-size: 13.5px; color: var(--text-secondary); }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <nav id="navbar" class="nav">
+    <div class="logo">
+      <a href="index.html" style="display:flex;align-items:center;gap:10px;">
+        <span class="logo-mark">ATH</span>
+        <span class="logo-name">Adrian Tobar Hanze</span>
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="architecture.html" data-i18n="nav.architecture">Architecture</a>
+      <a href="index.html#projects" data-i18n="nav.projects">Case Studies</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+      <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="nav-linkedin">LinkedIn ↗</a>
+    </div>
+    <div class="nav-right">
+      <div class="language-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="architecture.html" data-i18n="nav.architecture">Architecture</a>
+      <a href="index.html#projects" data-i18n="nav.projects">Case Studies</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+      <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank" class="nav-linkedin">LinkedIn ↗</a>
+      <div class="mobile-menu-langs">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-hero reveal">
+    <span class="section-tag">About</span>
+    <h1>I fix the gap between "it's configured" and "it's designed."</h1>
+    <p class="page-dek">Salesforce Technical Consultant working across Flow, Apex, LWC, security architecture, and integrations — currently 3 of 4 requirements into Salesforce Certified Application Architect.</p>
+  </div>
+
+  <main id="main-content">
+  <div class="content-grid" style="grid-template-columns:1fr; max-width:820px; margin:0 auto;">
+
+    <section class="content-block reveal about-prose" style="border:none;background:none;padding:40px 0;">
+      <h2>What I actually do</h2>
+      <p>Most of the Salesforce work I get pulled into isn't "build a new feature." It's "this automation works until it doesn't," or "we're not sure who's allowed to see what anymore." I spend most of my time on the boundary between admin-configured automation and engineered systems — the place where a Flow that made sense at 50 records starts breaking at 5,000, or where a permission model that was fine for one team stops making sense for three.</p>
+      <p>My day-to-day spans Flow automation, Apex development, Lightning Web Components, REST integrations, and the sharing/security model underneath all of it. I don't treat those as separate skills — a routing automation is also a security decision (who does the queue-based reassignment run as?) and a data decision (what happens to the record's field history when it moves).</p>
+
+      <h2>How I decide between configuration and code</h2>
+      <p>Flow is my default. It's transparent, admins can maintain it without a deployment, and most business process logic doesn't need anything more powerful than what it exposes. I move to Apex when one of a few specific things is true: the logic needs real transaction control, it has to be reused across more entry points than Flow can cleanly share, it's computation- or bulk-heavy enough that governor limits become the real constraint, or it sits at an integration boundary that needs proper error handling. That's a judgment call, not a rule I apply mechanically — and I'd rather explain the reasoning in an interview than hide behind "best practice."</p>
+
+      <h2>How I think about security</h2>
+      <p>Sharing and security is the part of Salesforce I find most interesting, which is part of why I went after the Sharing and Visibility Architect credential specifically rather than treating it as a box to check. The mental model I use: object and field access set the ceiling, record-level sharing decides who's actually let in under that ceiling, and runtime code (with sharing, without sharing, CRUD/FLS enforcement) decides whether anything built on top respects both. A lot of real-world security gaps live in that last, least-visible layer.</p>
+
+      <h2>Where this is heading</h2>
+      <p>I'm progressing toward Salesforce Certified Application Architect — three of the four requirements are done (Platform App Builder, Platform Developer, Platform Sharing and Visibility Architect), and I'm targeting Platform Data Architect next. That's a deliberate direction, not a rebrand: the questions I find myself asking on real projects are increasingly about data ownership and system boundaries rather than which button to click in Setup, and the certification path is catching up to where the work already is.</p>
+    </section>
+
+    <section class="content-block reveal" style="border:none;background:none;padding:0 0 40px;">
+      <h2 style="font-family:var(--font-display);font-size:22px;color:var(--text-primary);margin-bottom:18px;">What I Work With</h2>
+      <div class="skills-domain-grid">
+        <div class="skills-domain">
+          <h3>Platform Development</h3>
+          <ul><li>Apex</li><li>Lightning Web Components</li><li>SOQL</li><li>Asynchronous Apex</li><li>Apex testing (bulk &amp; negative paths)</li></ul>
+        </div>
+        <div class="skills-domain">
+          <h3>Automation</h3>
+          <ul><li>Salesforce Flow</li><li>Invocable Apex</li><li>Automation ownership &amp; decision-making</li></ul>
+        </div>
+        <div class="skills-domain">
+          <h3>Architecture</h3>
+          <ul><li>Sharing &amp; Visibility design</li><li>Data modeling</li><li>Solution design</li><li>Automation decision frameworks</li></ul>
+        </div>
+        <div class="skills-domain">
+          <h3>Integration</h3>
+          <ul><li>REST APIs</li><li>OAuth 2.0</li><li>Named Credentials</li></ul>
+        </div>
+        <div class="skills-domain">
+          <h3>Experience Cloud</h3>
+          <ul><li>External user access</li><li>Sharing for portal users</li><li>Security considerations for external-facing data</li></ul>
+        </div>
+        <div class="skills-domain">
+          <h3>Emerging</h3>
+          <ul><li>Agentforce (Certified Specialist)</li><li>Applied as a complement to the platform/architecture core, not a pivot away from it</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block reveal" style="border:none;background:none;padding:0 0 40px;">
+      <h2 style="font-family:var(--font-display);font-size:22px;color:var(--text-primary);margin-bottom:14px;">Testing &amp; Delivery</h2>
+      <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.7;max-width:700px;">I test Apex for bulk behavior and negative paths, not just the single-record happy case a governor limit will never catch in a demo. Delivery runs through sandboxes, Git-based version control, and Salesforce DX / Change Sets for promotion between environments — the fundamentals that make a release safe to repeat, not a one-time event.</p>
+    </section>
+
+  </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><span class="logo-mark">ATH</span><span>Adrian Tobar Hanze © 2026</span></div>
+      <div class="footer-links">
+        <a href="index.html#projects" data-i18n="footer.projects">Case Studies</a>
+        <a href="architecture.html" data-i18n="footer.architecture">Architecture</a>
+        <a href="about.html" data-i18n="footer.about">About</a>
+        <a href="index.html#contact" data-i18n="footer.contact">Contact</a>
+        <a href="https://www.linkedin.com/in/adrian-tobar-hanze/" target="_blank">LinkedIn ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

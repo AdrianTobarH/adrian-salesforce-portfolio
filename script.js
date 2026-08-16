@@ -12,16 +12,16 @@
 const translations = {
   en: {
     "nav.architecture": "Architecture",
-    "nav.diagram": "Diagram",
-    "nav.projects": "Projects",
+    "nav.projects": "Case Studies",
+    "nav.about": "About",
     "nav.contact": "Contact",
     "nav.backToPortfolio": "← Back to Portfolio",
     "nav.timezone": "GMT-5 · PT overlap",
     "nav.available": "Available for Remote Roles",
 
-    "footer.projects": "Projects",
-    "footer.diagram": "Diagram",
+    "footer.projects": "Case Studies",
     "footer.architecture": "Architecture",
+    "footer.about": "About",
     "footer.contact": "Contact",
 
     "common.backAllProjects": "← All Architecture Projects",
@@ -44,6 +44,26 @@ const translations = {
 
     "idx.certs.tag": "Credentials",
     "idx.certs.title": "Salesforce Certifications",
+
+    "common.completed": "Completed",
+    "common.next": "Next",
+    "idx.aj.tag": "Certification Path",
+    "idx.aj.sectionTitle": "Progressing Toward Application Architect",
+    "idx.aj.title": "Application Architect Journey",
+    "idx.aj.note": "Not yet a Salesforce Certified Application Architect — that credential requires all four requirements above to be complete.",
+
+    "idx.principles.tag": "Design Philosophy",
+    "idx.principles.title": "How I Design Salesforce Systems",
+    "idx.principles.intro": "A few of the principles behind every decision on this site. The full framework, with trade-offs, lives on the Architecture page.",
+    "idx.principles.p1.title": "Security by Default",
+    "idx.principles.p1.desc": "Least privilege and explicit access — nothing is inherited by accident.",
+    "idx.principles.p2.title": "Code With Purpose",
+    "idx.principles.p2.desc": "Apex earns its place when transaction control, reuse, or scale justify it — not by default.",
+    "idx.principles.p3.title": "Observable Operations",
+    "idx.principles.p3.desc": "A solution isn't finished when the happy path works. Failures must be detectable and recoverable.",
+    "idx.principles.p4.title": "Trade-offs Are Explicit",
+    "idx.principles.p4.desc": "Every architectural decision names what it costs, not just what it buys.",
+    "idx.principles.linkText": "See the full Architecture Principles →",
 
     "idx.arch.tag": "Architecture",
     "idx.arch.intro": "Designing scalable Flow orchestration frameworks, reusable Apex service layers, and enterprise-grade integration architectures across Sales Cloud environments. Focused on performance, governance alignment, and maintainable automation at scale.",
@@ -330,16 +350,16 @@ const translations = {
 
   es: {
     "nav.architecture": "Arquitectura",
-    "nav.diagram": "Diagrama",
-    "nav.projects": "Proyectos",
+    "nav.projects": "Casos de Estudio",
+    "nav.about": "Sobre Mí",
     "nav.contact": "Contacto",
     "nav.backToPortfolio": "← Volver al Portfolio",
     "nav.timezone": "GMT-5 · superposición PT",
     "nav.available": "Disponible para Roles Remotos",
 
-    "footer.projects": "Proyectos",
-    "footer.diagram": "Diagrama",
+    "footer.projects": "Casos de Estudio",
     "footer.architecture": "Arquitectura",
+    "footer.about": "Sobre Mí",
     "footer.contact": "Contacto",
 
     "common.backAllProjects": "← Todos los Proyectos de Arquitectura",
@@ -362,6 +382,26 @@ const translations = {
 
     "idx.certs.tag": "Credenciales",
     "idx.certs.title": "Certificaciones Salesforce",
+
+    "common.completed": "Completado",
+    "common.next": "Siguiente",
+    "idx.aj.tag": "Ruta de Certificación",
+    "idx.aj.sectionTitle": "Avanzando hacia Application Architect",
+    "idx.aj.title": "Trayectoria hacia Application Architect",
+    "idx.aj.note": "Todavía no soy Salesforce Certified Application Architect: esa credencial requiere completar los cuatro requisitos anteriores.",
+
+    "idx.principles.tag": "Filosofía de Diseño",
+    "idx.principles.title": "Cómo Diseño Sistemas Salesforce",
+    "idx.principles.intro": "Algunos de los principios detrás de cada decisión en este sitio. El marco completo, con sus trade-offs, vive en la página de Arquitectura.",
+    "idx.principles.p1.title": "Seguridad por Defecto",
+    "idx.principles.p1.desc": "Mínimo privilegio y acceso explícito: nada se hereda por accidente.",
+    "idx.principles.p2.title": "Código con Propósito",
+    "idx.principles.p2.desc": "Apex se gana su lugar cuando el control transaccional, la reutilización o la escala lo justifican, no por defecto.",
+    "idx.principles.p3.title": "Operaciones Observables",
+    "idx.principles.p3.desc": "Una solución no está terminada cuando el camino feliz funciona. Las fallas deben ser detectables y recuperables.",
+    "idx.principles.p4.title": "Los Trade-offs Son Explícitos",
+    "idx.principles.p4.desc": "Cada decisión de arquitectura nombra su costo, no solo su beneficio.",
+    "idx.principles.linkText": "Ver los Principios de Arquitectura completos →",
 
     "idx.arch.tag": "Arquitectura",
     "idx.arch.intro": "Diseño de frameworks de orquestación Flow escalables, capas de servicio Apex reutilizables y arquitecturas de integración de nivel empresarial en entornos Sales Cloud. Enfocado en rendimiento, alineación de gobernanza y automatización mantenible a escala.",
@@ -648,16 +688,16 @@ const translations = {
 
   fr: {
     "nav.architecture": "Architecture",
-    "nav.diagram": "Diagramme",
-    "nav.projects": "Projets",
+    "nav.projects": "Études de Cas",
+    "nav.about": "À Propos",
     "nav.contact": "Contact",
     "nav.backToPortfolio": "← Retour au Portfolio",
     "nav.timezone": "GMT-5 · chevauchement PT",
     "nav.available": "Disponible pour Rôles Remote",
 
-    "footer.projects": "Projets",
-    "footer.diagram": "Diagramme",
+    "footer.projects": "Études de Cas",
     "footer.architecture": "Architecture",
+    "footer.about": "À Propos",
     "footer.contact": "Contact",
 
     "common.backAllProjects": "← Tous les Projets d'Architecture",
@@ -680,6 +720,26 @@ const translations = {
 
     "idx.certs.tag": "Certifications",
     "idx.certs.title": "Certifications Salesforce",
+
+    "common.completed": "Terminé",
+    "common.next": "Suivant",
+    "idx.aj.tag": "Parcours de Certification",
+    "idx.aj.sectionTitle": "En Route vers Application Architect",
+    "idx.aj.title": "Parcours vers Application Architect",
+    "idx.aj.note": "Pas encore Salesforce Certified Application Architect — cette certification exige de compléter les quatre exigences ci-dessus.",
+
+    "idx.principles.tag": "Philosophie de Conception",
+    "idx.principles.title": "Comment Je Conçois les Systèmes Salesforce",
+    "idx.principles.intro": "Quelques principes derrière chaque décision de ce site. Le cadre complet, avec ses compromis, se trouve sur la page Architecture.",
+    "idx.principles.p1.title": "Sécurité par Défaut",
+    "idx.principles.p1.desc": "Privilège minimal et accès explicite : rien n'est hérité par accident.",
+    "idx.principles.p2.title": "Du Code avec un But",
+    "idx.principles.p2.desc": "Apex se justifie quand le contrôle transactionnel, la réutilisation ou l'échelle le justifient, pas par défaut.",
+    "idx.principles.p3.title": "Opérations Observables",
+    "idx.principles.p3.desc": "Une solution n'est pas terminée quand le chemin nominal fonctionne. Les échecs doivent être détectables et récupérables.",
+    "idx.principles.p4.title": "Les Compromis Sont Explicites",
+    "idx.principles.p4.desc": "Chaque décision d'architecture nomme son coût, pas seulement son bénéfice.",
+    "idx.principles.linkText": "Voir les Principes d'Architecture complets →",
 
     "idx.arch.tag": "Architecture",
     "idx.arch.intro": "Conception de frameworks d'orchestration Flow scalables, de couches de service Apex réutilisables et d'architectures d'intégration de niveau entreprise sur des environnements Sales Cloud. Axé sur la performance, l'alignement de gouvernance et l'automatisation maintenable à grande échelle.",
@@ -1127,6 +1187,42 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeAllPanels();
   });
+
+  /* ─── DECISION FRAMEWORK TABS (Automation / Security / Integration) ─── */
+  document.querySelectorAll(".decision-tabs").forEach(tabGroup => {
+    const tabs = tabGroup.querySelectorAll(".decision-tab");
+    const panels = tabGroup.parentElement.querySelectorAll(":scope > .decision-panel");
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
+        panels.forEach(p => p.classList.remove("active"));
+        tab.classList.add("active");
+        tab.setAttribute("aria-selected", "true");
+        const target = tabGroup.parentElement.querySelector(
+          `.decision-panel[data-decision-panel="${tab.dataset.decision}"]`
+        );
+        if (target) target.classList.add("active");
+      });
+    });
+  });
+
+  /* ─── LOCAL SUB-NAV SCROLLSPY (long-form architecture/about pages) ─── */
+  const subnavLinks = document.querySelectorAll(".subnav a");
+  if (subnavLinks.length) {
+    const subnavTargets = Array.from(subnavLinks)
+      .map(a => document.querySelector(a.getAttribute("href")))
+      .filter(Boolean);
+    const updateSubnav = () => {
+      const pos = window.scrollY + 140;
+      let current = subnavTargets[0];
+      subnavTargets.forEach(el => { if (el.offsetTop <= pos) current = el; });
+      subnavLinks.forEach((a, i) => {
+        a.classList.toggle("active", subnavTargets[i] === current);
+      });
+    };
+    window.addEventListener("scroll", updateSubnav, { passive: true });
+    updateSubnav();
+  }
 
   /* ─── LANGUAGE SWITCHER ─── */
   document.querySelectorAll(".lang-btn").forEach(btn => {
