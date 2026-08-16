@@ -103,6 +103,14 @@ function renderArchitectJourney() {
         <div class="aj-steps">
 ${steps}
         </div>
+        <div class="aj-target-row">
+          <span class="aj-target-arrow" aria-hidden="true">→</span>
+          <div class="aj-target">
+            <span class="aj-target-icon" aria-hidden="true">◇</span>
+            <span class="aj-target-label">Application Architect</span>
+            <span class="aj-target-tag" data-i18n="common.notYetEarned">Not Yet Earned</span>
+          </div>
+        </div>
         <p class="aj-note" data-i18n="idx.aj.note">Not yet a Salesforce Certified Application Architect — that credential requires all four requirements above to be complete.</p>
       </div>`;
 }

@@ -37,7 +37,7 @@ const translations = {
     "flowMatrixTitle": "Flow vs Apex Decision Matrix",
     "decisionPanelTitle": "Architecture Decision Review Panel",
     "metricsTitle": "Architecture Design Highlights",
-    "ctaTitle": "Let's Build Reliable<br>Salesforce Automation Together",
+    "ctaTitle": "Building a Salesforce system where automation, security, and integrations all need to work together?",
     "idx.hero.eyebrow": "Salesforce Technical Consultant",
     "idx.hero.sub": "Flow and Apex where each earns its place · sharing designed around the org, not a template · integrations that fail loudly, not silently.",
     "idx.hero.ctaProjects": "View Architecture Projects",
@@ -47,10 +47,44 @@ const translations = {
 
     "common.completed": "Completed",
     "common.next": "Next",
+    "common.notYetEarned": "Not Yet Earned",
     "idx.aj.tag": "Certification Path",
     "idx.aj.sectionTitle": "Progressing Toward Application Architect",
     "idx.aj.title": "Application Architect Journey",
     "idx.aj.note": "Not yet a Salesforce Certified Application Architect — that credential requires all four requirements above to be complete.",
+
+    "idx.meet.tag": "Meet Adrian",
+    "idx.meet.title": "Technical depth without losing the business problem.",
+    "idx.meet.intro": "Salesforce automation, platform development, security, and integrations — approached as one architectural discipline, not four separate specialties.",
+    "idx.meet.cta": "Read my story →",
+
+    "idx.console.tag": "Signature Interaction",
+    "idx.console.title": "Architecture Console",
+    "idx.console.intro": "What are you designing?",
+    "idx.console.tab.automation": "Automation",
+    "idx.console.tab.security": "Security",
+    "idx.console.tab.integration": "Integration",
+    "idx.console.tab.data": "Data",
+    "idx.console.automation.n1": "Ownership", "idx.console.automation.n2": "Complexity",
+    "idx.console.automation.n3": "Transaction", "idx.console.automation.n4": "Scale",
+    "idx.console.automation.n5": "Maintainability",
+    "idx.console.automation.message": "Start with who needs to own the process, then decide where declarative orchestration stops earning its place.",
+    "idx.console.automation.cta": "Explore Automation Decisions →",
+    "idx.console.security.n1": "Identity", "idx.console.security.n2": "Object",
+    "idx.console.security.n3": "Field", "idx.console.security.n4": "Record",
+    "idx.console.security.n5": "Runtime",
+    "idx.console.security.message": "Start with access boundaries before choosing the sharing mechanism.",
+    "idx.console.security.cta": "Explore Security Architecture →",
+    "idx.console.integration.n1": "Latency", "idx.console.integration.n2": "Coupling",
+    "idx.console.integration.n3": "Ownership", "idx.console.integration.n4": "Failure",
+    "idx.console.integration.n5": "Recovery",
+    "idx.console.integration.message": "Start with the contract and failure behavior before choosing the integration technology.",
+    "idx.console.integration.cta": "Explore Integration Architecture →",
+    "idx.console.data.n1": "Ownership", "idx.console.data.n2": "Model",
+    "idx.console.data.n3": "Identity", "idx.console.data.n4": "Quality",
+    "idx.console.data.n5": "Scale",
+    "idx.console.data.message": "Start with who owns the data before designing the schema.",
+    "idx.console.data.cta": "Explore Data Architecture →",
 
     "idx.principles.tag": "Design Philosophy",
     "idx.principles.title": "How I Design Salesforce Systems",
@@ -371,7 +405,7 @@ const translations = {
     "flowMatrixTitle": "Matriz de Decisión Flow vs Apex",
     "decisionPanelTitle": "Panel de Revisión de Decisiones Arquitectónicas",
     "metricsTitle": "Aspectos Destacados del Diseño de Arquitectura",
-    "ctaTitle": "Construyamos Automatización<br>Salesforce Confiable Juntos",
+    "ctaTitle": "¿Estás construyendo un sistema Salesforce donde automatización, seguridad e integraciones deben funcionar juntos?",
     "idx.hero.eyebrow": "Consultor Técnico Salesforce",
     "idx.hero.sub": "Flow y Apex donde cada uno se gana su lugar · sharing pensado para la organización, no una plantilla · integraciones que fallan de forma visible, no en silencio.",
     "idx.hero.ctaProjects": "Ver Proyectos de Arquitectura",
@@ -381,10 +415,44 @@ const translations = {
 
     "common.completed": "Completado",
     "common.next": "Siguiente",
+    "common.notYetEarned": "Aún No Obtenido",
     "idx.aj.tag": "Ruta de Certificación",
     "idx.aj.sectionTitle": "Avanzando hacia Application Architect",
     "idx.aj.title": "Trayectoria hacia Application Architect",
     "idx.aj.note": "Todavía no soy Salesforce Certified Application Architect: esa credencial requiere completar los cuatro requisitos anteriores.",
+
+    "idx.meet.tag": "Conoce a Adrian",
+    "idx.meet.title": "Profundidad técnica sin perder de vista el problema de negocio.",
+    "idx.meet.intro": "Automatización de Salesforce, desarrollo de plataforma, seguridad e integraciones, abordados como una sola disciplina de arquitectura, no como cuatro especialidades separadas.",
+    "idx.meet.cta": "Lee mi historia →",
+
+    "idx.console.tag": "Interacción Distintiva",
+    "idx.console.title": "Consola de Arquitectura",
+    "idx.console.intro": "¿Qué estás diseñando?",
+    "idx.console.tab.automation": "Automatización",
+    "idx.console.tab.security": "Seguridad",
+    "idx.console.tab.integration": "Integración",
+    "idx.console.tab.data": "Datos",
+    "idx.console.automation.n1": "Propiedad", "idx.console.automation.n2": "Complejidad",
+    "idx.console.automation.n3": "Transacción", "idx.console.automation.n4": "Escala",
+    "idx.console.automation.n5": "Mantenibilidad",
+    "idx.console.automation.message": "Empieza por quién debe ser dueño del proceso, y luego decide en qué punto la orquestación declarativa deja de ser la opción adecuada.",
+    "idx.console.automation.cta": "Explorar Decisiones de Automatización →",
+    "idx.console.security.n1": "Identidad", "idx.console.security.n2": "Objeto",
+    "idx.console.security.n3": "Campo", "idx.console.security.n4": "Registro",
+    "idx.console.security.n5": "Tiempo de Ejecución",
+    "idx.console.security.message": "Empieza por los límites de acceso antes de elegir el mecanismo de sharing.",
+    "idx.console.security.cta": "Explorar Arquitectura de Seguridad →",
+    "idx.console.integration.n1": "Latencia", "idx.console.integration.n2": "Acoplamiento",
+    "idx.console.integration.n3": "Propiedad", "idx.console.integration.n4": "Falla",
+    "idx.console.integration.n5": "Recuperación",
+    "idx.console.integration.message": "Empieza por el contrato y el comportamiento ante fallas antes de elegir la tecnología de integración.",
+    "idx.console.integration.cta": "Explorar Arquitectura de Integración →",
+    "idx.console.data.n1": "Propiedad", "idx.console.data.n2": "Modelo",
+    "idx.console.data.n3": "Identidad", "idx.console.data.n4": "Calidad",
+    "idx.console.data.n5": "Escala",
+    "idx.console.data.message": "Empieza por quién es dueño de los datos antes de diseñar el esquema.",
+    "idx.console.data.cta": "Explorar Arquitectura de Datos →",
 
     "idx.principles.tag": "Filosofía de Diseño",
     "idx.principles.title": "Cómo Diseño Sistemas Salesforce",
@@ -705,7 +773,7 @@ const translations = {
     "flowMatrixTitle": "Matrice de Décision Flow vs Apex",
     "decisionPanelTitle": "Panel de Revue des Décisions d'Architecture",
     "metricsTitle": "Points Forts de la Conception d'Architecture",
-    "ctaTitle": "Construisons une Automatisation<br>Salesforce Fiable Ensemble",
+    "ctaTitle": "Vous construisez un système Salesforce où automatisation, sécurité et intégrations doivent fonctionner ensemble ?",
     "idx.hero.eyebrow": "Consultant Technique Salesforce",
     "idx.hero.sub": "Flow et Apex là où chacun mérite sa place · des modèles de sharing pensés pour l'organisation, pas un modèle générique · des intégrations qui échouent de façon visible, jamais en silence.",
     "idx.hero.ctaProjects": "Voir les Projets d'Architecture",
@@ -715,10 +783,44 @@ const translations = {
 
     "common.completed": "Terminé",
     "common.next": "Suivant",
+    "common.notYetEarned": "Pas Encore Obtenu",
     "idx.aj.tag": "Parcours de Certification",
     "idx.aj.sectionTitle": "En Route vers Application Architect",
     "idx.aj.title": "Parcours vers Application Architect",
     "idx.aj.note": "Pas encore Salesforce Certified Application Architect — cette certification exige de compléter les quatre exigences ci-dessus.",
+
+    "idx.meet.tag": "Rencontrez Adrian",
+    "idx.meet.title": "Une profondeur technique sans perdre de vue le problème métier.",
+    "idx.meet.intro": "Automatisation Salesforce, développement de plateforme, sécurité et intégrations — abordés comme une seule discipline d'architecture, pas quatre spécialités séparées.",
+    "idx.meet.cta": "Lisez mon histoire →",
+
+    "idx.console.tag": "Interaction Signature",
+    "idx.console.title": "Console d'Architecture",
+    "idx.console.intro": "Que concevez-vous ?",
+    "idx.console.tab.automation": "Automatisation",
+    "idx.console.tab.security": "Sécurité",
+    "idx.console.tab.integration": "Intégration",
+    "idx.console.tab.data": "Données",
+    "idx.console.automation.n1": "Propriété", "idx.console.automation.n2": "Complexité",
+    "idx.console.automation.n3": "Transaction", "idx.console.automation.n4": "Échelle",
+    "idx.console.automation.n5": "Maintenabilité",
+    "idx.console.automation.message": "Commencez par déterminer qui doit être propriétaire du processus, puis décidez à quel moment l'orchestration déclarative cesse d'être pertinente.",
+    "idx.console.automation.cta": "Explorer les Décisions d'Automatisation →",
+    "idx.console.security.n1": "Identité", "idx.console.security.n2": "Objet",
+    "idx.console.security.n3": "Champ", "idx.console.security.n4": "Enregistrement",
+    "idx.console.security.n5": "Exécution",
+    "idx.console.security.message": "Commencez par les limites d'accès avant de choisir le mécanisme de sharing.",
+    "idx.console.security.cta": "Explorer l'Architecture de Sécurité →",
+    "idx.console.integration.n1": "Latence", "idx.console.integration.n2": "Couplage",
+    "idx.console.integration.n3": "Propriété", "idx.console.integration.n4": "Défaillance",
+    "idx.console.integration.n5": "Récupération",
+    "idx.console.integration.message": "Commencez par le contrat et le comportement en cas de défaillance avant de choisir la technologie d'intégration.",
+    "idx.console.integration.cta": "Explorer l'Architecture d'Intégration →",
+    "idx.console.data.n1": "Propriété", "idx.console.data.n2": "Modèle",
+    "idx.console.data.n3": "Identité", "idx.console.data.n4": "Qualité",
+    "idx.console.data.n5": "Échelle",
+    "idx.console.data.message": "Commencez par déterminer qui possède les données avant de concevoir le schéma.",
+    "idx.console.data.cta": "Explorer l'Architecture des Données →",
 
     "idx.principles.tag": "Philosophie de Conception",
     "idx.principles.title": "Comment Je Conçois les Systèmes Salesforce",
@@ -1242,6 +1344,42 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", () => {
       if (window.innerWidth > 900) closeMobileMenu();
     });
+  }
+
+  /* ─── ARCHITECTURE DNA (hover/tap/keyboard reveal) ─── */
+  document.querySelectorAll(".dna-card").forEach(card => {
+    card.addEventListener("click", () => {
+      const expanded = card.classList.toggle("expanded");
+      card.setAttribute("aria-expanded", String(expanded));
+    });
+  });
+
+  /* ─── HOW I THINK (accordion) ─── */
+  document.querySelectorAll(".think-item").forEach(item => {
+    const panel = document.getElementById(item.getAttribute("aria-controls"));
+    item.addEventListener("click", () => {
+      const isOpen = item.getAttribute("aria-expanded") === "true";
+      item.setAttribute("aria-expanded", String(!isOpen));
+      if (panel) panel.classList.toggle("open", !isOpen);
+    });
+  });
+
+  /* ─── PROFESSIONAL JOURNEY TIMELINE (one-shot reveal on scroll) ─── */
+  const timeline = document.querySelector(".journey-timeline");
+  if (timeline) {
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            timeline.classList.add("in-view");
+            obs.unobserve(timeline);
+          }
+        });
+      }, { threshold: 0.25 });
+      io.observe(timeline);
+    } else {
+      timeline.classList.add("in-view");
+    }
   }
 
 });
